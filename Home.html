@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+    <div data-role="page" id="Page1">
+    <div data-role="header"><h1>Page 1</h1></div>
+    <div role="main" class="ui-content">
+    <p>This is the content for page 1 with a 
+        <a href="#Page2">link to page 2</a></p> 
+        <input type="button" value="fdsfsdf">
+    </div>
+    <div data-role="footer"><h1>Footer</h1></div>
+    </div>
+
+    <div data-role="page" id="Page2" data-dialog="true">
+    <div data-role="header"><h1>Page 2</h1></div>
+    <div role="main" class="ui-content">
+    <p>This is the content for page 2 with a <a href="#Page1" >link to page 1</a>
+    </div>
+    <div data-role="footer"><h1>Footer</h1></div>
+    </div>
+
+    </body>
+
+</html>
