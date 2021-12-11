@@ -1,0 +1,24 @@
+.category {
+  width: 350px;
+  border-radius: 50px;
+}
+
+.category-container {
+}
+
+.bottom-left {
+  position: absolute;
+  background: rgba(33, 130, 110, 0.9);
+  border-radius: 0px 0px 15px 15px;
+  width: 330px;
+  height: 43px;
+  bottom: 11px;
+  left: 25px;
+}
+
+.label-text {
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
