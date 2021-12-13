@@ -1,16 +1,13 @@
 .category {
-  width: 350px;
+  width: 370px;
   border-radius: 50px;
-}
-
-.category-container {
 }
 
 .bottom-left {
   position: absolute;
   background: rgba(33, 130, 110, 0.9);
   border-radius: 0px 0px 15px 15px;
-  width: 330px;
+  width: 350px;
   height: 43px;
   bottom: 11px;
   left: 25px;
