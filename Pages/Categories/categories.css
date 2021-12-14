@@ -3,6 +3,17 @@
   border-radius: 50px;
 }
 
+.category-back-icon {
+  font-size: 35px;
+  color: #676767;
+}
+
+.category-title {
+  font-size: 30px;
+  font-weight: 650;
+  color: #676767;
+}
+
 .bottom-left {
   position: absolute;
   background: rgba(33, 130, 110, 0.9);
