@@ -1,11 +1,10 @@
 @import url("../assets/fonts/Poppins-Medium.ttf");
-body {
-  font-family: "Poppins-Medium", sans-serif;
-}
+@import url("../assets/fonts/Poppins-SemiBold.ttf");
 .category-title {
   font-size: 30px;
   font-weight: 650;
   color: #676767;
+  font-family: "Poppins-SemiBold", sans-serif;
 }
 
 .logo-container {
@@ -22,6 +21,7 @@ body {
 .caption-two {
   text-align: center;
   color: #676767;
+  font-family: "Poppins-Medium", sans-serif;
 }
 
 .caption-one {
