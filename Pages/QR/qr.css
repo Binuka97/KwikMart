@@ -1,0 +1,34 @@
+@import url("../assets/fonts/Poppins-Medium.ttf");
+body {
+  font-family: "Poppins-Medium", sans-serif;
+}
+.category-title {
+  font-size: 30px;
+  font-weight: 650;
+  color: #676767;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-colored {
+  width: 257px;
+  height: 257px;
+}
+
+.caption-one,
+.caption-three,
+.caption-two {
+  text-align: center;
+  color: #676767;
+}
+
+.caption-one {
+  font-size: 33px;
+  font-weight: 500;
+}
+
+.caption-three {
+  font-size: 25px;
+}
