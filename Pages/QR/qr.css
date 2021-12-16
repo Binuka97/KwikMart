@@ -32,3 +32,11 @@
 .caption-three {
   font-size: 25px;
 }
+
+.ui-content {
+  text-align: center;
+}
+.click-qr {
+  width: 200px;
+  height: 200px;
+}

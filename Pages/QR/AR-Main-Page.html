@@ -2,12 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <title>Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="qr.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -15,10 +11,19 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <!-- the three things that jQuery Mobile needs to work -->
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   </head>
   <body>
     <div>
-      <div class="row">Header</div>
+      <div data-role="header" data-position="fixed">
+        <h4>Header page AR</h4>
+      </div>
       <div class="container col-12 mb-5">
         <div class="col-12 d-flex justify-content-center">
           <div class="category-back-icon">
@@ -36,15 +41,17 @@
           </div>
           <div class="caption-one">Align the QR code within the</div>
           <div class="caption-one">frame to scan</div>
-          <div class="caption-two">QR area</div>
-          <div class="caption-three">
-            Scan the QR code to get know more 
+          <div role="main" class="ui-content mb-4 mt-4">
+            <a href="ARpage_box.html" rel="external">
+              <img src="../../assets/images/qrCode1.png" class="click-qr" />
+            </a>
           </div>
-          <div class="caption-three">
-            about KwikMart
-          </div>
+          <div class="caption-three">Scan the QR code to get know more</div>
+          <div class="caption-three">about KwikMart</div>
         </div>
       </div>
     </div>
   </body>
+  <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+  <script type="text/javascript"></script>
 </html>
