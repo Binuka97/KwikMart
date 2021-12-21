@@ -1,0 +1,23 @@
+@import url("../assets/fonts/Poppins-SemiBold.ttf");
+
+.section-title {
+  font-size: 20px;
+  font-family: "Poppins-SemiBold", sans-serif;
+  line-height: 30px;
+  font-weight: 600;
+  color: #21826e;
+}
+.form-area {
+  width: 70%;
+  margin: auto;
+}
+#exampleFormControlTextarea1 {
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  color: #a2a2a2;
+}
+.form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
