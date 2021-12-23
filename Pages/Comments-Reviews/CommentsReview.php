@@ -1,8 +1,11 @@
+<?php
+    echo "first php file"
+?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="comments.css"/>
+    <link rel="stylesheet" href="comments.css" />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
