@@ -1,11 +1,11 @@
 <?php
-    echo "first php file"
+    //index.php
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="comments.css" />
+    <link rel="stylesheet" href="comments.css" /> 
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -24,26 +24,54 @@
       </div>
       <div class="form-area">
         <div class="section-title mb-3">Write a Review</div>
-        <form>
+        <form method="POST" id="comment_form">
           <div class="form-group">
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>Choose Rating</option>
-              <option>one star</option>
-              <option>two stars</option>
-              <option>three stars</option>
-              <option>four stars</option>
-            </select>
+            <input  type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Name">
           </div>
           <div class="form-group">
             <textarea
-              placeholder="Your Comment"
+              name = "comment_content"
+              id = "comment_content"
+              placeholder="Write a Comment"
               class="form-control"
-              id="exampleFormControlTextarea1"
               rows="5"
             ></textarea>
           </div>
+          <div>
+            <input class="ui-button ui-widget ui-corner-all" type="submit" name="submit" id="submit" value="Submit">
+          </div>
         </form>
       </div>
+      <span id="comment_message"></span>
+      <div id="display_comment"></div>
     </div>
   </body>
 </html>
+
+<script>
+  $(document).ready(function(){
+    //to submit the form data
+    $('#comment_form').on('submit',function(event){
+      //this method stop submitting form data to server
+      event.preventDefault();
+      //convert form data to URL encoded string
+      var form_data = $(this).serialize();
+      //ajax request
+      $.ajax({
+        url:"AddComment.php",
+        method:"POST",
+        //which data we want to send to the server
+        data: form_data,
+        dataType:"JSON",
+        //success callback function
+        success:function(data)
+        {
+          if(data.error != ''){
+            $('#comment_form')[0].reset();
+            $('#comment_message').html(data.error);
+          }
+        }
+      })
+    });
+  });
+</script>
