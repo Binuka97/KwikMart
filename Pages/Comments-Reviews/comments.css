@@ -11,7 +11,9 @@
   width: 70%;
   margin: auto;
 }
-
+#comment_name{
+  background-color: #e6e6e6;
+}
 #comment_content {
   background-color: #e6e6e6;
   border-radius: 10px;

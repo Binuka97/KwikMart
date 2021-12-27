@@ -64,5 +64,4 @@ function get_reply_comment($connect, $parent_id = 0, $marginleft = 0)
  }
  return $output;
 }
-
 ?>
