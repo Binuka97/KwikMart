@@ -5,7 +5,7 @@
 <html>
  <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="comments.css" /> 
+    <link rel="stylesheet" href="comments.css"/>
     <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <!-- Bootstrap CSS -->
@@ -16,6 +16,14 @@
      <div>
     <div>POI AREA</div>
     <div class="form-area">
+        <div class="section-title mb-3">Reviews</div>
+    </div>
+  <div class="form-area">
+    <span id="comment_message"></span>
+    <br />
+    <div id="display_comment"></div>
+  </div>
+    <div class="form-area mb-5">
         <div class="section-title mb-3">Write a Comments</div>
     </div>
   <div class="form-area">
@@ -24,23 +32,13 @@
      <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
     </div>
     <div class="form-group">
-     <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Your Comment" rows="5"></textarea>
+     <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Your Comment" rows="8"></textarea>
     </div>
     <div class="form-group">
-     <input type="hidden" name="comment_id" id="comment_id" value="0" />
-     <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
+        <input type="hidden" name="comment_id" id="comment_id" value="0" />
+        <input type="submit" name="submit" id="submit" class="submitbtn" value="Submit Review"/>
     </div>
    </form>
-   
-  </div>
-  <div class="form-area">
-            <div class="section-title mb-3">Reviews</div>
-        </div>
-  <div class="form-area">
-      
-       <span id="comment_message"></span>
-       <br />
-       <div id="display_comment"></div>
   </div>
   </div>
  </body>
@@ -94,7 +92,6 @@ $(document).ready(function(){
   $('#comment_id').val(comment_id);
   $('#comment_name').focus();
  });
- 
+
 });
 </script>
-

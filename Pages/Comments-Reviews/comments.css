@@ -6,12 +6,11 @@
   font-weight: 600;
   color: #21826e;
 }
-
 .form-area {
   width: 70%;
   margin: auto;
 }
-#comment_name{
+#comment_name {
   background-color: #e6e6e6;
 }
 #comment_content {
@@ -19,13 +18,23 @@
   border-radius: 10px;
   color: #353434;
 }
-
-#comment_content:focus {
-  outline: none;
-}
-
 #comment_content::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #a2a2a2;
   opacity: 1; /* Firefox */
+}
+
+.submitbtn {
+  background-color: #21826e;
+  border: none;
+  border-radius: 100px;
+  height: 40px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
