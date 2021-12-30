@@ -1,10 +1,14 @@
 @import url("../../assets/fonts/Poppins-SemiBold.ttf");
-.section-title {
+.section-title,
+.section-title-form {
   font-size: 20px;
   font-family: "Poppins-SemiBold", sans-serif;
   line-height: 30px;
   font-weight: 600;
   color: #21826e;
+}
+.section-title-form {
+  margin-bottom: 15px;
 }
 .form-area {
   width: 70%;
@@ -23,18 +27,18 @@
   color: #a2a2a2;
   opacity: 1; /* Firefox */
 }
-
 .submitbtn {
   background-color: #21826e;
+  display: flex;
+  float: right;
   border: none;
   border-radius: 100px;
-  height: 40px;
   color: white;
-  padding: 15px 32px;
+  padding: 6px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 15px;
+  margin-bottom: 20px;
   cursor: pointer;
 }

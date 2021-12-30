@@ -1,5 +1,5 @@
 <?php
-//comments.php
+//Comments.php
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,6 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
  </head>
  <body>
      <div>
@@ -24,7 +25,7 @@
     <div id="display_comment"></div>
   </div>
     <div class="form-area mb-5">
-        <div class="section-title mb-3">Write a Comments</div>
+        <div class="section-title-form">Write a Comments</div>
     </div>
   <div class="form-area">
    <form method="POST" id="comment_form">
@@ -36,7 +37,7 @@
     </div>
     <div class="form-group">
         <input type="hidden" name="comment_id" id="comment_id" value="0" />
-        <input type="submit" name="submit" id="submit" class="submitbtn" value="Submit Review"/>
+        <input type="submit" name="submit" id="submit" class="submitbtn mb-5" value="Submit Review"/>
     </div>
    </form>
   </div>
