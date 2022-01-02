@@ -15,17 +15,29 @@
   margin: auto;
 }
 #comment_name {
-  background-color: #e6e6e6;
+  width: 100%;
+  height: 40px;
+  text-indent: 20px;
 }
 #comment_content {
+  text-indent: 10px;
+  padding-top: 15px;
+}
+#comment_content,
+#comment_name {
   background-color: #e6e6e6;
-  border-radius: 10px;
+
+  border-radius: 7px;
+  border: none;
   color: #353434;
 }
-#comment_content::placeholder {
+#comment_content::placeholder,
+#comment_name::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #a2a2a2;
-  opacity: 1; /* Firefox */
+}
+#comment_name:focus {
+  outline: none;
 }
 .submitbtn {
   background-color: #21826e;
@@ -41,4 +53,19 @@
   font-size: 15px;
   margin-bottom: 20px;
   cursor: pointer;
+}
+.comment-card {
+  background: #ffffff;
+  box-shadow: 0px 2px 11px -3px #b5b5b5;
+  border-radius: 15px;
+}
+.reply-button {
+  margin-bottom: 25px;
+}
+.reply {
+  border: none;
+  background-color: #ffffff;
+  color: #21826e;
+  font-size: 13px;
+  font-weight: 600;
 }

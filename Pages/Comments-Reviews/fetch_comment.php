@@ -1,4 +1,5 @@
-<?php
+<link rel="stylesheet" href="comments.css" type="text/css">
+<?php 
 
 //fetch_comment.php
 
@@ -18,10 +19,10 @@ $result = $statement->fetchAll();
 $output = '';
 foreach ($result as $row) {
     $output .= '
- <div class="panel panel-default">
+ <div class="comment-card">
   <div class="panel-heading">By <b>' . $row["comment_sender_name"] . '</b> on <i>' . $row["date"] . '</i></div>
   <div class="panel-body">' . $row["comment"] . '</div>
-  <div class="panel-footer" align="right"><button type="button" class="btn btn-default reply" id="' . $row["comment_id"] . '">Reply</button></div>
+  <div class="reply-button" align="right"><button type="button" class="reply" id="' . $row["comment_id"] . '">Reply</button></div>
  </div>
  ';
     $output .= get_reply_comment($connect, $row["comment_id"]);
@@ -58,3 +59,4 @@ function get_reply_comment($connect, $parentId = 0, $marginleft = 0)
     }
     return $output;
 }
+
