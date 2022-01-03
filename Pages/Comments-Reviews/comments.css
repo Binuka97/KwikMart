@@ -61,6 +61,7 @@
 }
 .reply-button {
   margin-bottom: 25px;
+  padding: 0 25px 15px 30px;
 }
 .reply {
   border: none;

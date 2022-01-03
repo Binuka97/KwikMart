@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="comments.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <?php 
 
 //fetch_comment.php
@@ -22,7 +23,9 @@ foreach ($result as $row) {
  <div class="comment-card">
   <div class="panel-heading">By <b>' . $row["comment_sender_name"] . '</b> on <i>' . $row["date"] . '</i></div>
   <div class="panel-body">' . $row["comment"] . '</div>
-  <div class="reply-button" align="right"><button type="button" class="reply" id="' . $row["comment_id"] . '">Reply</button></div>
+  <div class="reply-button" align="right">
+    <button type="button" class="reply" id="' . $row["comment_id"] . '"><i class="fa fa-reply" aria-hidden="true" ></i> Reply</button>
+  </div>
  </div>
  ';
     $output .= get_reply_comment($connect, $row["comment_id"]);
