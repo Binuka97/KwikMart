@@ -20,13 +20,20 @@ $result = $statement->fetchAll();
 $output = '';
 foreach ($result as $row) {
     $output .= '
- <div class="comment-card">
-  <div class="panel-heading">By <b>' . $row["comment_sender_name"] . '</b> on <i>' . $row["date"] . '</i></div>
-  <div class="panel-body">' . $row["comment"] . '</div>
-  <div class="reply-button" align="right">
-    <button type="button" class="reply" id="' . $row["comment_id"] . '"><i class="fa fa-reply" aria-hidden="true" ></i> Reply</button>
-  </div>
- </div>
+    <div class="comment-card">
+        <div class="panel-heading">
+            <img
+            src="../../assets/images/comment-user.png"
+            class="comment-user"
+            alt="profile-picture"
+        />
+            <b class="commentor-name">' . $row["comment_sender_name"] . '</b> 
+        </div>
+    <div class="panel-body">' . $row["comment"] . '</div>
+    <div class="reply-button" align="right">
+        <button type="button" class="reply" id="' . $row["comment_id"] . '"><i class="fa fa-reply" aria-hidden="true" ></i> Reply</button>
+    </div>
+</div>
  ';
     $output .= get_reply_comment($connect, $row["comment_id"]);
 }
@@ -51,10 +58,18 @@ function get_reply_comment($connect, $parentId = 0, $marginleft = 0)
     if ($count > 0) {
         foreach ($result as $row) {
             $output .= '
-   <div class="panel panel-default" style="margin-left:' . $marginleft . 'px">
-    <div class="panel-heading">By <b>' . $row["comment_sender_name"] . '</b> on <i>' . $row["date"] . '</i></div>
-    <div class="panel-body">' . $row["comment"] . '</div>
-    <div class="panel-footer" align="right"><button type="button" class="btn btn-default reply" id="' . $row["comment_id"] . '">Reply</button></div>
+   <div class="reply-comment-card" style="margin-left:' . $marginleft . 'px">
+    <div class="panel-heading">
+    <img
+    src="../../assets/images/reply-comment-user.png"
+    class="comment-user"
+    alt="profile-picture"
+    />
+    <b>' . $row["comment_sender_name"] . '</b>
+    <div class="reply-panel-body">' . $row["comment"] . '</div>
+    <div class="reply-comment-button" align="right">
+        <button type="button" class="reply" id="' . $row["comment_id"] . '"><i class="fa fa-reply" aria-hidden="true" ></i> Reply</button>
+    </div>
    </div>
    ';
             $output .= get_reply_comment($connect, $row["comment_id"], $marginleft);

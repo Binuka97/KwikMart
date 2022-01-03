@@ -11,7 +11,7 @@
   margin-bottom: 15px;
 }
 .form-area {
-  width: 70%;
+  width: 60%;
   margin: auto;
 }
 #comment_name {
@@ -54,14 +54,18 @@
   margin-bottom: 20px;
   cursor: pointer;
 }
-.comment-card {
+.comment-card,
+.reply-comment-card {
   background: #ffffff;
   box-shadow: 0px 2px 11px -3px #b5b5b5;
   border-radius: 15px;
 }
+.reply-comment-card {
+  margin-bottom: 45px;
+}
 .reply-button {
   margin-bottom: 25px;
-  padding: 0 25px 15px 30px;
+  padding: 0 15px 15px 30px;
 }
 .reply {
   border: none;
@@ -69,4 +73,25 @@
   color: #21826e;
   font-size: 13px;
   font-weight: 600;
+}
+.comment-user {
+  width: 35px;
+  height: 35px;
+  margin-right: 14px;
+  margin-top: 15px;
+}
+.commentor-name {
+  color: #676767;
+}
+.panel-body {
+  color: #676767;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-left: 63px;
+}
+.reply-panel-body {
+  color: #676767;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-left: 60px;
 }
