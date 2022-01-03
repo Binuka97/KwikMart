@@ -28,8 +28,9 @@ foreach ($result as $row) {
             alt="profile-picture"
         />
             <b class="commentor-name">' . $row["comment_sender_name"] . '</b> 
-        </div>
+        
     <div class="panel-body">' . $row["comment"] . '</div>
+    </div>
     <div class="reply-button" align="right">
         <button type="button" class="reply" id="' . $row["comment_id"] . '"><i class="fa fa-reply" aria-hidden="true" ></i> Reply</button>
     </div>
@@ -65,7 +66,7 @@ function get_reply_comment($connect, $parentId = 0, $marginleft = 0)
     class="comment-user"
     alt="profile-picture"
     />
-    <b>' . $row["comment_sender_name"] . '</b>
+    <b class="commentor-name">' . $row["comment_sender_name"] . '</b>
     <div class="reply-panel-body">' . $row["comment"] . '</div>
     <div class="reply-comment-button" align="right">
         <button type="button" class="reply" id="' . $row["comment_id"] . '"><i class="fa fa-reply" aria-hidden="true" ></i> Reply</button>
