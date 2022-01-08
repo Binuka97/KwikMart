@@ -1,0 +1,35 @@
+.ui-bar-a {
+  background-color: transparent !important;
+  border: transparent !important;
+  text-align: center !important;
+}
+.category {
+  width: 480px;
+  border-radius: 60px;
+  filter: drop-shadow(0px 2px 11px #e2e2e2);
+}
+.bottom-left {
+  position: absolute;
+  background: rgba(33, 130, 110, 0.9);
+  border-radius: 0px 0px 15px 15px;
+  width: 350px;
+  height: 43px;
+  left: 25px;
+}
+
+.label-text {
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins-SemiBold", sans-serif;
+}
+
+/* stack all grids below 40em (640px) */
+@media all and (max-width: 35em) {
+  .my-breakpoint .ui-block-a,
+  .my-breakpoint .ui-block-b {
+    width: 100%;
+    float: none;
+  }
+}

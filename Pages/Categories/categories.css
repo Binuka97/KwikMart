@@ -2,7 +2,7 @@
 @import url("../assets/fonts/Poppins-SemiBold.ttf");
 
 .category {
-  width: 370px;
+  width: 470px;
   border-radius: 50px;
 }
 
@@ -22,7 +22,7 @@
   position: absolute;
   background: rgba(33, 130, 110, 0.9);
   border-radius: 0px 0px 15px 15px;
-  width: 350px;
+  width: 449px;
   height: 43px;
   bottom: 11px;
   left: 25px;

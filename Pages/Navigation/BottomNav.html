@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Hamburger Menu</title>
+    <title>Bottom Navigation</title>
     <link rel="stylesheet" href="bottomNav.css" />
     <link
       rel="stylesheet"
@@ -16,35 +16,37 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   </head>
   <body>
-    <nav class="nav">
-      <a href="#" class="nav__link">
-        <img
-          src="../../assets/icons/home.png"
-          class="nav-icons-home"
-          alt="home"
-        />
-      </a>
-      <a href="#" class="nav__link nav__link--active">
-        <img
-          src="../../assets/icons/favourite.png"
-          class="nav-icons-fav"
-          alt="favourite"
-        />
-      </a>
-      <a href="#" class="nav__link">
-        <img
-          src="../../assets/icons/cart.png"
-          class="nav-icons-cart"
-          alt="cart"
-        />
-      </a>
-      <a href="#" class="nav__link">
-        <img
-          src="../../assets/icons/user.png"
-          class="nav-icons-user"
-          alt="user"
-        />
-      </a>
-    </nav>
+    <div data-role="footer" data-position="fixed">
+      <nav class="nav">
+        <a href="#" class="nav__link">
+          <img
+            src="../../assets/icons/home.png"
+            class="nav-icons-home"
+            alt="home"
+          />
+        </a>
+        <a href="#" class="nav__link nav__link--active">
+          <img
+            src="../../assets/icons/favourite.png"
+            class="nav-icons-fav"
+            alt="favourite"
+          />
+        </a>
+        <a href="#" class="nav__link">
+          <img
+            src="../../assets/icons/cart.png"
+            class="nav-icons-cart"
+            alt="cart"
+          />
+        </a>
+        <a href="#" class="nav__link">
+          <img
+            src="../../assets/icons/user.png"
+            class="nav-icons-user"
+            alt="user"
+          />
+        </a>
+      </nav>
+    </div>
   </body>
 </html>

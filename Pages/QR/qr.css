@@ -1,6 +1,7 @@
 @import url("../assets/fonts/Poppins-Medium.ttf");
 @import url("../assets/fonts/Poppins-SemiBold.ttf");
 .category-title {
+  padding-top: 20px;
   font-size: 30px;
   font-weight: 650;
   color: #676767;
@@ -18,6 +19,7 @@
 
 .caption-one,
 .caption-three,
+.caption-three-last,
 .caption-two {
   text-align: center;
   color: #676767;
@@ -29,10 +31,13 @@
   font-weight: 500;
 }
 
-.caption-three {
+.caption-three,
+.caption-three-last {
   font-size: 25px;
 }
-
+.caption-three-last{
+  padding-bottom: 20px;
+}
 .ui-content {
   text-align: center;
 }
