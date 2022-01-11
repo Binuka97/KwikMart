@@ -1,7 +1,7 @@
 @import url("../assets/fonts/Poppins-Medium.ttf");
 @import url("../assets/fonts/Poppins-SemiBold.ttf");
 
-.navbar {
+.navbar-header {
   background-color: #ffffff;
   filter: drop-shadow(9px 2px 9px rgba(198, 198, 198, 0.24));
   border: none;
@@ -9,17 +9,17 @@
   height: 83px;
 }
 
-.navbar a {
+.navbar-header .hamburger-icon {
   float: left;
   display: block;
   color: #21826e;
   text-align: center;
-  padding: 30px 16px;
+  padding: 0px 16px;
   text-decoration: none;
   font-size: 28px;
 }
-.navbar ul {
-  margin: 8px 0 0 0;
+.navbar-header ul {
+  margin: 5px 0 0 0;
   list-style: none;
 }
 .logo-header {
@@ -41,7 +41,7 @@
   transition: 0.5s;
 }
 
-.side-nav a,
+.side-nav .menu-icon,
 .btn-close {
   padding: 10px 10px 30px 30px;
   cursor: pointer;
@@ -54,7 +54,7 @@
   font-family: "Poppins-Medium", sans-serif;
 }
 
-.side-nav a:hover {
+.side-nav .menu-icon:hover {
   background-color: #494949;
   height: 10px;
   margin-right: 10px;

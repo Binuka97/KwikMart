@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="qr.css" />
     <link rel="stylesheet" href="../Navigation/navigation.css" />
     <link rel="stylesheet" href="../Navigation/bottomNav.css" />
@@ -25,10 +26,66 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
   </head>
-  <body>
-    <div data-role="header" data-position="fixed">
-      <h4>header</h4>
+  <div data-role="header" data-position="fixed">
+    <nav class="navbar-header">
+      <span class="open-slide">
+        <p href="#" class="hamburger-icon" onclick="openSlideMenu()">
+          <i class="fa fa-bars"></i>
+        </p>
+      </span>
+      <ul>
+        <img
+          src="../../assets/images/logo1.png"
+          class="logo-header"
+          alt="logocolored"
+        />
+      </ul>
+    </nav>
+    <div id="side-menu" class="side-nav">
+      <div class="btn-close" onclick="closeSlideMenu()">&times;</div>
+      <div href="#" class="menu-icon">
+        <i class="fas fa-home icons"></i>Home
+      </div>
+      <div href="#" class="menu-icon">
+        <i class="fas fa-th-list icons"></i>Categories
+      </div>
+      <div href="#" class="menu-icon">
+        <i class="fas fa-heart icons"></i>Favourites
+      </div>
+      <div href="#" class="menu-icon">
+        <i class="fas fa-shopping-cart icons"></i>Cart
+      </div>
+      <div href="#" class="menu-icon">
+        <i class="fa fa-percent icons"></i>Promotions
+      </div>
+      <div href="#" class="menu-icon">
+        <i class="fas fa-gamepad icons"></i>Games
+      </div>
+      <div href="#" class="menu-icon">
+        <i class="fa fa-address-card icons"></i>About Us
+      </div>
+      <div href="#" class="menu-icon">
+        <i class="fa fa-qrcode icons"></i>Scan Me
+      </div>
+      <div href="#" class="menu-icon">
+        <i class="fa fa-user icons"></i>Account
+      </div>
+      <div href="#" class="menu-icon">
+        <i class="fa fa-power-off icons"></i>Sign out
+      </div>
     </div>
+
+    <script>
+      function openSlideMenu() {
+        document.getElementById("side-menu").style.width = "250px";
+      }
+
+      function closeSlideMenu() {
+        document.getElementById("side-menu").style.width = "0px";
+      }
+    </script>
+  </div>
+  <body>
     <div>
       <div class="container col-12 col-xs-12 mb-5">
         <div class="col-12 col-xs-12 d-flex justify-content-center">
