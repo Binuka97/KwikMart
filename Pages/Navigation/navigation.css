@@ -8,6 +8,19 @@
   height: 93px;
 }
 
+.navbar a {
+  float: left;
+  display: block;
+  color: #21826E;
+  text-align: center;
+  padding: 30px 16px;
+  text-decoration: none;
+  font-size: 28px;
+}
+.navbar ul{
+  margin: 8px 0 0 0;
+  list-style: none;
+}
 .logo {
   width: 79px;
   height: 79px;
@@ -22,14 +35,15 @@
   top: 0;
   left: 0;
   background-color: #0f0f0f;
-  opacity: 0.9;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
 }
 
-.side-nav a {
+.side-nav a,
+.btn-close {
   padding: 10px 10px 30px 30px;
+  cursor: pointer;
   margin-left: 20px;
   text-decoration: none;
   font-size: 18px;
@@ -40,9 +54,18 @@
 }
 
 .side-nav a:hover {
+  background-color: #494949;
+  height: 10px;
+  margin-right: 10px;
 }
 
-.side-nav .btn-close {
+.side-nav a::selection {
+  background-color: #494949;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.btn-close {
   position: absolute;
   top: 0;
   right: 22px;
@@ -50,6 +73,7 @@
   margin-left: 50px;
   background-color: none;
 }
+
 .icons {
   font-size: 20px;
   margin-right: 20px;
@@ -57,6 +81,6 @@
 
 @media (max-width: 568px) {
   .logo {
-    display: none;
+    float: right;
   }
 }
