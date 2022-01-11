@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Hamburger Menu</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive navigation</title>
     <link rel="stylesheet" href="navigation.css" />
     <link
       rel="stylesheet"
@@ -10,52 +12,45 @@
     />
   </head>
   <body>
-    <input type="checkbox" id="check" />
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-      <img
-        src="../assets/images/logo-light.png"
-        class="nav-logo"
-        alt="Italian Trulli"
-      />
-      <ul>
-        <li>
-          <a href="#"><i class="fas fa-home"></i>Home</a>
-        </li>
-        <li>
-          <a href="../Pages/Categories/Categories.html"
-            ><i class="fas fa-th-list"></i>Categories</a
-          >
-        </li>
-        <li>
-          <a href="#"><i class="fas fa-heart"></i>Favourites</a>
-        </li>
-        <li>
-          <a href="#"><i class="fas fa-shopping-cart"></i>Cart</a>
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-percent"></i>Promotions</a>
-        </li>
-        <li>
-          <a href="#"><i class="fas fa-gamepad"></i>Games</a>
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-address-card"></i>About Us</a>
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-qrcode"></i>Scan Me</a>
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-user"></i>Account</a>
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-power-off"></i>Sign out</a>
-        </li>
-      </ul>
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+          <img
+            src="../../assets/images/Ham-burger.png"
+            class="hamburger-menu"
+            alt="Menu"
+          />
+        </a>
+      </span>
+      <img src="../../assets/images/logo1.png" class="logo" alt="logocolored" />
+    </nav>
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <a href="#"> <i class="fas fa-home icons"></i>Home</a>
+      <a href="#"> <i class="fas fa-th-list icons"></i>Categories</a>
+      <a href="#"> <i class="fas fa-heart icons"></i>Favourites</a>
+      <a href="#"> <i class="fas fa-shopping-cart icons"></i>Cart</a>
+      <a href="#"> <i class="fa fa-percent icons"></i>Promotions</a>
+      <a href="#"> <i class="fas fa-gamepad icons"></i>Games</a>
+      <a href="#"> <i class="fa fa-address-card icons"></i>About Us</a>
+      <a href="#"> <i class="fa fa-qrcode icons"></i>Scan Me</a>
+      <a href="#"> <i class="fa fa-user icons"></i>Account</a>
+      <a href="#"> <i class="fa fa-power-off icons"></i>Sign out</a>
     </div>
-    <section></section>
+    <div id="main">
+      <h1>Responsive content</h1>
+    </div>
+
+    <script>
+      function openSlideMenu() {
+        document.getElementById("side-menu").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeSlideMenu() {
+        document.getElementById("side-menu").style.width = "0px";
+        document.getElementById("main").style.marginLeft = "0px";
+      }
+    </script>
   </body>
 </html>

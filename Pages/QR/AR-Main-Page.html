@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="qr.css" />
+    <link rel="stylesheet" href="../Navigation/bottomNav.css" />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -24,8 +25,8 @@
       <div data-role="header" data-position="fixed">
         <h4>Header page AR</h4>
       </div>
-      <div class="container col-12 mb-5">
-        <div class="col-12 d-flex justify-content-center">
+      <div class="container col-12 col-xs-12 mb-5">
+        <div class="col-12 col-xs-12 d-flex justify-content-center">
           <div class="category-back-icon">
             <i class="fa fa-arrow-left"></i>
           </div>
@@ -49,13 +50,42 @@
           <div class="caption-three">
             Scan the Hiro Mark and get jaw-dropping discounts
           </div>
-          <div class="caption-three">during your next purchase</div>
+          <div class="caption-three-last">during your next purchase</div>
         </div>
       </div>
     </div>
   </body>
   <div data-role="footer" data-position="fixed">
-    <h4>Footer</h4>
+    <nav class="nav">
+      <a href="#" class="nav__link">
+        <img
+          src="../../assets/icons/home.png"
+          class="nav-icons-home"
+          alt="home"
+        />
+      </a>
+      <a href="#" class="nav__link nav__link--active">
+        <img
+          src="../../assets/icons/favourite.png"
+          class="nav-icons-fav"
+          alt="favourite"
+        />
+      </a>
+      <a href="#" class="nav__link">
+        <img
+          src="../../assets/icons/cart.png"
+          class="nav-icons-cart"
+          alt="cart"
+        />
+      </a>
+      <a href="#" class="nav__link">
+        <img
+          src="../../assets/icons/user.png"
+          class="nav-icons-user"
+          alt="user"
+        />
+      </a>
+    </nav>
   </div>
   <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
   <script type="text/javascript"></script>
