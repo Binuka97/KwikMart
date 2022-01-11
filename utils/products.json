@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "name": "Tomato - 1kg",
+        "price": "Rs.40.00",
+        "description": "This is a good tomato",
+        "image": "assets/images/Bakery.png"
+    },
+    {
+        "id": "2",
+        "name": "Orange - 1kg",
+        "price": "Rs.40.00",
+        "description": "This is a good tomato",
+        "image": "assets/images/Bakery.png"
+    },
+    {
+        "id": "3",
+        "name": "Banana - 1kg",
+        "price": "Rs.40.00",
+        "description": "This is a good tomato",
+        "image": "assets/images/Bakery.png"
+    },
+    {
+        "id": "4",
+        "name": "Carrot - 1kg",
+        "price": "Rs.40.00",
+        "description": "This is a good tomato",
+        "image": "assets/images/Bakery.png"
+    },
+    {
+        "id": "5",
+        "name": "Apple - 1kg",
+        "price": "Rs.40.00",
+        "description": "This is a good tomato",
+        "image": "assets/images/Bakery.png"
+    }
+]
