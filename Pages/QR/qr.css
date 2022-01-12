@@ -51,7 +51,32 @@
   display: block;
   color: #21826e;
   text-align: center;
-  padding: 28px 16px;
+  padding: 28px 25px;
   text-decoration: none;
   font-size: 28px;
+}
+
+@media (max-width: 812px) {
+  .caption-one {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .caption-three,
+  .caption-three-last {
+    font-size: 18px;
+  }
+
+  .click-qr {
+    width: 150px;
+    height: 150px;
+  }
+  .caption-one,
+  .caption-three,
+  .caption-three-last,
+  .caption-two {
+    text-align: center;
+    color: #676767;
+    font-family: "Poppins-Medium", sans-serif;
+  }
 }
