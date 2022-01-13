@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Categories</title>
-    <link rel="stylesheet" href="categories.css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Jquery mobile -->
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -17,115 +25,157 @@
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
+    />
+    <link rel="stylesheet" href="categories.css" />
+
+    <title>bootstrap card gallery</title>
   </head>
   <body>
-    <div>
-      <div data-role="header" data-position="fixed">
-        <h4>Header page AR</h4>
-      </div>
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="category-back-icon">
-            <i class="fa fa-arrow-left"></i>
-          </div>
-          <div class="category-title">All Categories</div>
-        </div>
-        <div class="row justify-content-around">
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/Vegetables.png"
-              class="category"
-              alt="vegetables"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Vegetables</p>
-            </div>
-          </div>
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/Fruits.png"
-              class="category"
-              alt="fruits"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Fruits</p>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-around">
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/Bakery.png"
-              class="category"
-              alt="bakery"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Bakery</p>
-            </div>
-          </div>
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/Beauty.png"
-              class="category"
-              alt="beauty"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Beauty</p>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-around">
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/seafood.png"
-              class="category"
-              alt="seafood"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Seafood</p>
-            </div>
-          </div>
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/spices.png"
-              class="category"
-              alt="spices"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Spices</p>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-around">
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/meat.png"
-              class="category"
-              alt="meat"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Meat</p>
-            </div>
-          </div>
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/stationery.png"
-              class="category"
-              alt="stationary"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Stationary</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div data-role="header" data-position="fixed">
+      <h4>Header page AR</h4>
     </div>
+    <div class="container col-9 topic-container topic mb-1 mt-5">
+      <span class="d-inline-block float-left">
+        <a href="C:/xampp/htdocs/KwikMart/KwikMart/Pages/Categories/Home.html">
+          <i class="fa fa-arrow-left qr-back-icon" aria-hidden="true"></i
+        ></a>
+      </span>
+      <span class="d-flex justify-content-center qr-title">Scan Me</span>
+    </div>
+    <section class="gallery-block cards-gallery">
+      <div class="container category-container">
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img
+                  src="../../assets/images/Vegetables.png"
+                  class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Vegetables</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img src="../../assets/images/Fruits.png" class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Fruits</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img src="../../assets/images/Bakery.png" class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Bakery</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img src="../../assets/images/Beauty.png" class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Beauty</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img
+                  src="../../assets/images/seafood.png"
+                  class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Seafood</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img src="../../assets/images/spices.png" class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Spices</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img src="../../assets/images/meat.png" class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Meat</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img
+                  src="../../assets/images/stationery.png"
+                  class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Stationery</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div data-role="footer" data-position="fixed">
+      <h4>Footer</h4>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+      baguetteBox.run(".cards-gallery", { animation: "slideIn" });
+    </script>
   </body>
-  <div data-role="footer" data-position="fixed">
-    <h4>Footer</h4>
-  </div>
 </html>
