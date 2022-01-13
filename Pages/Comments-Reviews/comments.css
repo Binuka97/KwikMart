@@ -26,7 +26,6 @@
 #comment_content,
 #comment_name {
   background-color: #e6e6e6;
-
   border-radius: 7px;
   border: none;
   color: #353434;
@@ -63,10 +62,12 @@
 .reply-comment-card {
   margin-bottom: 45px;
 }
-.reply-button {
+.reply-button,
+ .reply-comment-button {
   margin-bottom: 25px;
   padding: 0 15px 15px 30px;
 }
+
 .reply {
   border: none;
   background-color: #ffffff;
