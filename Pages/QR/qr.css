@@ -1,14 +1,23 @@
 @import url("../assets/fonts/Poppins-Medium.ttf");
 @import url("../assets/fonts/Poppins-SemiBold.ttf");
-.category-title {
-  padding-top: 20px;
+
+.qr-title {
   font-size: 30px;
   font-weight: 650;
   color: #676767;
   font-family: "Poppins-SemiBold", sans-serif;
 }
+.qr-back-icon {
+  font-size: 30px;
+  color: #21826e;
+  cursor: pointer;
+}
+.topic-header {
+  margin-top: 20px;
+}
 
-.logo-container {
+.logo-container,
+.logo-colored {
   text-align: center;
 }
 
@@ -51,7 +60,60 @@
   display: block;
   color: #21826e;
   text-align: center;
-  padding: 28px 16px;
+  padding: 28px 25px;
   text-decoration: none;
   font-size: 28px;
+}
+
+@media (max-width: 812px) {
+  .caption-one {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .caption-three,
+  .caption-three-last {
+    font-size: 18px;
+  }
+
+  .click-qr {
+    width: 150px;
+    height: 150px;
+  }
+  .caption-one,
+  .caption-three,
+  .caption-three-last,
+  .caption-two {
+    text-align: center;
+    color: #676767;
+    font-family: "Poppins-Medium", sans-serif;
+  }
+}
+@media (height: 1024px) {
+  .topic-header {
+    margin-top: 30px;
+  }
+
+  .caption-one {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .caption-three,
+  .caption-three-last {
+    font-size: 25px;
+  }
+
+  .click-qr {
+    width: 200px;
+    height: 200px;
+  }
+  .caption-one,
+  .caption-three,
+  .caption-three-last,
+  .caption-two {
+    text-align: center;
+    color: #676767;
+    font-family: "Poppins-Medium", sans-serif;
+  }
 }
