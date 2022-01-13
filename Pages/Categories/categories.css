@@ -1,6 +1,17 @@
 @import url("../assets/fonts/Poppins-Medium.ttf");
 @import url("../assets/fonts/Poppins-SemiBold.ttf");
 
+/* header styling code */
+.navbar-header .hamburger-icon-qr {
+  float: left;
+  display: block;
+  color: #21826e;
+  text-align: center;
+  padding: 28px 25px;
+  text-decoration: none;
+  font-size: 28px;
+}
+
 .qr-title {
   font-size: 30px;
   font-weight: 650;
@@ -14,7 +25,7 @@
 }
 
 .gallery-block {
-  padding-bottom: 25px;
+  padding-bottom: 60px;
   padding-top: 25px;
 }
 

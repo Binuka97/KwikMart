@@ -7,6 +7,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="stylesheet" href="categories.css" />
+    <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+    <link rel="stylesheet" href="../Navigation/navigation.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -34,15 +37,70 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
     />
-    <link rel="stylesheet" href="categories.css" />
 
     <title>bootstrap card gallery</title>
   </head>
   <body>
     <div data-role="header" data-position="fixed">
-      <h4>Header page AR</h4>
+      <nav class="navbar-header">
+        <span class="open-slide">
+          <p href="#" class="hamburger-icon-qr" onclick="openSlideMenu()">
+            <i class="fa fa-bars"></i>
+          </p>
+        </span>
+        <ul>
+          <img
+            src="../../assets/images/logo1.png"
+            class="logo-header"
+            alt="logocolored"
+          />
+        </ul>
+      </nav>
+      <div id="side-menu" class="side-nav">
+        <div class="btn-close" onclick="closeSlideMenu()">&times;</div>
+        <div href="#" class="menu-icon">
+          <i class="fas fa-home icons"></i>Home
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fas fa-th-list icons"></i>Categories
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fas fa-heart icons"></i>Favourites
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fas fa-shopping-cart icons"></i>Cart
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fa fa-percent icons"></i>Promotions
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fas fa-gamepad icons"></i>Games
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fa fa-address-card icons"></i>About Us
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fa fa-qrcode icons"></i>Scan Me
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fa fa-user icons"></i>Account
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fa fa-power-off icons"></i>Sign out
+        </div>
+      </div>
+
+      <script>
+        function openSlideMenu() {
+          document.getElementById("side-menu").style.width = "300px";
+        }
+
+        function closeSlideMenu() {
+          document.getElementById("side-menu").style.width = "0px";
+        }
+      </script>
     </div>
-    <div class="container col-9 topic-container topic mb-1 mt-5">
+    <div class="container col-9 topic-container topic mb-1 mt-4">
       <span class="d-inline-block float-left">
         <a href="C:/xampp/htdocs/KwikMart/KwikMart/Pages/Categories/Home.html">
           <i class="fa fa-arrow-left qr-back-icon" aria-hidden="true"></i
@@ -154,7 +212,36 @@
       </div>
     </section>
     <div data-role="footer" data-position="fixed">
-      <h4>Footer</h4>
+      <nav class="nav">
+        <a href="#" class="nav__link">
+          <img
+            src="../../assets/icons/home.png"
+            class="nav-icons-home"
+            alt="home"
+          />
+        </a>
+        <a href="#" class="nav__link nav__link--active">
+          <img
+            src="../../assets/icons/favourite.png"
+            class="nav-icons-fav"
+            alt="favourite"
+          />
+        </a>
+        <a href="#" class="nav__link">
+          <img
+            src="../../assets/icons/cart.png"
+            class="nav-icons-cart"
+            alt="cart"
+          />
+        </a>
+        <a href="#" class="nav__link">
+          <img
+            src="../../assets/icons/user.png"
+            class="nav-icons-user"
+            alt="user"
+          />
+        </a>
+      </nav>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
