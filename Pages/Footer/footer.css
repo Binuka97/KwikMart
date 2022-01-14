@@ -16,7 +16,11 @@
   background-color: #252525;
   padding: 80px 0;
 }
-
+.logo-footer{
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
 .segment-two .topic-content::before,
 .segment-three .topic-content::before,
 .segment-four .topic-content::before {
