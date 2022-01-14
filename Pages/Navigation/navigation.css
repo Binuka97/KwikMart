@@ -35,7 +35,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #0f0f0f;
+  background-color: #252525;
   overflow-x: hidden;
   padding-top: 70px;
   transition: 0.5s;
@@ -68,8 +68,8 @@
   background-color: none;
 }
 
-.icons {
-  font-size: 20px;
+.icons,.menu-icon {
+  font-size: 30px;
   margin-right: 20px;
 }
 
