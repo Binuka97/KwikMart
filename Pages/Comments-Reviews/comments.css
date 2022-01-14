@@ -63,11 +63,10 @@
   margin-bottom: 45px;
 }
 .reply-button,
- .reply-comment-button {
+.reply-comment-button {
   margin-bottom: 25px;
   padding: 0 15px 15px 30px;
 }
-
 .reply {
   border: none;
   background-color: #ffffff;
