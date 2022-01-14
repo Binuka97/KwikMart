@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="qr.css" />
     <link rel="stylesheet" href="../Navigation/navigation.css" />
     <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+    <link rel="stylesheet" href="../Footer/footer.css" />
     <!-- Bootstrap CSS -->
+
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -23,7 +25,7 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <div data-role="header" data-position="fixed">
@@ -44,22 +46,22 @@
     <div id="side-menu" class="side-nav">
       <div class="btn-close" onclick="closeSlideMenu()">&times;</div>
       <div href="#" class="menu-icon">
-        <i class="fas fa-home icons"></i>Home
+        <i class="fa fa-home icons"></i>Home
       </div>
       <div href="#" class="menu-icon">
-        <i class="fas fa-th-list icons"></i>Categories
+        <i class="fa fa-th-list icons"></i>Categories
       </div>
       <div href="#" class="menu-icon">
-        <i class="fas fa-heart icons"></i>Favourites
+        <i class="fa fa-heart icons"></i>Favourites
       </div>
       <div href="#" class="menu-icon">
-        <i class="fas fa-shopping-cart icons"></i>Cart
+        <i class="fa fa-shopping-cart icons"></i>Cart
       </div>
       <div href="#" class="menu-icon">
         <i class="fa fa-percent icons"></i>Promotions
       </div>
       <div href="#" class="menu-icon">
-        <i class="fas fa-gamepad icons"></i>Games
+        <i class="fa fa-gamepad icons"></i>Games
       </div>
       <div href="#" class="menu-icon">
         <i class="fa fa-address-card icons"></i>About Us
@@ -88,7 +90,7 @@
   <body>
     <div class="container col-12 col-xs-12 mb-5">
       <div class="topic mt-4">
-        <span class="d-inline-block float-left">
+        <span class="d-inline-block float-left qr-back-icon">
           <a
             href="C:/xampp/htdocs/KwikMart/KwikMart/Pages/Categories/Home.html"
           >
@@ -119,6 +121,65 @@
       </div>
     </div>
   </body>
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12 segment-one">
+            <img
+              src="../../assets/images/logo-light.png"
+              class="logo-footer"
+              alt="light-logo"
+            />
+            <p class="content">
+              Our pioneer venture into modern trade in 1983 was a unique
+              innovation of our company's longstanding trading legacy. We
+              continued to challenge the norm by revolutionizing what was
+              traditionally an affluent affair by offering products of a higher
+              value for the lowest prices.
+            </p>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 segment-two">
+            <h2 class="topic-content">Links</h2>
+            <ul>
+              <p class="link" href="#">Home</p>
+              <p class="link" href="#">Scan Me</p>
+              <p class="link" href="#">Reviews</p>
+              <p class="link" href="#">Categories</p>
+              <p class="link" href="#">About us</p>
+              <p class="link" href="#">Help</p>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 segment-three">
+            <h2 class="topic-content">Follow Us</h2>
+            <p class="content">
+              Questions or Feedbacks? We'd love to hear from you. Please follow
+              us on our social media profiles in order to keep updated
+            </p>
+            <div class="icons" href="#"><i class="fa fa-facebook"></i></div>
+            <div class="icons" href="#"><i class="fa fa-twitter"></i></div>
+            <div class="icons" href="#"><i class="fa fa-linkedin"></i></div>
+            <div class="icons" href="#"><i class="fa fa-pinterest"></i></div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 segment-four">
+            <h2 class="topic-content">Our Newsletters</h2>
+            <p class="content">
+              Questions or Feedbacks? We'd love to hear from you. Please follow
+              us on our social media profiles in order to keep updated
+            </p>
+            <form action="" class="form-area">
+              <span class="email-field"></span>
+              <span class="submit-button">Subscribe</span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="footer-bottom-text">
+      Copy right 2022 by KwikMart Grocery Store | All rights reserved
+    </p>
+  </footer>
+
   <div data-role="footer" data-position="fixed">
     <nav class="nav">
       <a href="#" class="nav__link">
