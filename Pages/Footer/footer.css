@@ -1,14 +1,16 @@
-@import url("../assets/fonts/Poppins-Medium.ttf");
-@import url("../assets/fonts/Poppins-Regular.ttf");
+@import url("../../assets/fonts/Poppins-Medium.ttf");
+@import url("../../assets/fonts/Poppins-Regular.ttf");
+@import url("../../assets/fonts/Poppins-Light.ttf");
 
 .content {
   color: #ffffff;
-  font-family: "Poppins-Regular", sans-serif;
+  font-family: "Poppins-Light", sans-serif;
   line-height: 25px;
 }
 .topic-content {
   color: #ffffff;
   font-size: 17px;
+  font-family: "Poppins-Medium", sans-serif;
 }
 .footer-top {
   background-color: #252525;
@@ -29,11 +31,11 @@
   list-style: none;
 }
 
-.segment-two ul li {
+.segment-two ul .link {
   line-height: 30px;
 }
 
-.segment-two ul li a {
+.segment-two ul .link {
   color: #ffffff;
   text-decoration: none;
 }
@@ -45,22 +47,35 @@
   font-family: "Poppins-Medium", sans-serif;
 }
 
-.segment-three a i {
+.segment-three .icons i {
+  display: flex;
+  float: left;
   font-size: 20px;
   color: #ffffff;
   padding: 10px 12px;
 }
 
-.segment-four form input[type="submit"] {
+.submit-button {
   background: #f1862c;
   border: none;
-  padding: 3px 9px;
+  border-radius: 0 5px 5px 0;
+  padding: 8px 9px;
   margin-left: -5px;
   color: #ffffff;
+}
+.email-field {
+  background-color: #ffffff;
+  border-radius: 5px 0 0 5px;
+  padding: 8px 80px;
+  border: none;
+}
+.form-area {
+  margin-top: 20px;
 }
 .footer-bottom-text {
   text-align: center;
   background: #414141;
   line-height: 50px;
-  color: #757575;
+  color: #fafafa;
+  margin-bottom: 50px;
 }
