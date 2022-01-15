@@ -24,7 +24,7 @@
   margin-bottom: 15px;
 }
 .form-area {
-  width: 60%;
+  width: 70%;
   margin: auto;
 }
 #comment_name {
@@ -63,9 +63,10 @@
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
+  margin-bottom: 70px;
   cursor: pointer;
 }
-.btn-content{
+.btn-content {
   margin-bottom: 30px;
 }
 .comment-card,
@@ -82,12 +83,18 @@
   margin-bottom: 25px;
   padding: 0 15px 15px 30px;
 }
+
 .reply {
   border: none;
   background-color: #ffffff;
   color: #21826e;
+  cursor: pointer;
   font-size: 13px;
   font-weight: 600;
+}
+.reply:focus{
+  transition: opacity .3s ease-in-out;
+  outline: none;
 }
 .comment-user {
   width: 35px;
@@ -109,4 +116,8 @@
   font-size: 14px;
   line-height: 1.5;
   margin-left: 55px;
+}
+
+.panel-heading {
+  padding-left: 20px;
 }

@@ -15,19 +15,13 @@
     />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
-    <!--  -->
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
@@ -103,7 +97,7 @@
         <br />
         <div id="display_comment"></div>
       </div>
-      <div class="form-area mb-5">
+      <div class="form-area mb-3">
         <div class="section-title-form">Write a Comment</div>
       </div>
       <div class="form-area">
@@ -114,18 +108,15 @@
           <div class="form-group">
             <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Your Comment" rows="8"></textarea>
           </div>
-          <div class="form-group">
+          <div class="form-group ">
             <input type="hidden" name="comment_id" id="comment_id" value="0" />
-            <div class="btn-content">
-
-              <input type="submit" name="submit" id="submit" class="submitbtn mb-5" value="Add a comment"/>
-            </div>
+              <input type="submit" name="submit" id="submit" class="submitbtn " value="Add a comment"/>
           </div>
         </form>
       </div>
   </div>
  </body>
- <div data-role="footer" data-position="fixed">
+ <div data-role="footer" data-position="fixed" class="footer-conatiner">
     <nav class="nav">
       <a href="#" class="nav__link">
         <img
