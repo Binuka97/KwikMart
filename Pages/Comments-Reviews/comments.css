@@ -1,6 +1,9 @@
 @import url("../../assets/fonts/Poppins-SemiBold.ttf");
 @import url("../../assets/fonts/Poppins-Regular.ttf");
 
+body{
+  background-color: #F8F8F8;
+}
 /* header styling code */
 .navbar-header .hamburger-icon-qr {
   float: left;

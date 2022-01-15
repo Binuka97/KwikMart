@@ -90,7 +90,7 @@
     <div>
       <div>POI AREA</div>
       <div class="form-area">
-        <div class="section-title mb-3">Reviews</div>
+        <div class="section-title mb-2">Reviews</div>
       </div>
       <div class="form-area">
         <span id="comment_message"></span>
