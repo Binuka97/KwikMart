@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Favourites</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="favourites.css" />
-    <link rel="stylesheet" href="../Navigation/navigation.css" />
-    <link rel="stylesheet" href="../Navigation/bottomNav.css" />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <!-- the three things that jQuery Mobile needs to work -->
-    <link
-      rel="stylesheet"
-      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Favourites</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="favourites.css" />
+  <link rel="stylesheet" href="../Navigation/navigation.css" />
+  <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <!-- the three things that jQuery Mobile needs to work -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <div data-role="header" data-position="fixed">
@@ -36,11 +27,7 @@
       </p>
     </span>
     <ul>
-      <img
-        src="../../assets/images/logo1.png"
-        class="logo-header"
-        alt="logocolored"
-      />
+      <img src="../../assets/images/logo1.png" class="logo-header" alt="logocolored" />
     </ul>
   </nav>
   <div id="side-menu" class="side-nav">
@@ -87,70 +74,79 @@
     }
   </script>
 </div>
+
 <body>
-  <div>
-    <div class="container col-12 col-xs-12 mb-5">
-      <div class="col-12 col-xs-12 d-flex justify-content-center">
-        <div class="category-back-icon">
-          <i class="fa fa-arrow-left"></i>
-        </div>
-        <div class="category-title">Scan Me</div>
-      </div>
-      <div>
-        <div class="logo-container">
-          <img
-            src="../../assets/images/logo1.png"
-            class="logo-colored"
-            alt="colored-logo"
-          />
-        </div>
-        <div class="caption-one">Don't Miss the Chance!</div>
-        <div class="caption-one">Touch on the QR code to proceed</div>
-        <div role="main" class="ui-content mb-1 mt-1">
-          <a href="ARpage_plane.html" rel="external">
-            <img src="../../assets/images/qrCode1.png" class="click-qr" />
-          </a>
-        </div>
-        <div class="caption-three">
-          Scan the Hiro Mark and get jaw-dropping discounts
-        </div>
-        <div class="caption-three-last">during your next purchase</div>
-      </div>
+  <script type="text/javascript" src="./favourites.js"></script>
+  <div class="container col-12 col-xs-12 mb-5">
+    <div class="topic mt-4">
+      <span class="d-inline-block float-left">
+        <a href="C:/xampp/htdocs/KwikMart/KwikMart/Pages/Categories/Home.html">
+          <i class="fa fa-arrow-left qr-back-icon" aria-hidden="true"></i></a>
+      </span>
+      <span class="d-flex justify-content-center qr-title">My Favourites</span>
     </div>
+
+    <!-- <div style="padding-top: 40px;">
+      <input type="checkbox" id="favcheckbox">
+      <h4 id="isvisible" class="selectall">Select All</h4>
+  </div> -->
+
+    <div style="padding-top: 40px;">
+      <!-- <label class="select-all-checkbox"> -->
+      <label class="float-left select-all-checkbox">
+        <input class="select-all" id="select-all" type="checkbox" data-role="none">
+        <span class="checkmark"></span>
+        <p id="checkbox-label"> Select All</p>
+      </label>
+      <img src="../../assets/icons/delete.png" class="float-right" />
+      <div class="clear"></div>
+    </div>
+
+    <div class="products">
+      <ul class="favourite-products" id="favourite-products">
+      </ul>
+    </div>
+
+  </div>
+  <div class="share-favourites text-center"><span>Share Favourites</span></div>
+
+
+  <!-- <div class="hover_bkgr_fricc">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton">&times;</div>
+            <label for="fields">Email</label>
+            <input id="email" name="email" type="text" id="email" required>
+            <label for="fields">Add in your customised message!</label>
+            <input id="message" name="message" type="text" value="" required>
+            <button class="button" id="button2" onclick="sendEmail()">Share via email</button>
+
+        </div>
+    </div> -->
+
+
+  <div>
+
+  </div>
   </div>
 </body>
 <div data-role="footer" data-position="fixed">
   <nav class="nav">
     <a href="#" class="nav__link">
-      <img
-        src="../../assets/icons/home.png"
-        class="nav-icons-home"
-        alt="home"
-      />
+      <img src="../../assets/icons/home.png" class="nav-icons-home" alt="home" />
     </a>
     <a href="#" class="nav__link nav__link--active">
-      <img
-        src="../../assets/icons/favourite.png"
-        class="nav-icons-fav"
-        alt="favourite"
-      />
+      <img src="../../assets/icons/favourite.png" class="nav-icons-fav" alt="favourite" />
     </a>
     <a href="#" class="nav__link">
-      <img
-        src="../../assets/icons/cart.png"
-        class="nav-icons-cart"
-        alt="cart"
-      />
+      <img src="../../assets/icons/cart.png" class="nav-icons-cart" alt="cart" />
     </a>
     <a href="#" class="nav__link">
-      <img
-        src="../../assets/icons/user.png"
-        class="nav-icons-user"
-        alt="user"
-      />
+      <img src="../../assets/icons/user.png" class="nav-icons-user" alt="user" />
     </a>
   </nav>
 </div>
 <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 <script type="text/javascript"></script>
+
 </html>

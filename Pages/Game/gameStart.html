@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../QR/qr.css" />
+    <link rel="stylesheet" href="../Game/game.css" />
+    <link rel="stylesheet" href="../Navigation/navigation.css" />
+    <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- the three things that jQuery Mobile needs to work -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<!-- header -->
+<div data-role="header" data-position="fixed">
+    <nav class="navbar-header">
+        <span class="open-slide">
+            <p href="#" class="hamburger-icon-qr" onclick="openSlideMenu()">
+                <i class="fa fa-bars"></i>
+            </p>
+        </span>
+        <ul>
+            <img src="../../assets/images/logo1.png" class="logo-header" alt="logocolored" />
+        </ul>
+    </nav>
+    <!-- Side Navigation -->
+    <div id="side-menu" class="side-nav">
+        <div class="btn-close" onclick="closeSlideMenu()">&times;</div>
+        <div href="#" class="menu-icon">
+            <i class="fas fa-home icons"></i>Home
+        </div>
+        <div href="#" class="menu-icon">
+            <i class="fas fa-th-list icons"></i>Categories
+        </div>
+        <div href="#" class="menu-icon">
+            <i class="fas fa-heart icons"></i>Favourites
+        </div>
+        <div href="#" class="menu-icon">
+            <i class="fas fa-shopping-cart icons"></i>Cart
+        </div>
+        <div href="#" class="menu-icon">
+            <i class="fa fa-percent icons"></i>Promotions
+        </div>
+        <div href="#" class="menu-icon">
+            <i class="fas fa-gamepad icons"></i>Games
+        </div>
+        <div href="#" class="menu-icon">
+            <i class="fa fa-address-card icons"></i>About Us
+        </div>
+        <div href="#" class="menu-icon">
+            <i class="fa fa-qrcode icons"></i>Scan Me
+        </div>
+        <div href="#" class="menu-icon">
+            <i class="fa fa-user icons"></i>Account
+        </div>
+        <div href="#" class="menu-icon">
+            <i class="fa fa-power-off icons"></i>Sign out
+        </div>
+    </div>
+    <!-- Script -->
+    <script>
+        function openSlideMenu() {
+            document.getElementById("side-menu").style.width = "300px";
+        }
+
+        function closeSlideMenu() {
+            document.getElementById("side-menu").style.width = "0px";
+        }
+    </script>
+</div>
+
+<body>
+
+    <img id="gif" src="../../assets/images/2.gif">
+
+    <h2 id="gameName">BIGTREAT</h2>
+    <h4 id="des1">This is the place where you can get free rewards for your payment. </h4>
+    <h4 id="des2">You have to choose one of the cards given in the selection.If you are <br> winner you can find gift
+        card from the selection.</h4>
+
+    <button href="game.html" type="button" id="btnStart">Let's start</button>
+
+</body>
+
+
+</html>
