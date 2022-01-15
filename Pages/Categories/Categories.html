@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Categories</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link rel="stylesheet" href="categories.css" />
+    <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+    <link rel="stylesheet" href="../Navigation/navigation.css" />
+    <link rel="stylesheet" href="../Footer/footer.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Jquery mobile -->
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -17,115 +29,299 @@
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
+    />
+
+    <title>bootstrap card gallery</title>
   </head>
   <body>
-    <div>
-      <div data-role="header" data-position="fixed">
-        <h4>Header page AR</h4>
-      </div>
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="category-back-icon">
-            <i class="fa fa-arrow-left"></i>
-          </div>
-          <div class="category-title">All Categories</div>
+    <div data-role="header" data-position="fixed">
+      <nav class="navbar-header">
+        <span class="open-slide">
+          <p href="#" class="hamburger-icon-qr" onclick="openSlideMenu()">
+            <i class="fa fa-bars"></i>
+          </p>
+        </span>
+        <ul>
+          <img
+            src="../../assets/images/logo1.png"
+            class="logo-header"
+            alt="logocolored"
+          />
+        </ul>
+      </nav>
+      <div id="side-menu" class="side-nav">
+        <div class="btn-close" onclick="closeSlideMenu()">&times;</div>
+        <div href="#" class="menu-icon">
+          <i class="fas fa-home icons"></i>Home
         </div>
-        <div class="row justify-content-around">
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/Vegetables.png"
-              class="category"
-              alt="vegetables"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Vegetables</p>
-            </div>
-          </div>
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/Fruits.png"
-              class="category"
-              alt="fruits"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Fruits</p>
-            </div>
-          </div>
+        <div href="#" class="menu-icon">
+          <i class="fas fa-th-list icons"></i>Categories
         </div>
-        <div class="row justify-content-around">
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/Bakery.png"
-              class="category"
-              alt="bakery"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Bakery</p>
-            </div>
-          </div>
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/Beauty.png"
-              class="category"
-              alt="beauty"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Beauty</p>
-            </div>
-          </div>
+        <div href="#" class="menu-icon">
+          <i class="fas fa-heart icons"></i>Favourites
         </div>
-        <div class="row justify-content-around">
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/seafood.png"
-              class="category"
-              alt="seafood"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Seafood</p>
-            </div>
-          </div>
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/spices.png"
-              class="category"
-              alt="spices"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Spices</p>
-            </div>
-          </div>
+        <div href="#" class="menu-icon">
+          <i class="fas fa-shopping-cart icons"></i>Cart
         </div>
-        <div class="row justify-content-around">
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/meat.png"
-              class="category"
-              alt="meat"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Meat</p>
-            </div>
-          </div>
-          <div class="col-4 category-container">
-            <img
-              src="../../assets/images/stationery.png"
-              class="category"
-              alt="stationary"
-            />
-            <div class="bottom-left">
-              <p class="label-text">Stationary</p>
-            </div>
-          </div>
+        <div href="#" class="menu-icon">
+          <i class="fa fa-percent icons"></i>Promotions
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fas fa-gamepad icons"></i>Games
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fa fa-address-card icons"></i>About Us
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fa fa-qrcode icons"></i>Scan Me
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fa fa-user icons"></i>Account
+        </div>
+        <div href="#" class="menu-icon">
+          <i class="fa fa-power-off icons"></i>Sign out
         </div>
       </div>
+
+      <script>
+        function openSlideMenu() {
+          document.getElementById("side-menu").style.width = "300px";
+        }
+
+        function closeSlideMenu() {
+          document.getElementById("side-menu").style.width = "0px";
+        }
+      </script>
     </div>
+    <div class="container col-9 topic-container topic mb-1 mt-4">
+      <span class="d-inline-block float-left qr-back-icon">
+        <a href="C:/xampp/htdocs/KwikMart/KwikMart/Pages/Categories/Home.html">
+          <i class="fa fa-arrow-left qr-back-icon" aria-hidden="true"></i
+        ></a>
+      </span>
+      <span class="d-flex justify-content-center qr-title">Scan Me</span>
+    </div>
+    <section class="gallery-block cards-gallery">
+      <div class="container category-container">
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img
+                  src="../../assets/images/Vegetables.png"
+                  class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Vegetables</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img src="../../assets/images/Fruits.png" class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Fruits</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img src="../../assets/images/Bakery.png" class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Bakery</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img src="../../assets/images/Beauty.png" class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Beauty</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img
+                  src="../../assets/images/seafood.png"
+                  class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Seafood</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img src="../../assets/images/spices.png" class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Spices</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img src="../../assets/images/meat.png" class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Meat</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6">
+            <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="#"
+                ><img
+                  src="../../assets/images/stationery.png"
+                  class="card-img-top"
+              /></a>
+              <div class="card-body">
+                <h6>Stationery</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12 segment-one">
+              <img
+                src="../../assets/images/logo-light.png"
+                class="logo-footer"
+                alt="light-logo"
+              />
+              <p class="content">
+                Our pioneer venture into modern trade in 1983 was a unique
+                innovation of our company's longstanding trading legacy. We
+                continued to challenge the norm by revolutionizing what was
+                traditionally an affluent affair by offering products of a
+                higher value for the lowest prices.
+              </p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 segment-two">
+              <h2 class="topic-content">Links</h2>
+              <ul>
+                <p class="link" href="#">Home</p>
+                <p class="link" href="#">Scan Me</p>
+                <p class="link" href="#">Reviews</p>
+                <p class="link" href="#">Categories</p>
+                <p class="link" href="#">About us</p>
+                <p class="link" href="#">Help</p>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 segment-three">
+              <h2 class="topic-content">Follow Us</h2>
+              <p class="content">
+                Questions or Feedbacks? We'd love to hear from you. Please
+                follow us on our social media profiles in order to keep updated
+              </p>
+              <div class="icons" href="#"><i class="fa fa-facebook"></i></div>
+              <div class="icons" href="#"><i class="fa fa-twitter"></i></div>
+              <div class="icons" href="#"><i class="fa fa-linkedin"></i></div>
+              <div class="icons" href="#"><i class="fa fa-pinterest"></i></div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 segment-four">
+              <h2 class="topic-content">Our Newsletters</h2>
+              <p class="content">
+                Questions or Feedbacks? We'd love to hear from you. Please
+                follow us on our social media profiles in order to keep updated
+              </p>
+              <form action="" class="form-area">
+                <span class="email-field"></span>
+                <span class="submit-button">Subscribe</span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footer-bottom-text">
+        Copy right 2022 by KwikMart Grocery Store | All rights reserved
+      </p>
+    </footer>
+    <div data-role="footer" data-position="fixed">
+      <nav class="nav">
+        <a href="#" class="nav__link">
+          <img
+            src="../../assets/icons/home.png"
+            class="nav-icons-home"
+            alt="home"
+          />
+        </a>
+        <a href="#" class="nav__link nav__link--active">
+          <img
+            src="../../assets/icons/favourite.png"
+            class="nav-icons-fav"
+            alt="favourite"
+          />
+        </a>
+        <a href="#" class="nav__link">
+          <img
+            src="../../assets/icons/cart.png"
+            class="nav-icons-cart"
+            alt="cart"
+          />
+        </a>
+        <a href="#" class="nav__link">
+          <img
+            src="../../assets/icons/user.png"
+            class="nav-icons-user"
+            alt="user"
+          />
+        </a>
+      </nav>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+      baguetteBox.run(".cards-gallery", { animation: "slideIn" });
+    </script>
   </body>
-  <div data-role="footer" data-position="fixed">
-    <h4>Footer</h4>
-  </div>
 </html>

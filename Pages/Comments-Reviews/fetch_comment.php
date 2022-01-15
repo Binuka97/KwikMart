@@ -68,6 +68,7 @@ function get_reply_comment($connect, $parentId = 0, $marginleft = 0)
     />
     <b class="commentor-name">' . $row["comment_sender_name"] . '</b>
     <div class="reply-panel-body">' . $row["comment"] . '</div>
+    </div>
     <div class="reply-comment-button" align="right">
         <button type="button" class="reply" id="' . $row["comment_id"] . '"><i class="fa fa-reply" aria-hidden="true" ></i> Reply</button>
     </div>
