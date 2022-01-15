@@ -17,7 +17,7 @@
   background-color: #252525;
   padding: 80px 0;
 }
-.logo-footer{
+.logo-footer {
   width: 70px;
   height: 70px;
   margin-bottom: 15px;
@@ -52,7 +52,7 @@
   font-family: "Poppins-Medium", sans-serif;
 }
 
-.segment-three .icons  {
+.segment-three .icons {
   display: flex;
   float: left;
   font-size: 20px;

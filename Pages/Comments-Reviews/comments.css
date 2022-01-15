@@ -1,4 +1,17 @@
 @import url("../../assets/fonts/Poppins-SemiBold.ttf");
+@import url("../../assets/fonts/Poppins-Regular.ttf");
+
+/* header styling code */
+.navbar-header .hamburger-icon-qr {
+  float: left;
+  display: block;
+  color: #21826e;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-size: 28px;
+}
+
 .section-title,
 .section-title-form {
   font-size: 20px;
@@ -50,8 +63,10 @@
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
-  margin-bottom: 20px;
   cursor: pointer;
+}
+.btn-content{
+  margin-bottom: 30px;
 }
 .comment-card,
 .reply-comment-card {
