@@ -11,7 +11,7 @@
 }
 .topic-content {
   color: #f1f0f0;
-  font-size: 17px;
+  font-size: 15px;
   padding-bottom: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -73,6 +73,7 @@
   padding: 8px 9px;
   margin-left: -5px;
   color: #ffffff;
+  
 }
 .email-field {
   background-color: #ffffff;
