@@ -65,7 +65,7 @@
     </nav>
     <div id="side-menu" class="side-nav">
       <div class="btn-close" onclick="closeSlideMenu()">&times;</div>
-      <a href="#" class="menu-icon"> <i class="fas fa-home icons"></i>Home </a>
+      <a href="item-page.php" class="menu-icon"> <i class="fas fa-home icons"></i>Home </a>
       <a
         href="file:///C:/xampp/htdocs/KwikMart/KwikMart/Pages/Categories/Categories.html"
         class="menu-icon"
@@ -84,13 +84,13 @@
       <a href="#" class="menu-icon">
         <i class="fas fa-gamepad icons"></i>Games
       </a>
-      <a href="#" class="menu-icon">
+      <a href="home.html" class="menu-icon">
         <i class="fa fa-address-card icons"></i>About Us
       </a>
       <a href="#" class="menu-icon">
         <i class="fa fa-qrcode icons"></i>Scan Me
       </a>
-      <a href="#" class="menu-icon">
+      <a href="location.html" class="menu-icon">
         <i class="fa fa-user icons"></i>Account
       </a>
       <a href="#" class="menu-icon">
