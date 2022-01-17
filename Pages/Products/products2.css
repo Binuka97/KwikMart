@@ -89,7 +89,7 @@
     top:10px;
 }
 
-#addFav1,#addFav2,#addFav3,#addFav4,#addFav5,#addFav6,#addFav7,#addFav8,#addFav9{
+#addFav{
     position: relative; 
     top: 20px; 
     margin-left: 180px;

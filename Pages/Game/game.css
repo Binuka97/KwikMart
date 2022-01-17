@@ -4,19 +4,38 @@
 
 
 #gif{
+    width: auto;
+    height: auto;
     display: block;
   margin-left: auto;
   margin-right: auto;
-  
+  margin-top: 50px;  
   
 }
 
+#gif2{
+    width: 100px;
+    height: 100px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;  
+  
+}
 #gameName{
     text-align: center;
     color: #676767;
     font-weight: bold; 
-    font-family: "Poppins-SemiBold", sans-serif;
-    
+    font-family: "Poppins-SemiBold", sans-serif;   
+}
+
+#gameName2{
+    margin-top: 10px;
+    text-align: center;
+    color: #676767;
+    font-weight: bold; 
+    font-size: 60px;
+    font-family: "Poppins-SemiBold", sans-serif;   
 }
 #des1{
     text-align: center;
@@ -27,6 +46,18 @@
 #des2{
     text-align: center;
     color: #676767; 
+    font-family: "Poppins-Medium", sans-serif;
+}
+#des3{
+    text-align: center;
+    color: #676767; 
+    margin-top: 50px;
+    font-family: "Poppins-Medium", sans-serif;
+}
+#des4{
+    text-align: center;
+    color: #676767; 
+    margin-top: 40px;
     font-family: "Poppins-Medium", sans-serif;
 }
 #btnStart{
@@ -40,3 +71,28 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+#done{
+    height: 40px;
+    width: 140px;
+    border-radius: 25px;
+    background-color: #21826E;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-right: 25px;
+  
+}
+
+#again{
+    height: 40px;
+    width: 140px;
+    border-radius: 25px;
+    background-color: white;
+    color: #21826E;
+    margin-left: 25px;
+
+}
+
+
+
+
