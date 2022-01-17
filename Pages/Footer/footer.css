@@ -3,15 +3,17 @@
 @import url("../../assets/fonts/Poppins-Light.ttf");
 
 .content {
-  color: #ffffff;
-  font-family: "Poppins-Light", sans-serif;
+  color: #f0f0f0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   line-height: 25px;
 }
 .topic-content {
-  color: #ffffff;
+  color: #f1f0f0;
   font-size: 17px;
   padding-bottom: 15px;
-  font-family: "Poppins-Medium", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 .footer-top {
   background-color: #252525;
@@ -49,7 +51,9 @@
 .segment-three .topic-content,
 .segment-four .topic-content {
   color: #ffffff;
-  font-family: "Poppins-Medium", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
 }
 
 .segment-three .icons {
@@ -79,6 +83,8 @@
 }
 .footer-bottom-text {
   text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   background: #414141;
   line-height: 50px;
   color: #fafafa;

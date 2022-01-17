@@ -18,7 +18,7 @@ body{
 .section-title,
 .section-title-form {
   font-size: 20px;
-  font-family: "Poppins-SemiBold", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 30px;
   font-weight: 600;
   color: #21826e;
@@ -93,6 +93,7 @@ body{
   color: #21826e;
   cursor: pointer;
   font-size: 13px;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
 .reply:focus{
@@ -110,12 +111,16 @@ body{
 }
 .panel-body {
   color: #676767;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
   margin-left: 40px;
 }
 .reply-panel-body {
   color: #676767;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
   margin-left: 55px;
