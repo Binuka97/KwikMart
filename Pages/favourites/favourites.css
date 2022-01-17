@@ -411,9 +411,6 @@ position: relative;
   width: 18px;
 }
 
-
- /* share favourites popup box */
- /* Popup box BEGIN */
  .hover_bkgr_fricc{
   background:rgba(4,0,0,.4);
   display:none;
@@ -422,7 +419,7 @@ position: relative;
   text-align:center;
   top:0;
   width:100%;
-  /* z-index:10000; */
+  z-index:10000;
 }
 .hover_bkgr_fricc .helper{
   display:inline-block;
@@ -437,21 +434,12 @@ position: relative;
   max-width: 551px;
   min-height: 100px;
   vertical-align: middle;
-  width: 60%;
+  width: 80%;
   position: relative;
-  border-radius: 8px;
+  border-radius: 15px;
   padding: 15px 5%;
 }
 
-/* .trigger_popup_fricc {
-  font-size: 20px;
-  margin: 20px;
-  display: inline-block;
-  font-weight: bold;
-} */
-/* Popup box BEGIN */
-
-/* pop up box email */
 #button2{
   background-color: #21826e;
   font-family: "Poppins-SemiBold", sans-serif;
@@ -460,20 +448,30 @@ position: relative;
   /* padding: 15px 10px; */
   width: 200px;
   margin: 10px auto; 
-  padding-top: 10px;
+  padding-top: 10px !important;
   margin-top: 30px;
   text-align: center; 
   border: none;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+
 }
 
-/* success Message*/
 .successMessage{
   position: absolute;
+  font-size: 16px;
+  border-radius: 15px;
   background: white;
-  right: 52px;
-  /*color: black; */
   z-index: 2;
   font-family: "Poppins", sans-serif;
+  padding-left: 65px;
+  padding-top: 31px;
+  margin-left: 50px;
+  right: -7px;
+  padding-bottom: 38px;
+  padding-right: 66px;
+  /* background-color: green; */
+  margin-bottom: 49px;
+  top: -10px;
 }
 
 .progress-text {
@@ -489,4 +487,24 @@ position: relative;
 
 p {
   font-family: "Poppins", sans-serif;
+}
+
+.popupCloseButton {
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: arial;
+  font-weight: bold;
+  position: absolute;
+  top: 14px;
+  right: 7px;
+  font-size: 25px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+#message {
+  margin-bottom: 60px;
 }
