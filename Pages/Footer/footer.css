@@ -7,6 +7,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 25px;
+  font-size: 12px;
 }
 .topic-content {
   color: #f1f0f0;
@@ -36,6 +37,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 12px;
 }
 
 .segment-two ul .link {
@@ -84,6 +86,7 @@
 .footer-bottom-text {
   text-align: center;
   font-family: "Poppins", sans-serif;
+  font-size: 12px;
   font-weight: 500;
   background: #414141;
   line-height: 50px;
