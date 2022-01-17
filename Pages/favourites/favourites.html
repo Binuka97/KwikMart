@@ -17,6 +17,10 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <script type="text/javascript" src="./favourites.js"></script>
+<script type="text/javascript" src="../../utils/products.json" ></script> 
+
 </head>
 
 <div data-role="header" data-position="fixed">
@@ -64,19 +68,9 @@
     </div>
   </div>
 
-  <script>
-    function openSlideMenu() {
-      document.getElementById("side-menu").style.width = "250px";
-    }
-
-    function closeSlideMenu() {
-      document.getElementById("side-menu").style.width = "0px";
-    }
-  </script>
 </div>
 
 <body>
-  <script type="text/javascript" src="./favourites.js"></script>
   <div class="container col-12 col-xs-12 mb-5">
     <div class="topic mt-4">
       <span class="d-inline-block float-left">
@@ -108,27 +102,42 @@
     </div>
 
   </div>
-  <div class="share-favourites text-center"><span>Share Favourites</span></div>
-
-
-  <!-- <div class="hover_bkgr_fricc">
-        <span class="helper"></span>
-        <div>
-            <div class="popupCloseButton">&times;</div>
-            <label for="fields">Email</label>
-            <input id="email" name="email" type="text" id="email" required>
-            <label for="fields">Add in your customised message!</label>
-            <input id="message" name="message" type="text" value="" required>
-            <button class="button" id="button2" onclick="sendEmail()">Share via email</button>
-
-        </div>
-    </div> -->
-
-
-  <div>
-
+  <a class="trigger_popup_fricc"><div class="share-favourites text-center"><span>Share Favourites</span></a>
+  
+    <div class="hover_bkgr_fricc">
+      <span class="helper"></span>
+      <div style="text-align: left;">
+        <span style="font-weight: 600; color: #676767;">Share Your Favourites</span>
+          <div class="popupCloseButton">&times;</div>
+          <label style="color: #676767;" class="email-field" for="fields">Email: </label>
+          <input id="email" name="email" type="text" id="email" required>
+          <label style="color: #676767;" for="fields">Message:</label>
+          <input id="message" name="message" type="text" value="" required>
+          <button class="button" id="button2" onclick="sendEmail()">Share</button>
+      </div>
   </div>
   </div>
+
+  <script>
+    function openSlideMenu() {
+      document.getElementById("side-menu").style.width = "250px";
+    }
+
+    function closeSlideMenu() {
+      document.getElementById("side-menu").style.width = "0px";
+    }
+
+    $(window).load(function () {
+                $(".trigger_popup_fricc").click(function () {
+                    $('.hover_bkgr_fricc').show();
+                });
+                $('.popupCloseButton').click(function () {
+                    $('.hover_bkgr_fricc').hide();
+                });
+            });
+  </script>
+
+
 </body>
 <div data-role="footer" data-position="fixed">
   <nav class="nav">
