@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="comments.css"/>
     <link rel="stylesheet" href="../Navigation/navigation.css"/>
     <link rel="stylesheet" href="../Navigation/bottomNav.css"/>
-    <link rel="stylesheet" href="style.css"/>
     <!--Jquery-->
     <link
       rel="stylesheet"
@@ -93,81 +92,7 @@
       </script>
     </div>
     <div>
-    <div class="mb-5 mt-5 product-area">
-        <!--product card-->
-        <div class="p-5 shadow card position-relative product-card mb-4">
-            <div class="d-flex justify-content-between">
-                <div>
-                    <h6>Weetabix - Original, 400g</h6>
-                    <div class="star-rating">
-                        <span class="material-icons"><i class="fa fa-star" aria-hidden="true"></i></span>
-                        <span class="material-icons"><i class="fa fa-star" aria-hidden="true"></i></span>
-                        <span class="material-icons"><i class="fa fa-star" aria-hidden="true"></i></span>
-                        <span class="material-icons"><i class="fa fa-star" aria-hidden="true"></i></span>
-                        <span class="material-icons"><i class="fa fa-star" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="text-muted">Rs 420.00</div>
-                </div>
-                <div>
-                    <span class="material-icons text-primary"><i class="fa fa-heart heart-color" aria-hidden="true"></i></span>
-                  
-                </div>
-            </div>
-            <div class="text-center">
-                <img src="../../assets/images/AR-201109907_1-removebg-preview.png" width="176">
-            </div>
-            <div class="position-absolute rounded-pill bg-primary py-2 px-3 text-white font-weight-bold stock-badge outstock">
-                Out of stock
-            </div>
-        </div>
-        <!--quantity selector-->
-        <div class="text-center">
-            <h6 class="mb-3 text-muted">Select Quantity</h6>
-            <div class="mb-3">
-                <div class="quantity-selector-container">
-                    <span class="material-icons add">add</span>
-                    <span class="quantity-label w-100">001</span>
-                    <span class="material-icons remove">remove</span>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-block bg-primary rounded-pill d-flex justify-content-center align-items-center px-4 addcart">
-                    <span>ADD TO CART</span>
-                </button>
-            </div>
-        </div>
-      </div>
-
-    <!--product details-->
-    <section class="mb-5 details-area">
-        <h4 class="text-muted mb-4">Product Details</h4>
-        <table class="table">
-            <tbody class="text-muted">
-            <tr>
-                <th scope="row" class="border-top-0">Item Description</th>
-                <td class="border-top-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="text-muted">Ingredients</th>
-                <td>Wheat flor, Sugar, Oil</td>
-            </tr>
-            <tr>
-                <th scope="row" class="text-muted">Product Code</th>
-                <td>WB400G</td>
-            </tr>
-            <tr>
-                <th scope="row" class="text-muted">Expiry Date</th>
-                <td>11 / 10 / 2022</td>
-            </tr>
-            <tr>
-                <th scope="row" class="text-muted">Manufactured Date</th>
-                <td>11 / 10 / 2022</td>
-            </tr>
-            </tbody>
-        </table>
-    </section>
+      <div>POI AREA</div>
       <div class="form-area">
         <div class="section-title mb-2">Reviews</div>
       </div>

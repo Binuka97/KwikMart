@@ -23,8 +23,8 @@ body {
 .section-title-form {
   margin-bottom: 15px;
 }
-.form-area {
-  width: 70%;
+.form-area,.product-area,.details-area {
+  width: 80%;
   margin: auto;
 }
 #comment_name {
@@ -126,3 +126,12 @@ body {
 .panel-heading {
   padding-left: 20px;
 }
+
+.heart-color{
+  color: #21826e;
+  font-size: 20px;
+}
+.outstock, .addcart{
+  background-color: #21826e !important;
+}
+
