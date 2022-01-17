@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="address.css" />
 	<link rel="stylesheet" href="../Navigation/navigation.css" />
 	<link rel="stylesheet" href="../Navigation/bottomNav.css" />
+	<script src="../../utils/utils.js"></script>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
@@ -80,7 +81,7 @@
 	<div class="container col-12 col-xs-12 mb-5">
 		<div style="padding-bottom: 10px;" class="topic mt-4">
 			<span class="d-inline-block float-left">
-				<i class="fa fa-arrow-left qr-back-icon" aria-hidden="true"></i>
+				<i class="fa fa-arrow-left qr-back-icon" onclick="checkoutPage()" aria-hidden="true"></i>
 			</span>
 			<span class="d-flex justify-content-center cart-title">Add New Address</span>
 		</div>
@@ -115,10 +116,10 @@
 		<a href="#" class="nav__link">
 			<img src="../../assets/icons/home.png" class="nav-icons-home" alt="home" />
 		</a>
-		<a href="#" class="nav__link nav__link--active">
+		<a href="#" class="nav__link nav__link--active" onclick="favPage()">
 			<img src="../../assets/icons/favourite.png" class="nav-icons-fav" alt="favourite" />
 		</a>
-		<a href="#" class="nav__link">
+		<a href="#" class="nav__link" onclick="cartPage()">
 			<img src="../../assets/icons/cart.png" class="nav-icons-cart" alt="cart" />
 		</a>
 		<a href="#" class="nav__link">

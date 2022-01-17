@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../utils/utils.js"></script>
+    <link rel="stylesheet" href="filter.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <nav class="navbar-header">
+        <span class="open-slide">
+            <p href="#" class="hamburger-icon" onclick="openSlideMenu()">
+                <i class="fa fa-bars"></i>
+            </p>
+        </span>
+        <ul>
+            <img src="../../assets/images/logo1.png" class="logo-header" alt="logocolored" />
+        </ul>
+    </nav>
+    
+    <div id="side-menu" class="side-nav">
+        <div class="btn-close" onclick="closeSlideMenu()">&times;</div>
+        <div id="head1">
+            <h3>
+                Filter by
+            </h3>
+        </div>
+        <div href="#" class="menu-icon" id="category">
+            <div class="dropdown">
+
+                <p><i></i>Category <i class="arrow right" onclick="myFunction1()"></i> </p>
+
+                <div id="myDIV1">
+                    <div class="form-check">
+                        Vegetables
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick="vegetablePage()">
+                        
+                        <label class="form-check-label" for="flexCheckDefault"  > 
+                        </label>
+
+                        <br>
+                        Fruits
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick="fruitsPage()">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        </label>
+
+                        <br>
+                        Bakery
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick="bakeryPage()">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        </label>
+
+                        <br>
+                        Beauty
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        </label>
+
+                        <br>
+                        Seafood
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        </label>
+
+                        <br>
+                        Spices
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        </label>
+
+                        <br>
+                        Meat
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        </label>
+
+                        <br>
+                        Stationary
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        </label>
+                    </div>
+                </div>
+
+                <script>
+                    function myFunction1() {
+                        var x = document.getElementById("myDIV1");
+                        if (x.style.display === "none") {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
+                    }
+                </script>
+
+            </div>
+        </div>
+
+
+        <div href="#" class="menu-icon" id="category">
+            <div class="dropdown">
+
+                <p><i></i>Rating <i class="arrow right" onclick="myFunction()"></i> </p>
+
+                <div id="myDIV">
+                    <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                        <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio"
+                            name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating"
+                            value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1"
+                            id="1"><label for="1">☆</label> </div>
+                </div>
+
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("myDIV");
+                        if (x.style.display === "none") {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
+                    }
+                </script>
+
+            </div>
+        </div>
+
+        <div id="head1">
+            <h3>
+                Sort by
+            </h3>
+        </div>
+       
+            
+        <div href="#" class="menu-icon" id="category">
+            <div class="dropdown">
+
+                <p><i></i>Alphabetical Order <i class="arrow right" onclick="myFunction2()"></i> </p>
+
+                <div id="myDIV2">
+                   <div>
+                    A - Z
+                   </div>
+                       
+                    <br>
+                    <div>
+                        Z - A
+                    </div>
+                       
+                    
+                </div>
+
+                <script>
+                    function myFunction2() {
+                        var x = document.getElementById("myDIV2");
+                        if (x.style.display === "none") {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
+                    }
+                </script>
+
+            </div>
+        </div>
+
+        <div href="#" class="menu-icon" id="category">
+            <div class="dropdown">
+
+                <p><i></i>Price <i class="arrow right" onclick="myFunction3()"></i> </p>
+
+                <div id="myDIV3">
+                   <div>
+                    High to Low
+                   </div>
+                       
+                    
+                    <br>
+                    <div>
+                        Low to High
+                    </div>
+                       
+                    
+                </div>
+
+                <script>
+                    function myFunction3() {
+                        var x = document.getElementById("myDIV3");
+                        if (x.style.display === "none") {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
+                    }
+                </script>
+
+            </div>
+        </div>
+
+       
+    </div>
+
+    <script>
+        function openSlideMenu() {
+            document.getElementById("side-menu").style.width = "300px";
+        }
+
+        function closeSlideMenu() {
+            document.getElementById("side-menu").style.width = "0px";
+        }
+
+
+    </script>
+
+
+    <!-- <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input
+    type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio"
+    name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating"
+    value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1"
+    id="1"><label for="1">☆</label> </div> -->
+</body>
+
+</html>
