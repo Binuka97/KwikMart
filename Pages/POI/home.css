@@ -1,0 +1,42 @@
+.bg-primary {
+    background: #21826E !important;
+    color: white;
+}
+
+.btn.bg-primary:hover {
+    background: #11453c !important;
+    color: white;
+}
+
+.btn-primary {
+    background: #21826E !important;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #11453c !important;
+    color: white;
+}
+
+.btn-outline-primary {
+    color: #21826E !important;
+    border-color: #21826E !important;
+}
+
+.btn-outline-primary:hover {
+    color: #21826E !important;
+    border-color: #21826E !important;
+}
+
+
+.text-primary {
+    color: #21826E !important;
+}
+
+input[type=email] {
+    background: #E6E6E6 !important;
+}
+
+select, textarea {
+    background: #E6E6E6 !important;
+}
