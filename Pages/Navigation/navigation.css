@@ -48,7 +48,7 @@
   margin-left: 20px;
   text-decoration: none;
   font-size: 18px;
-  color: #ffffff;
+  color: #ffffff !important;
   display: block;
   transition: 0.3s;
   font-family: "Poppins", sans-serif;

@@ -52,7 +52,7 @@
         <a href="#" class="menu-icon">
           <i class="fas fa-home icons"></i>Home
         </a>
-        <a href="file:///C:/xampp/htdocs/KwikMart/KwikMart/Pages/Categories/Categories.html" class="menu-icon">
+        <a href="../Categories/Categories.html" class="menu-icon">
           <i class="fas fa-th-list icons"></i>Categories
         </a>
         <a href="#" class="menu-icon">
@@ -70,7 +70,7 @@
         <a href="#" class="menu-icon">
           <i class="fa fa-address-card icons"></i>About Us
         </a>
-        <a href="#" class="menu-icon">
+        <a href="../QR/AR-Main-Page.html" class="menu-icon">
           <i class="fa fa-qrcode icons"></i>Scan Me
         </a>
         <a href="#" class="menu-icon">

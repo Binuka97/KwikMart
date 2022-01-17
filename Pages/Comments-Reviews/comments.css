@@ -1,8 +1,5 @@
-@import url("../../assets/fonts/Poppins-SemiBold.ttf");
-@import url("../../assets/fonts/Poppins-Regular.ttf");
-
-body{
-  background-color: #F8F8F8;
+body {
+  background-color: #f8f8f8;
 }
 /* header styling code */
 .navbar-header .hamburger-icon-qr {
@@ -96,8 +93,8 @@ body{
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
-.reply:focus{
-  transition: opacity .3s ease-in-out;
+.reply:focus {
+  transition: opacity 0.3s ease-in-out;
   outline: none;
 }
 .comment-user {
