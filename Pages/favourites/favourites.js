@@ -9,15 +9,15 @@ $(document).ready(function () {
   const fav_products = [
     {
       id: 'item-1',
-      name: "Carrot - 1 Kg",
-      img: "../../assets/images/apples.png",
-      price: "Rs.68.00"
+      name: "Mango - 1Kg",
+      img: "../../assets/images/mango.png",
+      price: "Rs.118.00"
     },
     {
       id: 'item-1',
-      name: "Carrot - 1 Kg",
-      img: "../../assets/images/apples.png",
-      price: "Rs.68.00"
+      name: "Orange - 1kg",
+      img: "../../assets/images/orange.png",
+      price: "Rs.100.00"
     }
   ]
 
@@ -122,27 +122,23 @@ $(document).ready(function () {
 
 function displayFavourites() {
   console.log("INSIDE")
-  // var products = JSON.parse(productss);
-  // console.log("object", productss)
-  var favouriteProducts = JSON.parse(localStorage.getItem("favourites"));
   let fav_items = JSON.parse(localStorage.getItem("favouriteItems"))
   console.log(fav_items);
 
-  var output = '';
+  var favCard = '';
   if (fav_items != null) {
     fav_items.forEach((item) => {
-      output += '<div class="cart-item">';
-      output += '<div class="check-image">';
-      output += '<input type="checkbox" name="' + item.id + '" id="productCheckBox" data-role="none"><img src="'+item.img +'" class="img" /></div>';
-      output += '<div class="item-info">';
-      output += '<div class="progress-container">';
-      output += '<span class="progress-text">' + item.name + ' </span></div>';
-      output += '<p style="color: #A1A1A1;">' + item.price + '</p>';
-      output += '<span class="quantity-btn"> ADD TO <img src="../../assets/icons/cart1.png" id="cart-img"></span></div></div>';
+      favCard += '<div class="cart-item">';
+      favCard += '<div class="check-image">';
+      favCard += '<input type="checkbox" name="' + item.id + '" id="productCheckBox" data-role="none"><img src="'+item.img +'" class="img" /></div>';
+      favCard += '<div class="item-info">';
+      favCard += '<div class="progress-container">';
+      favCard += '<span class="progress-text">' + item.name + ' </span></div>';
+      favCard += '<p class="price-txt" style="color: #A1A1A1;">' + item.price + '</p>';
+      favCard += '<span class="quantity-btn"> ADD TO <img src="../../assets/icons/cart1.png" id="cart-img"></span></div></div>';
         })
 
-        document.getElementById("favourite-products").innerHTML = output;
-          
+        document.getElementById("favourite-products").innerHTML = favCard;
   }
   
 }
@@ -204,30 +200,3 @@ function sendEmail() {
       showErrorToast();
     });
 }
-
-// function getEmailBody() {
-//   var products = JSON.parse(data);
-//   console.log(products);
-//   var selectedProducts = JSON.parse(localStorage.getItem("selected"));
-//   console.log(selectedProducts);
-//   var output = ``;
-//   if (selectedProducts != null) {
-//     for (var i = 0; i < products.length; i++) {
-//       for (j = 0; j < selectedProducts.length; j++) {
-
-//         if (products[i].id == favouriteProducts[j]) {
-//           output += '<li><div class="favourite-product">';
-//           output += '<div class="favourite-product-images"> <img class="favourite-product-image" src="' + item.image + '"> </div>';
-//           output += '<div class="favourite-product-details"><label class="favourite-product-checkbox"><input type="checkbox" name="' + item.id + '" id="productCheckBox" data-role="none"><span class="checkmark"></span></label>';
-//           output += '<p class="favourite-product-name">' + item.name + '</p>';
-//           // output += '<p class="favourite-product-detail">' + products[i].details + '</p>';
-//           output += '<p class="favourite-product-price">' + item.price + '</p>';
-//           output += '<img class="favourite-icon-fill" src="../images/heartFill.png" style="margin-left: 120px;"></div></div></div></li>';
-//         }
-//       }
-//     }
-//   }
-//   // var emailBody = getEmailTemplate();
-//   emailBody = emailBody.replace(`@products-list`, output);
-//   return emailBody;
-// }

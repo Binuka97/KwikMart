@@ -3,12 +3,13 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>Add New Card</title>
+	<title>Add New Address</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="address.css" />
 	<link rel="stylesheet" href="../Navigation/navigation.css" />
 	<link rel="stylesheet" href="../Navigation/bottomNav.css" />
+	<script src="../../utils/utils.js"></script>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
@@ -80,15 +81,34 @@
 	<div class="container col-12 col-xs-12 mb-5">
 		<div style="padding-bottom: 10px;" class="topic mt-4">
 			<span class="d-inline-block float-left">
-				<a href="C:/xampp/htdocs/KwikMart/KwikMart/Pages/Categories/Home.html">
-					<i class="fa fa-arrow-left qr-back-icon" aria-hidden="true"></i></a>
+				<i class="fa fa-arrow-left qr-back-icon" onclick="checkoutPage()" aria-hidden="true"></i>
 			</span>
-			<span class="d-flex justify-content-center cart-title">Add New Card</span>
+			<span class="d-flex justify-content-center cart-title">Add New Address</span>
 		</div>
 
+		<div style="padding: 10px; margin-top: 20px;">
+			<form class="frmBooking" id="frmBooking" name="bookingForm" action="_self">
+				<label style="font-weight: 500;" class="form-element" for="fields">Full Name: </label>
+				<input class="form-element" id="first_name" name="first_name" type="text" value="Binuka Kamesh" placeholder="Enter Name" required>
+				<label class="form-element" style="padding-top: 10px; font-weight: 500;" for="fields">Mobile Number:</label>
+				<input class="form-element" id="mobile_no" name="mobile_no" type="text" value="071-0903953" placeholder="Enter Mobile Number" required>
+				<label class="form-element" style="padding-top: 10px; font-weight: 500;" for="fields">Province / Region: </label>
+				<input class="form-element" id="province" name="province" type="text" value="Western Province" placeholder="Enter Province" required>
+				<label class="form-element" style="padding-top: 10px; font-weight: 500;" for="fields">City:</label>
+				<input class="form-element" id="city" name="city" type="text" value="Gampaha" placeholder="Enter City" required>
+				<label class="form-element" style="padding-top: 10px; font-weight: 500;" for="fields">Address:</label>
+				<input class="form-element" id="address" name="address" type="text" value="No.21/A, Main St, Colombo 03," placeholder="Enter Address" required>
+			</form>
+
+			<div style="padding-top: 40px;" class="d-flex justify-content-between">
+				<p>Make default delivery address</p>
+				<input style="left: -25px; bottom: -30px; top: 3px;" type="checkbox">
+			</div>
+
+		</div>
 	</div>
 
-		<div class="share-favourites text-center"><span>Save</span></div>
+	<div class="share-favourites text-center"><span>Save</span></div>
 	</div>
 </body>
 <div data-role="footer" data-position="fixed">
@@ -96,10 +116,10 @@
 		<a href="#" class="nav__link">
 			<img src="../../assets/icons/home.png" class="nav-icons-home" alt="home" />
 		</a>
-		<a href="#" class="nav__link nav__link--active">
+		<a href="#" class="nav__link nav__link--active" onclick="favPage()">
 			<img src="../../assets/icons/favourite.png" class="nav-icons-fav" alt="favourite" />
 		</a>
-		<a href="#" class="nav__link">
+		<a href="#" class="nav__link" onclick="cartPage()">
 			<img src="../../assets/icons/cart.png" class="nav-icons-cart" alt="cart" />
 		</a>
 		<a href="#" class="nav__link">

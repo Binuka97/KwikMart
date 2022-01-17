@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="favourites.css" />
   <link rel="stylesheet" href="../Navigation/navigation.css" />
   <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+  <link rel="stylesheet" href="../Footer/footer.css" />
+  <script src="../../utils/utils.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
@@ -17,9 +19,9 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script type="text/javascript" src="./favourites.js"></script>
-<script type="text/javascript" src="../../utils/products.json" ></script> 
+  <script type="text/javascript" src="../../utils/products.json"></script>
 
 </head>
 
@@ -77,16 +79,10 @@
         <a href="C:/xampp/htdocs/KwikMart/KwikMart/Pages/Categories/Home.html">
           <i class="fa fa-arrow-left qr-back-icon" aria-hidden="true"></i></a>
       </span>
-      <span class="d-flex justify-content-center qr-title">My Favourites</span>
+      <span class="d-flex justify-content-center fav-title">My Favourites</span>
     </div>
 
-    <!-- <div style="padding-top: 40px;">
-      <input type="checkbox" id="favcheckbox">
-      <h4 id="isvisible" class="selectall">Select All</h4>
-  </div> -->
-
     <div style="padding-top: 40px;">
-      <!-- <label class="select-all-checkbox"> -->
       <label class="float-left select-all-checkbox">
         <input class="select-all" id="select-all" type="checkbox" data-role="none">
         <span class="checkmark"></span>
@@ -102,19 +98,21 @@
     </div>
 
   </div>
-  <a class="trigger_popup_fricc"><div class="share-favourites text-center"><span>Share Favourites</span></a>
-  
-    <div class="hover_bkgr_fricc">
-      <span class="helper"></span>
-      <div style="text-align: left;">
-        <span style="font-weight: 600; color: #676767;">Share Your Favourites</span>
-          <div class="popupCloseButton">&times;</div>
-          <label style="color: #676767;" class="email-field" for="fields">Email: </label>
-          <input id="email" name="email" type="text" id="email" required>
-          <label style="color: #676767;" for="fields">Message:</label>
-          <input id="message" name="message" type="text" value="" required>
-          <button class="button" id="button2" onclick="sendEmail()">Share</button>
-      </div>
+  <a class="trigger_popup_fricc">
+    <div class="share-favourites text-center"><span>Share Favourites</span>
+  </a>
+
+  <div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div style="text-align: left;">
+      <span style="font-family: Poppins, sans-serif; font-weight: 600; color: #676767;">Share Your Favourites</span>
+      <div class="popupCloseButton">&times;</div>
+      <label style="font-family: Poppins, sans-serif; color: #676767;" for="fields">Email: </label>
+      <input id="email" name="email" type="text" id="email" required>
+      <label style="font-family: Poppins, sans-serif; color: #676767;" for="fields">Message:</label>
+      <input id="message" name="message" type="text" value="" required>
+      <button class="button" id="button2" onclick="sendEmail()">Share</button>
+    </div>
   </div>
   </div>
 
@@ -128,32 +126,123 @@
     }
 
     $(window).load(function () {
-                $(".trigger_popup_fricc").click(function () {
-                    $('.hover_bkgr_fricc').show();
-                });
-                $('.popupCloseButton').click(function () {
-                    $('.hover_bkgr_fricc').hide();
-                });
-            });
+      $(".trigger_popup_fricc").click(function () {
+        $('.hover_bkgr_fricc').show();
+      });
+      $('.popupCloseButton').click(function () {
+        $('.hover_bkgr_fricc').hide();
+      });
+    });
+
+
+    function sendEmail() {
+      let email = $("#email").val();
+      let favourites = JSON.parse(localStorage.getItem("favouriteItems"))
+      if (favourites) {
+        let favString = "";
+        favourites.forEach((item) => {
+          let fav = `<br/> ${item.name}`;
+          favString += fav
+        })
+
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "binuka.2017172@iit.ac.lk",
+          Password: "Bikkabikka97",
+          To: email,
+          From: "binuka.2017172@iit.ac.lk",
+          Subject: "Your Favourites List",
+          Body: favString,
+        }).then(
+          message => alert("Successfully sent the favourites list")
+        );
+
+        $(".popupCloseButton").append(`
+<div style="color: #676767;" class="successMessage">
+<p style="color: #676767;">Your Favourite list was 
+Successfully sent!</p>
+<button class="button" id="button2" ">Got it</button>
+</div>
+`)
+      }
+    }
   </script>
 
 
 </body>
+<footer>
+  <div style="margin-top: 410px;" class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12 segment-one">
+          <img
+            src="../../assets/images/logo-light.png"
+            class="logo-footer"
+            alt="light-logo"
+          />
+          <p class="content">
+            Our pioneer venture into modern trade in 1983 was a unique
+            innovation of our company's longstanding trading legacy. We
+            continued to challenge the norm by revolutionizing what was
+            traditionally an affluent affair by offering products of a higher
+            value for the lowest prices.
+          </p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 segment-two">
+          <h2 class="topic-content">Links</h2>
+          <ul>
+            <p class="link" href="#">Home</p>
+            <p class="link" href="#">Scan Me</p>
+            <p class="link" href="#">Reviews</p>
+            <p class="link" href="#">Categories</p>
+            <p class="link" href="#">About us</p>
+            <p class="link" href="#">Help</p>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 segment-three">
+          <h2 class="topic-content">Follow Us</h2>
+          <p class="content">
+            Questions or Feedbacks? We'd love to hear from you. Please follow
+            us on our social media profiles in order to keep updated
+          </p>
+          <div class="icons" href="#"><i class="fa fa-facebook"></i></div>
+          <div class="icons" href="#"><i class="fa fa-twitter"></i></div>
+          <div class="icons" href="#"><i class="fa fa-linkedin"></i></div>
+          <div class="icons" href="#"><i class="fa fa-pinterest"></i></div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 segment-four">
+          <h2 class="topic-content">Our Newsletters</h2>
+          <p class="content">
+            Questions or Feedbacks? We'd love to hear from you. Please follow
+            us on our social media profiles in order to keep updated
+          </p>
+          <form action="" class="form-area">
+            <span class="email-field"></span>
+            <span class="submit-button">Subscribe</span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom-text">
+    Copy right 2022 by KwikMart Grocery Store | All rights reserved
+  </p>
+</footer>
 <div data-role="footer" data-position="fixed">
-  <nav class="nav">
-    <a href="#" class="nav__link">
-      <img src="../../assets/icons/home.png" class="nav-icons-home" alt="home" />
-    </a>
-    <a href="#" class="nav__link nav__link--active">
-      <img src="../../assets/icons/favourite.png" class="nav-icons-fav" alt="favourite" />
-    </a>
-    <a href="#" class="nav__link">
-      <img src="../../assets/icons/cart.png" class="nav-icons-cart" alt="cart" />
-    </a>
-    <a href="#" class="nav__link">
-      <img src="../../assets/icons/user.png" class="nav-icons-user" alt="user" />
-    </a>
-  </nav>
+	<nav class="nav">
+		<a href="#" class="nav__link">
+			<img src="../../assets/icons/home.png" class="nav-icons-home" alt="home" />
+		</a>
+		<a href="#" class="nav__link nav__link--active" onclick="favPage()">
+			<img src="../../assets/icons/favourite.png" class="nav-icons-fav" alt="favourite" />
+		</a>
+		<a href="#" class="nav__link" onclick="cartPage()">
+			<img src="../../assets/icons/cart.png" class="nav-icons-cart" alt="cart" />
+		</a>
+		<a href="#" class="nav__link">
+			<img src="../../assets/icons/user.png" class="nav-icons-user" alt="user" />
+		</a>
+	</nav>
 </div>
 <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 <script type="text/javascript"></script>

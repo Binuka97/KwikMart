@@ -80,7 +80,7 @@
         });
     });
 
-    function cabbageMinus() {
+    function item1Minus() {
         decreament = document.getElementById("myNumber").value;
         if (+decreament == 1 || +decreament > 1) {
             document.getElementById("myNumber").stepDown();
@@ -101,7 +101,7 @@
         }
     }
 
-    function cabbagePlus() {
+    function item1Plus() {
         document.getElementById("myNumber").stepUp();
         num1 = document.getElementById("price").innerHTML;
         num2 = document.getElementById("myNumber").value;
@@ -312,11 +312,73 @@
 		<div class="item-info">
 			<div class="progress-container">
 				<span class="progress-text">
-					Green Cabbage - 1 Kg
+					Apple - 1 Kg
 				</span>
 			</div>
             <p style="color: #A1A1A1;">Rs.<span id="result">68</span></p>
 			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">68</span></p>
+
+			<table class="quantity-btn">
+                <tr>
+                    <th><i style="color: #21826e;" class="fa fa-plus-circle" aria-hidden="true"
+                            onclick="item1Plus()"></i></th>
+                    <th>
+                        <div class="myQty">
+                            <input disabled="true" type="number" id="myNumber" min="0" value="1">
+                        </div>
+                    </th>
+                    <th><i style="color: #21826e;" class="fa fa-minus-circle" aria-hidden="true"
+                            onclick="item1Minus()"></i></th>
+                </tr>
+            </table>
+		</div>
+	</div>
+
+    <div class="cart-item"> 
+		<div class="check-image">
+            <input class="select-all" id="select-all" type="checkbox" data-role="none">
+            <img src="../../assets/images/mango.png" class="img" />
+		</div>
+
+		<div class="item-info">
+			<div class="progress-container">
+				<span class="progress-text">
+					Mango - 1 Kg
+				</span>
+			</div>
+            <p style="color: #A1A1A1;">Rs.<span id="result">160</span></p>
+			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">160</span></p>
+
+			<table class="quantity-btn">
+                <tr>
+                    <th><i style="color: #21826e;" class="fa fa-plus-circle" aria-hidden="true"
+                            onclick="carrotPlus()"></i></th>
+                    <th>
+                        <div class="myQty">
+                            <input disabled="true" type="number" id="myNumber" min="0" value="1">
+                        </div>
+                    </th>
+                    <th><i style="color: #21826e;" class="fa fa-minus-circle" aria-hidden="true"
+                            onclick="carrotMinus()"></i></th>
+                </tr>
+            </table>
+		</div>
+	</div>
+
+    <div class="cart-item"> 
+		<div class="check-image">
+            <input class="select-all" id="select-all" type="checkbox" data-role="none">
+            <img src="../../assets/images/orange.png" class="img" />
+		</div>
+
+		<div class="item-info">
+			<div class="progress-container">
+				<span class="progress-text">
+					Orange - 1 Kg
+				</span>
+			</div>
+            <p style="color: #A1A1A1;">Rs.<span id="result">89</span></p>
+			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">89</span></p>
 
 			<table class="quantity-btn">
                 <tr>
@@ -337,79 +399,17 @@
     <div class="cart-item"> 
 		<div class="check-image">
             <input class="select-all" id="select-all" type="checkbox" data-role="none">
-            <img src="../../assets/images/apples.png" class="img" />
+            <img src="../../assets/images/Cabbage.png" class="img" />
 		</div>
 
 		<div class="item-info">
 			<div class="progress-container">
 				<span class="progress-text">
-					Green Cabbage - 1 Kg
+					Cabbage - 1 Kg
 				</span>
 			</div>
-            <p style="color: #A1A1A1;">Rs.<span id="result">68</span></p>
-			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">68</span></p>
-
-			<table class="quantity-btn">
-                <tr>
-                    <th><i style="color: #21826e;" class="fa fa-plus-circle" aria-hidden="true"
-                            onclick="cabbagePlus()"></i></th>
-                    <th>
-                        <div class="myQty">
-                            <input disabled="true" type="number" id="myNumber" min="0" value="1">
-                        </div>
-                    </th>
-                    <th><i style="color: #21826e;" class="fa fa-minus-circle" aria-hidden="true"
-                            onclick="cabbageMinus()"></i></th>
-                </tr>
-            </table>
-		</div>
-	</div>
-
-    <div class="cart-item"> 
-		<div class="check-image">
-            <input class="select-all" id="select-all" type="checkbox" data-role="none">
-            <img src="../../assets/images/apples.png" class="img" />
-		</div>
-
-		<div class="item-info">
-			<div class="progress-container">
-				<span class="progress-text">
-					Green Cabbage - 1 Kg
-				</span>
-			</div>
-            <p style="color: #A1A1A1;">Rs.<span id="result">68</span></p>
-			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">68</span></p>
-
-			<table class="quantity-btn">
-                <tr>
-                    <th><i style="color: #21826e;" class="fa fa-plus-circle" aria-hidden="true"
-                            onclick="cabbagePlus()"></i></th>
-                    <th>
-                        <div class="myQty">
-                            <input disabled="true" type="number" id="myNumber" min="0" value="1">
-                        </div>
-                    </th>
-                    <th><i style="color: #21826e;" class="fa fa-minus-circle" aria-hidden="true"
-                            onclick="cabbageMinus()"></i></th>
-                </tr>
-            </table>
-		</div>
-	</div>
-
-    <div class="cart-item"> 
-		<div class="check-image">
-            <input class="select-all" id="select-all" type="checkbox" data-role="none">
-            <img src="../../assets/images/apples.png" class="img" />
-		</div>
-
-		<div class="item-info">
-			<div class="progress-container">
-				<span class="progress-text">
-					Green Cabbage - 1 Kg
-				</span>
-			</div>
-            <p style="color: #A1A1A1;">Rs.<span id="result">68</span></p>
-			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">68</span></p>
+            <p style="color: #A1A1A1;">Rs.<span id="result">110</span></p>
+			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">110</span></p>
 
 			<table class="quantity-btn">
                 <tr>
@@ -496,20 +496,20 @@
       <div class="container col-12 col-xs-12 mb-5 price-text">
         <div class="d-flex justify-content-between">
             <span>Subtotal</span>
-            <span class="text-right"> Rs.219</span>
+            <span class="text-right"> Rs.219.00</span>
         </div>
         <div class="d-flex justify-content-between">
             <span>Delivery Fee</span>
-            <span class="text-right"> Rs.50</span>
+            <span class="text-right"> Rs.50.00</span>
         </div>
         <div class="d-flex justify-content-between">
             <span>Discount</span>
-            <span class="text-right"> -Rs.100</span>
+            <span class="text-right"> -Rs.100.00</span>
         </div>
         <hr/>
         <div class="d-flex justify-content-between">
             <span class="total-price">Total</span>
-            <span class="text-right"> Rs.<span id="tottalCost"></span></span>
+            <span class="text-right"> Rs.<span id="tottalCost"></span>.00</span>
         </div>
       </div>
       <div class="share-favourites text-center" onclick="checkoutPage()">Checkout</div>
@@ -525,10 +525,10 @@
     <a href="#" class="nav__link">
       <img src="../../assets/icons/home.png" class="nav-icons-home" alt="home" />
     </a>
-    <a href="#" class="nav__link nav__link--active">
+    <a href="#" class="nav__link nav__link--active" onclick="favPage()">
       <img src="../../assets/icons/favourite.png" class="nav-icons-fav" alt="favourite" />
     </a>
-    <a href="#" class="nav__link">
+    <a href="#" class="nav__link" onclick="cartPage()">
       <img src="../../assets/icons/cart.png" class="nav-icons-cart" alt="cart" />
     </a>
     <a href="#" class="nav__link">
