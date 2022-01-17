@@ -133,5 +133,6 @@ body {
 }
 .outstock, .addcart{
   background-color: #21826e !important;
+  border-radius: 50px;
 }
 

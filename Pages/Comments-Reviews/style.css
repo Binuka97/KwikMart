@@ -32,7 +32,7 @@
 }
 
 .quantity-selector-container > .add {
-  background: #009578;
+  background: #21826e;
   color: white;
   padding: 0.5rem 1rem;
   border-top-left-radius: 999em;
@@ -41,7 +41,7 @@
 }
 
 .quantity-selector-container > .remove {
-  background: #009578;
+  background: #21826e;
   color: white;
   padding: 0.5rem 1rem;
   border-top-right-radius: 999em;
@@ -60,6 +60,8 @@ input {
 select,
 textarea {
   background: #e6e6e6 !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 .star-rating {
