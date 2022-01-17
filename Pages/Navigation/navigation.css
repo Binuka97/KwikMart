@@ -48,13 +48,19 @@
   margin-left: 20px;
   text-decoration: none;
   font-size: 18px;
-  color: #ffffff;
+  color: #ffffff !important;
   display: block;
   transition: 0.3s;
-  font-family: "Poppins-Medium", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 .side-nav .menu-icon:hover {
+  background-color: #494949;
+  color: #ffffff;
+  margin-right: 0;
+}
+.side-nav .menu-icon:focus {
   background-color: #494949;
   margin-right: 0;
 }
@@ -68,7 +74,8 @@
   background-color: none;
 }
 
-.icons,.menu-icon {
+.icons,
+.menu-icon {
   font-size: 20px;
   margin-right: 20px;
 }

@@ -37,7 +37,7 @@ if ($error == '') {
             ':comment_sender_name' => $comment_name,
         )
     );
-    $error = '<label class="text-success">Comment Added</label>';
+    $error = '<label class="text-success">Comment added Successfully</label>';
 }
 
 $data = array(

@@ -1,6 +1,3 @@
-@import url("../assets/fonts/Poppins-Medium.ttf");
-@import url("../assets/fonts/Poppins-SemiBold.ttf");
-
 /* header styling code */
 .navbar-header .hamburger-icon-qr {
   float: left;
@@ -11,12 +8,15 @@
   text-decoration: none;
   font-size: 28px;
 }
-
+body {
+  background-color: #f8f8f8;
+}
 .qr-title {
   font-size: 30px;
   font-weight: 650;
   color: #676767;
-  font-family: "Poppins-SemiBold", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 .qr-back-icon {
   font-size: 30px;
@@ -51,14 +51,18 @@
   text-align: center;
   background-color: #21826e;
   color: #ffffff;
-  font-family: "Poppins-SemiBold", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   height: 30px;
 }
 .gallery-block.cards-gallery .card-body h6 {
   margin-top: -10px;
 }
 .gallery-block.cards-gallery .card-body .sub-title {
-  font-family: "Poppins-SemiBold", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1em;
   color: #ffffff;
   font-size: 17px;
 }

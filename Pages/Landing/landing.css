@@ -1,0 +1,48 @@
+.landing-image-one {
+  width: 300px;
+}
+.text-content {
+  margin-top: 100px;
+}
+.image-content {
+  margin-top: 100px;
+  text-align: center;
+}
+.main-title {
+  font-size: 25px;
+  color: #676767;
+  font-weight: 700;
+  text-align: center;
+}
+.sub-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #a1a1a1;
+}
+.button {
+  width: 35px;
+  height: 35px;
+}
+.button-container {
+  text-align: center;
+}
+
+@media (max-width: 896px) {
+  .sub-title {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #818181;
+  }
+  .main-title {
+    font-size: 20px;
+    color: #676767;
+    font-weight: 700;
+    text-align: center;
+  }
+}
