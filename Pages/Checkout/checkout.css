@@ -1,5 +1,6 @@
 @import url("../../assets/fonts/Poppins-Medium.ttf");
-@import url("../../assets/fonts/Poppins-SemiBold.ttf");
+@import url("../../assets/fonts/Poppins-Regular.ttf");
+@import url("../../assets/fonts/Poppins-Light.ttf");
 
 .navbar-header .hamburger-icon-qr {
     float: left;
@@ -13,9 +14,9 @@
 
 .cart-title {
     font-size: 25px;
-    font-weight: 650;
+    font-weight: 600;
     color: #676767;
-    font-family: "Poppins-SemiBold", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 .qr-back-icon {
     font-size: 30px;
@@ -23,14 +24,26 @@
     cursor: pointer;
 }
 
-/* #selectall{
-    color: #676767;
-    font-family: "Poppins-SemiBold", sans-serif;
-    font-size: 18px;
-    padding-left: 40px;
-    margin-top: -10px;
-    padding-right: 13px;
-} */
+.progress-text {
+  color: #676767;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.payment {
+  font-family: "Poppins", sans-serif;
+
+}
+
+.price-txt {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
 
 .select-all-checkbox {
     display: block;
@@ -103,7 +116,7 @@
     border-radius: 30px;
     width: 80%;
     color: white;
-    font-family: "Poppins-Medium", sans-serif;
+    font-family: "Poppins", sans-serif;
     box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   }
@@ -130,7 +143,7 @@
     font-family: normalText;
   /*  float: right;*/
     color: black;
-    text-shadow: none;
+    /* text-shadow: none; */
     margin-block-start: 0.3em;
     margin-block-end: 0.5em;
   }
@@ -144,7 +157,7 @@
   .favourite-product-price {
     font-family: normalText;
     /*float: right;*/
-    text-shadow: none;
+    /* text-shadow: none; */
     margin-block-start: 0.3em;
     margin-block-end: 0.5em;
     font-weight: 600;
@@ -163,27 +176,30 @@
 
 .checkout-area {
     background-color: white;
-    /* margin: 35px; */
     padding-top: 20px;
     padding-bottom: 75px;
     position: fixed;
     width: 100%;
     bottom: 50px;
     color: #676767;
-    font-family: "Poppins-Medium", sans-serif;
+    font-family: "Poppins", sans-serif;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 
+.text-right {
+  font-family: "Poppins", sans-serif;
 }
 
 .total-price {
     font-size: 20px;
-    font-weight: 650;
+    font-weight: 600;
     color: #676767;
-    font-family: "Poppins-SemiBold", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .price-text {
     color: #676767;
-    font-family: "Poppins-Medium", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /* ---------------------------- */
@@ -216,11 +232,10 @@
 
 .quantity-btn {
 	position: absolute;
-    padding-top: 50px;
+  padding-top: 50px;
 	bottom: 25px;
-	/* right: 100px; */
-    left: 130px;
-    width: 100px;
+  left: 130px;
+  width: 100px;
 }
 
 /* ------------------------------ */

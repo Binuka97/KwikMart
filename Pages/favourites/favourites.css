@@ -1,5 +1,6 @@
-@import url("../assets/fonts/Poppins-Medium.ttf");
-@import url("../assets/fonts/Poppins-SemiBold.ttf");
+@import url("../../assets/fonts/Poppins-Medium.ttf");
+@import url("../../assets/fonts/Poppins-Regular.ttf");
+@import url("../../assets/fonts/Poppins-Light.ttf");
 
 .navbar-header .hamburger-icon-qr {
     float: left;
@@ -11,11 +12,11 @@
     font-size: 28px;
   }
 
-.qr-title {
+.fav-title {
     font-size: 30px;
-    font-weight: 650;
+    font-weight: 600;
     color: #676767;
-    font-family: "Poppins-SemiBold", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 .qr-back-icon {
     font-size: 30px;
@@ -115,7 +116,7 @@
     font-family: normalText;
   /*  float: right;*/
     color: black;
-    text-shadow: none;
+    /* text-shadow: none; */
     margin-block-start: 0.3em;
     margin-block-end: 0.5em;
   }
@@ -129,7 +130,7 @@
   .favourite-product-price {
     font-family: normalText;
     /*float: right;*/
-    text-shadow: none;
+    /* text-shadow: none; */
     margin-block-start: 0.3em;
     margin-block-end: 0.5em;
     font-weight: 600;
@@ -151,9 +152,7 @@
 .select-all-checkbox {
   display: block;
   position: absolute;
-  /* margin-top: -20px !important; */
   padding-left: 30px;
-  /* margin-bottom: 12px; */
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -253,7 +252,7 @@
   font-family: normalText;
 /*  float: right;*/
   color: black;
-  text-shadow: none;
+  /* text-shadow: none; */
   margin-block-start: 0.3em;
   margin-block-end: 0.5em;
 }
@@ -267,7 +266,7 @@
 .favourite-product-price {
   font-family: normalText;
   /*float: right;*/
-  text-shadow: none;
+  /* text-shadow: none; */
   margin-block-start: 0.3em;
   margin-block-end: 0.5em;
   font-weight: 600;
@@ -393,6 +392,7 @@ position: relative;
 
 .quantity-btn  {
 	background-color: #21826e;
+  font-family: "Poppins", sans-serif;
 	/* border: 0; */
 	border-radius: 50px;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -473,10 +473,20 @@ position: relative;
   right: 52px;
   /*color: black; */
   z-index: 2;
-  font-family: "Poppins-SemiBold", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-/* .email-field{
-  color: #21826e;
+.progress-text {
+  color: #676767;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
 
-} */
+.price-txt {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}

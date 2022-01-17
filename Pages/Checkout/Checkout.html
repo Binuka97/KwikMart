@@ -65,15 +65,6 @@
 		</div>
 	</div>
 
-	<script>
-		function openSlideMenu() {
-			document.getElementById("side-menu").style.width = "250px";
-		}
-
-		function closeSlideMenu() {
-			document.getElementById("side-menu").style.width = "0px";
-		}
-	</script>
 </div>
 
 <body>
@@ -94,7 +85,7 @@
 
 		<div class="cart-item">
 			<div class="item-info">
-				<span style="color: #676767; font-weight: 600;" class="progress-text">
+				<span style="color: #676767; font-weight: 500;" class="progress-text">
 					Delivery Address
 				</span>
 				<br /><br />
@@ -113,7 +104,7 @@
 
 		<div class="cart-item">
 			<div class="item-info">
-				<span style="color: #676767; font-weight: 600;" class="progress-text">
+				<span style="color: #676767; font-weight: 500;" class="progress-text">
 					Payment Options
 				</span>
 				<br /><br />
@@ -122,7 +113,9 @@
 					<fieldset class="radio-btn" data-role="controlgroup">
 						<input class="radio1" type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="on"
 							checked="checked">
-						<label for="radio-choice-v-2a"><span><img src="../../assets/icons/card.png"> </span><span>
+						<label style="font-weight: 500; color: #676767; font-family: Poppins, sans-serif;"
+							class="payment" for="radio-choice-v-2a"><span><img src="../../assets/icons/card.png">
+							</span><span>
 								&nbsp; </span> Credit / Debit Card &emsp;
 							&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img
 								src="../../assets/icons/right.png">
@@ -130,13 +123,18 @@
 								* &nbsp; 9243</div>
 						</label>
 						<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="off">
-						<label for="radio-choice-v-2b"><span><img src="../../assets/icons/paypal.png"> </span><span>
-								&nbsp; </span> Pay With Paypal &emsp; &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label style="font-weight: 500; color: #676767; font-family: Poppins, sans-serif;"
+							class="payment" for="radio-choice-v-2b"><span><img src="../../assets/icons/paypal.png">
+							</span><span>
+								&nbsp; </span> Pay With Paypal &emsp;
+							&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<img src="../../assets/icons/forward.png"></label>
 						<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2c" value="other">
-						<label for="radio-choice-v-2c"><span><img src="../../assets/icons/cash.png"> </span><span>
-								&nbsp; </span> Cash on Delivery &emsp; &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; <img
-								src="../../assets/icons/forward.png"></label>
+						<label style="font-weight: 500; color: #676767; font-family: Poppins, sans-serif;"
+							class="payment" for="radio-choice-v-2c"><span><img src="../../assets/icons/cash.png">
+							</span><span>
+								&nbsp; </span> Cash on Delivery &emsp; &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<img src="../../assets/icons/forward.png"></label>
 					</fieldset>
 				</form>
 				<br />
@@ -157,10 +155,54 @@
 				<span class="text-right"> Rs.420.00</span></span>
 			</div>
 		</div>
-		
+
 		<div id="customButton" class="share-favourites text-center"><span>Place Order</span></div>
 		<div align="center" id="thankyouPayment"></div>
 	</div>
+
+	<script>
+		function openSlideMenu() {
+			document.getElementById("side-menu").style.width = "250px";
+		}
+
+		function closeSlideMenu() {
+			document.getElementById("side-menu").style.width = "0px";
+		}
+
+		jQuery(function ($) {
+			var handler = StripeCheckout.configure({
+				key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
+				image: 'https://www.linkpicture.com/q/Brown-Cart-Online-Shop-Icon-Modern-Logo-8.png',
+				token: function (token) {
+					// Use the token to create the charge with a server-side script.
+					// You can access the token ID with `token.id`
+					//This will be printed when the transaction is successful. To charge, server side scripting is required.
+					if (token.id) {
+						$("#paymentResponse").html("Thank you, your payment was successful!");
+						window.location.href = "SuccessOrder.html";
+					}
+					else {
+						$("#paymentResponse").html("Something went wrong, Please try again later.");
+					}
+				}
+			});
+
+			$('#customButton').on('click', function (e) {
+				handler.open({
+					name: 'KwikMart',
+					currency: 'lkr',
+					amount: 870 * 100,
+					description: "Pay To Confirm Your Order",
+				});
+				e.preventDefault();
+			});
+
+			$(window).on('popstate', function () {
+				handler.close();
+			});
+		});
+	</script>
+
 </body>
 <div data-role="footer" data-position="fixed">
 	<nav class="nav">
