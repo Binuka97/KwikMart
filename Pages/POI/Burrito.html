@@ -1,23 +1,3 @@
-<?php
-
-    $conn=mysqli_connect("localhost","root","","Kwikmart");
-    if(!$conn){
-        die("Error while connecting to database");
-    }
-
-
-    if(isset($_POST["submit"])){
-        $rating=$_POST['rating'];
-        $review=$_POST["review"];
-        $query=mysqli_query($conn,"INSERT INTO review(rating,review) VALUES('$rating','$review')");
-        if(!$query){
-            die("ERROR: Could not post review");
-        }
-    }
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +24,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="footer.css" />
 
 </head>
@@ -55,6 +34,16 @@
           <i class="fa fa-bars"></i>
         </p>
       </span>
+        <!-- <div class="input-group  mb-3">
+            <span class="input-group-text bg-light rounded-pill border-end-0"
+                style="border-top-right-radius: 0 !important;
+                border-bottom-right-radius: 0!important;"
+                id="basic-addon1"><span class="material-icons text-primary">search</span></span>
+                <input type="text" class="form-control bg-light rounded-pill border-start-0"
+                style="border-top-left-radius: 0 !important; border-bottom-left-radius: 0!important;"
+                placeholder="Search"
+                aria-label="Username" aria-describedby="basic-addon1">
+            </div> -->
       <ul>
         <img
           src="../../assets/images/logo1.png"
@@ -65,7 +54,7 @@
     </nav>
     <div id="side-menu" class="side-nav">
       <div class="btn-close" onclick="closeSlideMenu()">&times;</div>
-      <a href="#" class="menu-icon"> <i class="fas fa-home icons"></i>Home </a>
+      <a href="item-page.php" class="menu-icon"> <i class="fas fa-home icons"></i>Home </a>
       <a
         href="file:///C:/xampp/htdocs/KwikMart/KwikMart/Pages/Categories/Categories.html"
         class="menu-icon"
@@ -90,7 +79,7 @@
       <a href="#" class="menu-icon">
         <i class="fa fa-qrcode icons"></i>Scan Me
       </a>
-      <a href="#" class="menu-icon">
+      <a href="location.html" class="menu-icon">
         <i class="fa fa-user icons"></i>Account
       </a>
       <a href="#" class="menu-icon">
@@ -103,7 +92,7 @@
         <div class="p-5 shadow card position-relative product-card mb-4">
             <div class="d-flex justify-content-between">
                 <div>
-                    <h6>Weetabix - Original, 400g</h6>
+                    <h6>Burrito, 3Pcs</h6>
                     <div class="star-rating">
                         <span class="material-icons">star</span>
                         <span class="material-icons">star</span>
@@ -111,7 +100,7 @@
                         <span class="material-icons">star_border</span>
                         <span class="material-icons">star_border</span>
                     </div>
-                    <div class="text-muted">Rs 420.00</div>
+                    <div class="text-muted">Rs 600.00</div>
                 </div>
                 <div>
                     <span class="material-icons text-primary">favorite</span>
@@ -119,7 +108,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <img src="../../assets/images/AR-201109907_1-removebg-preview.png" width="176">
+                <img src="/Applications/XAMPP/xamppfiles/htdocs/KwikMart-1/assets/images/Burrito.png" width="176">
             </div>
             <div class="position-absolute rounded-pill bg-primary py-2 px-3 text-white font-weight-bold stock-badge">
                 In stock
@@ -155,24 +144,25 @@
             <tbody class="text-muted">
             <tr>
                 <th scope="row" class="border-top-0">Item Description</th>
-                <td class="border-top-0">A cereal is any grass cultivated (grown) for the edible components of its grain (botanically, a type of fruit called a caryopsis), composed of the endosperm, germ, and bran.
+                <td class="border-top-0">La Mexican food that consists of a flour tortilla that is rolled or folded around a filling (such as meat,
+                   beans, and cheese)
                 </td>
             </tr>
             <tr>
                 <th scope="row" class="text-muted">Ingredients</th>
-                <td>Wheat flor, Sugar, Oil</td>
+                <td>Flour, Vegetable oil, Cabbage, Tomato, Chicken</td>
             </tr>
             <tr>
                 <th scope="row" class="text-muted">Product Code</th>
-                <td>WB400G</td>
+                <td>BR001</td>
             </tr>
             <tr>
                 <th scope="row" class="text-muted">Expiry Date</th>
-                <td>11 / 10 / 2021</td>
+                <td>18 / 01 / 2022</td>
             </tr>
             <tr>
                 <th scope="row" class="text-muted">Manufactured Date</th>
-                <td>11 / 10 / 2022</td>
+                <td>19 / 01 / 2022</td>
             </tr>
             </tbody>
         </table>
@@ -182,59 +172,53 @@
     <section class="mb-5">
         <h3 class="text-primary mb-3">Reviews</h3>
 
-<?php
-$query=mysqli_query($conn,"SELECT * FROM review");
-if(mysqli_num_rows($query)>0){
-    while($row=mysqli_fetch_assoc($query)){
-        $review=$row["review"];
-        $rating=$row["rating"];
-?>
         <div class="border d-flex justify-content-between align-items-center position-relative p-4 shadow rounded mb-3" style="gap: 2rem">
-            <img src="../../assets/images/default_image.png" width="80" class="flex-shrink-0 img-fluid" alt="...">
+            <img src="../../assets/images/comment-user.png" width="80" class="flex-shrink-0 img-fluid" alt="...">
             <div>
                 <div class="d-flex justify-content-between align-items-center">
-                    <h6 class="mt-0">Guest User</h6>
+                    <h6 class="mt-0">Jane Doe</h6>
                     <div class="star-rating">
-<?php
-
-                for($i=0;$i<5;$i++){
-                    if($i<$rating){
-
-?>
                         <span class="material-icons">star</span>
-<?php
-        }
-        else{
-?>
-
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
                         <span class="material-icons">star_border</span>
-
-<?php
-        }
-    }
-?>
+                        <span class="material-icons">star_border</span>
                     </div>
                 </div>
-                <p class=""><?php echo $review?></p>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eius in iste iusto minima nobis, nulla officiis quasi soluta vitae. Ab at beatae esse harum officia porro quam quis saepe?</p>
                 <div class="float-right text-primary d-flex justify-content-between align-items-center" style="gap: 1rem; cursor: pointer">
                     <span class="material-icons-outlined">reply</span>
                     Reply
                 </div>
             </div>
         </div>
-<?php
-    }
-}
-
-
-?>
+        <div class="border d-flex justify-content-between align-items-center position-relative p-4 shadow rounded mb-3" style="gap: 2rem">
+            <img src="../../assets/images/Cinnamon roll.png" width="80" class="flex-shrink-0 img-fluid" alt="...">
+            <div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="mt-0">Jane Doe</h6>
+                    <div class="star-rating">
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star_border</span>
+                        <span class="material-icons">star_border</span>
+                    </div>
+                </div>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eius in iste iusto minima nobis, nulla officiis quasi soluta vitae. Ab at beatae esse harum officia porro quam quis saepe?</p>
+                <div class="float-right text-primary d-flex justify-content-between align-items-center" style="gap: 1rem; cursor: pointer">
+                    <span class="material-icons-outlined">reply</span>
+                    Reply
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="mb-5">
         <h3 class="text-primary mb-3">Write a Review</h3>
-        <form action="" class="bg-white p-4 rounded custom-form" method="POST">
+        <form action="" class="bg-white p-4 rounded custom-form">
             <div class="form-group">
-                <select class="form-control" id="exampleFormControlSelect1" name="rating">
+                <select class="form-control" id="exampleFormControlSelect1">
                     <option>Choose Rating</option>
                     <option>1</option>
                     <option>2</option>
@@ -244,10 +228,10 @@ if(mysqli_num_rows($query)>0){
                 </select>
             </div>
             <div class="form-group">
-                <textarea class="form-control" rows="5" id="exampleFormControl2" placeholder="Write a comment" name="review"></textarea>
+                <textarea class="form-control" rows="5" id="exampleFormControl2" placeholder="Write a comment"></textarea>
             </div>
             <div class="d-flex justify-content-end">
-                <button class="btn bg-primary rounded-pill px-4" name="submit" type="submit">Submit Review</button>
+                <button class="btn bg-primary rounded-pill px-4">Submit Review</button>
             </div>
         </form>
     </section>
@@ -329,19 +313,19 @@ if(mysqli_num_rows($query)>0){
     $(document).ready(function(){
         i=1;
         $('.number_span').text(i);
-        $('.price_heading').text(i*420);
+        $('.price_heading').text(i*600);
 
 
         $('.remove').click(function(){
             i++;
             $('.number_span').text(i);
-            $('.price_heading').text(i*420);
+            $('.price_heading').text(i*600);
         });
 
         $('.add').click(function(){
             i--;
             $('.number_span').text(i);
-            $('.price_heading').text(i*420);
+            $('.price_heading').text(i*600);
 
         });
     })
