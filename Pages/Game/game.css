@@ -26,7 +26,9 @@
     text-align: center;
     color: #676767;
     font-weight: bold; 
-    font-family: "Poppins-SemiBold", sans-serif;   
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;  
+    margin-bottom: 35px;
 }
 
 #gameName2{
@@ -35,61 +37,75 @@
     color: #676767;
     font-weight: bold; 
     font-size: 60px;
-    font-family: "Poppins-SemiBold", sans-serif;   
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;  
 }
 #des1{
+
     text-align: center;
     color: #676767; 
-    font-family: "Poppins-Medium", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
     
 }
 #des2{
     text-align: center;
     color: #676767; 
-    font-family: "Poppins-Medium", sans-serif;
+    font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 #des3{
     text-align: center;
     color: #676767; 
     margin-top: 50px;
-    font-family: "Poppins-Medium", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
 #des4{
     text-align: center;
     color: #676767; 
     margin-top: 40px;
-    font-family: "Poppins-Medium", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
 }
 #btnStart{
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 180px;
-    height: auto;
+    height: 45px;
+    color: white;
+    padding-top: 11px;
     border-radius: 25px;
     background-color: #21826E;
     margin-left: auto;
     margin-right: auto;
+    font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 #done{
-    height: 40px;
+    height: 45px;
     width: 140px;
     border-radius: 25px;
     background-color: #21826E;
-    padding-top: 2px;
+    color: white;
     padding-bottom: 2px;
     margin-right: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
   
 }
 
 #again{
-    height: 40px;
+    height: 45px;
     width: 140px;
     border-radius: 25px;
     background-color: white;
     color: #21826E;
     margin-left: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 
 }
 
@@ -136,11 +152,14 @@ html head+body .ui-btn.ui-btn-b:visited {
 }
 
 #countdown {
-    font-size: 10vw;
+    font-size: 4vw;
     text-align: center;
-    padding-top: 70px !important;
-    color: black;
-    font-family: Montserrat;
+    color: #676767;
+    padding-bottom: 100px;
+    
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    
 }
 
 .box_holder {

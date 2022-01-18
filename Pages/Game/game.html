@@ -22,13 +22,13 @@
                 $(this).toggleClass('show_info')
             });
         });
-        var timeleft = 20;
+        var timeleft = 15;
         var downloadTimer = setInterval(function () {
             if (timeleft <= 0) {
                 clearInterval(downloadTimer);
                 document.getElementById("countdown").innerHTML = "Finished";
             } else {
-                document.getElementById("countdown").innerHTML = timeleft + "seconds remaining";
+                document.getElementById("countdown").innerHTML =  "Time: " + timeleft+"S";
             }
             timeleft -= 1;
         }, 1000);
@@ -141,7 +141,9 @@
                 </div>
             </div>
         </div>
-        <div id="countdown"></div>
+        <img src="../../assets/icons/clock.png" style="margin-left: 530px; width: 100px;">
+        <div id="countdown">
+        </div>
     </div>
 </body>
 
