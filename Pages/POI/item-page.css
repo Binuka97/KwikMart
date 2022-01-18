@@ -1,0 +1,76 @@
+/* header styling code */
+.navbar-header .hamburger-icon-qr {
+    float: left;
+    display: block;
+    color: #21826e;
+    text-align: center;
+    padding: 23px 25px;
+    text-decoration: none;
+    font-size: 28px;
+  }
+.bg-primary {
+    background: #21826E !important;
+    color: white;
+}
+
+.btn.bg-primary:hover {
+    background: #11453c !important;
+    color: white;
+}
+
+.text-primary {
+    color: #21826E !important;
+}
+
+.stock-badge {
+    right: 0;
+    bottom: 2rem;
+    position: absolute;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.product-card {
+    border-radius: 2rem;
+}
+
+.quantity-selector-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background: #cccccc;*/
+}
+
+.quantity-selector-container > .add {
+    background: #009578;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 999em;
+    border-bottom-left-radius: 999em;
+    cursor: pointer;
+}
+
+.quantity-selector-container > .remove {
+    background: #009578;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-top-right-radius: 999em;
+    border-bottom-right-radius: 999em;
+    cursor: pointer;
+}
+
+.quantity-selector-container > .quantity-label {
+    padding: 0.5rem 1rem;
+}
+
+input {
+    background: #E6E6E6;
+}
+
+select, textarea {
+    background: #E6E6E6 !important;
+}
+
+.star-rating {
+    color: #F1862C;
+}

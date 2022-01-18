@@ -1,0 +1,85 @@
+.navbar-header {
+  background-color: #ffffff;
+  filter: drop-shadow(9px 2px 9px rgba(198, 198, 198, 0.24));
+  border: none;
+  overflow: hidden;
+  height: 83px;
+}
+
+.navbar-header .hamburger-icon {
+  float: left;
+  display: block;
+  color: #21826e;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+  font-size: 28px;
+}
+.navbar-header ul {
+  margin: 5px 0 0 0;
+  list-style: none;
+}
+.logo-header {
+  width: 79px;
+  height: 79px;
+  margin-left: 15px;
+}
+
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #252525;
+  overflow-x: hidden;
+  padding-top: 70px;
+  transition: 0.5s;
+}
+
+.side-nav .menu-icon,
+.btn-close {
+  padding: 10px 10px 30px 35px;
+  cursor: pointer;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff !important;
+  display: block;
+  transition: 0.3s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.side-nav .menu-icon:hover {
+  background-color: #494949;
+  color: #ffffff;
+  margin-right: 0;
+}
+
+.side-nav .menu-icon:focus {
+  background-color: #494949;
+  margin-right: 0;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+  background-color: none;
+}
+
+.icons,
+.menu-icon {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 568px) {
+  .logo {
+    float: right;
+  }
+}
