@@ -15,12 +15,22 @@ function vegetablePage() {
     window.location.assign("../../Pages/Products/Vegetables.html")
 }
 
-function checkoutPage1() {
-    window.location.assign("../../Pages/Checkout/Checkout.html")
+function fruitsPage() {
+    window.location.assign("../../Pages/Products/Fruits.html")
 }
 
-function checkoutPage1() {
-    window.location.assign("../../Pages/Checkout/Checkout.html")
+function bakeryPage() {
+    window.location.assign("../../Pages/Products/Bakery.html")
 }
 
+function minTomax() {
+    window.location.assign("../../Pages/Products/minToMax.html")
+}
 
+function az() {
+    window.location.assign("../../Pages/Products/a-z.html")
+}
+
+function POI1() {
+    window.location.assign("../../Pages/POI/item-page.html")
+}
