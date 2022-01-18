@@ -110,75 +110,7 @@
         document.getElementById("tottalCost").innerHTML = +total + +num1;
     }
 
-    function carrotMinus() {
-        decreament = document.getElementById("myNumber5").value;
-        if (+decreament == 1 || +decreament > 1) {
-            document.getElementById("myNumber5").stepDown();
-            num1 = document.getElementById("price5").innerHTML;
-            num2 = document.getElementById("myNumber5").value;
-            result = document.getElementById("result5").innerHTML;
-            if (+num2 > 0) {
-                document.getElementById("result5").innerHTML = result - num1;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num1;
-            }
-            else {
-                document.getElementById("result5").innerHTML = 0;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num1;
-            }
-        }
-    }
-
-    function carrotPlus() {
-        document.getElementById("myNumber5").stepUp();
-        num1 = document.getElementById("price5").innerHTML;
-        num2 = document.getElementById("myNumber5").value;
-        document.getElementById("result5").innerHTML = num1 * num2;
-        total = document.getElementById("tottalCost").innerHTML;
-        document.getElementById("tottalCost").innerHTML = +total + +num1;
-    }
-
-    function capsicumPlus() {
-        document.getElementById("myNumber2").stepUp();
-        num1 = document.getElementById("price2").innerHTML;
-        num2 = document.getElementById("myNumber2").value;
-        document.getElementById("result2").innerHTML = num1 * num2;
-        total = document.getElementById("tottalCost").innerHTML;
-        document.getElementById("tottalCost").innerHTML = +total + +num1;
-    }
-
-
-    function chilliPlus() {
-        document.getElementById("myNumber3").stepUp();
-        num1 = document.getElementById("price3").innerHTML;
-        num2 = document.getElementById("myNumber3").value;
-        document.getElementById("result3").innerHTML = num1 * num2;
-        total = document.getElementById("tottalCost").innerHTML;
-        result = document.getElementById("tottalCost").innerHTML = +total + +num1;
-    }
-
-    function chilliMinus() {
-        decreament = document.getElementById("myNumber3").value;
-        if (+decreament == 1 || +decreament > 1) {
-            document.getElementById("myNumber3").stepDown();
-            num1 = document.getElementById("price3").innerHTML;
-            num2 = document.getElementById("myNumber3").value;
-            result = document.getElementById("result3").innerHTML;
-            if (+num2 > 0) {
-                document.getElementById("result").innerHTML = result - num1;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num1;
-            }
-            else {
-                document.getElementById("result").innerHTML = 0;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num1;
-            }
-        }
-    }
-
-    function capsicumMinus() {
+    function item2Minus() {
         decreament = document.getElementById("myNumber2").value;
         if (+decreament == 1 || +decreament > 1) {
             document.getElementById("myNumber2").stepDown();
@@ -198,75 +130,85 @@
         }
     }
 
-    function pumpkinMinus() {
-        decreament = document.getElementById("myNumber4").value;
-        if (+decreament == 1 || +decreament > 1) {
-            document.getElementById("myNumber4").stepDown();
-            num3 = document.getElementById("price4").innerHTML;
-            num4 = document.getElementById("myNumber4").value;
-            result = document.getElementById("result4").innerHTML;
-            if (+num4 > 0) {
-                document.getElementById("result4").innerHTML = result - num3;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num3;
-            }
-            else {
-                document.getElementById("result4").innerHTML = 0;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num3;
-            }
-        }
-    }
-
-    function pumpkinPlus() {
-        document.getElementById("myNumber4").stepUp();
-        num1 = document.getElementById("price4").innerHTML;
-        num2 = document.getElementById("myNumber4").value;
-        document.getElementById("result4").innerHTML = num1 * num2;
+    function item2Plus() {
+        document.getElementById("myNumber2").stepUp();
+        num1 = document.getElementById("price2").innerHTML;
+        num2 = document.getElementById("myNumber2").value;
+        document.getElementById("result2").innerHTML = num1 * num2;
         total = document.getElementById("tottalCost").innerHTML;
         document.getElementById("tottalCost").innerHTML = +total + +num1;
     }
 
-    function tomatoMinus() {
-        decreament = document.getElementById("myNumber6").value;
+    function item3Plus() {
+        document.getElementById("myNumber3").stepUp();
+        num1 = document.getElementById("price3").innerHTML;
+        num2 = document.getElementById("myNumber3").value;
+        document.getElementById("result3").innerHTML = num1 * num2;
+        total = document.getElementById("tottalCost").innerHTML;
+        result = document.getElementById("tottalCost").innerHTML = +total + +num1;
+    }
+
+    function item3Minus() {
+        decreament = document.getElementById("myNumber3").value;
         if (+decreament == 1 || +decreament > 1) {
-            document.getElementById("myNumber6").stepDown();
-            num3 = document.getElementById("price6").innerHTML;
-            num4 = document.getElementById("myNumber6").value;
-            result = document.getElementById("result6").innerHTML;
-            if (+num4 > 0) {
-                document.getElementById("result6").innerHTML = result - num3;
+            document.getElementById("myNumber3").stepDown();
+            num1 = document.getElementById("price3").innerHTML;
+            num2 = document.getElementById("myNumber3").value;
+            result = document.getElementById("result3").innerHTML;
+            if (+num2 > 0) {
+                document.getElementById("result").innerHTML = result - num1;
                 total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = result - num3;
+                document.getElementById("tottalCost").innerHTML = total - num1;
             }
             else {
-                document.getElementById("result6").innerHTML = 0;
+                document.getElementById("result").innerHTML = 0;
+                total = document.getElementById("tottalCost").innerHTML;
+                document.getElementById("tottalCost").innerHTML = total - num1;
+            }
+        }
+    }
+
+    function item4Minus() {
+        decreament = document.getElementById("cabbage-myNumber").value;
+        if (+decreament == 1 || +decreament > 1) {
+            document.getElementById("cabbage-myNumber").stepDown();
+            num3 = document.getElementById("cabbage-price").innerHTML;
+            num4 = document.getElementById("cabbage-myNumber").value;
+            result = document.getElementById("cabbage-result").innerHTML;
+            if (+num4 > 0) {
+                document.getElementById("cabbage-result").innerHTML = result - num3;
+                total = document.getElementById("tottalCost").innerHTML;
+                document.getElementById("tottalCost").innerHTML = total - num3;
+            }
+            else {
+                document.getElementById("cabbage-result").innerHTML = 0;
                 total = document.getElementById("tottalCost").innerHTML;
                 document.getElementById("tottalCost").innerHTML = total - num3;
             }
         }
     }
 
-    function tomatoPlus() {
-        document.getElementById("myNumber6").stepUp();
-        num1 = document.getElementById("price6").innerHTML;
-        num2 = document.getElementById("myNumber6").value;
-        document.getElementById("result6").innerHTML = num1 * num2;
+    function item4Plus() {
+        document.getElementById("cabbage-myNumber").stepUp();
+        num1 = document.getElementById("cabbage-price").innerHTML;
+        num2 = document.getElementById("cabbage-myNumber").value;
+        document.getElementById("cabbage-result").innerHTML = num1 * num2;
         total = document.getElementById("tottalCost").innerHTML;
         document.getElementById("tottalCost").innerHTML = +total + +num1;
     }
 
     function SomeFunction() {
-        console.log("WE ARE INSIDEEEEE")
-        calc1 = document.getElementById("result").innerHTML;
-        console.log("WE ARE INSIDEEEEE", calc1)
+        // console.log("WE ARE INSIDEEEEE")
+        item1 = document.getElementById("result").innerHTML;
+        // console.log("WE ARE INSIDEEEEE", calc1)
 
-        calc2 = document.getElementById("result2").innerHTML;
-        calc3 = document.getElementById("result3").innerHTML;
-        calc4 = document.getElementById("result4").innerHTML;
-        calc5 = document.getElementById("result5").innerHTML;
-        calc6 = document.getElementById("result6").innerHTML;
-        document.getElementById("tottalCost").innerHTML = +calc1 + +calc2 + +calc3 + +calc4 + +calc5 + +calc6;
+        item2 = document.getElementById("result2").innerHTML;
+        item3 = document.getElementById("result3").innerHTML;
+        item4 = document.getElementById("cabbage-result").innerHTML;
+
+        document.getElementById("tottalCost").innerHTML = +item1 + +item2 + +item3 + +item4;
+        document.getElementById("tottalCost1").innerHTML = +item1 + +item2 + +item3 + +item4;
+
     }
   </script>
 </div>
@@ -281,11 +223,6 @@
       </span>
       <span class="d-flex justify-content-center cart-title">Cart</span>
     </div>
-
-    <!-- <div style="padding-top: 40px;">
-      <input type="checkbox" id="favcheckbox">
-      <h4 id="isvisible" class="selectall">Select All</h4>
-  </div> -->
  
     <div style="padding-top: 40px;">
       <!-- <label class="select-all-checkbox"> -->
@@ -346,20 +283,20 @@
 					Mango - 1 Kg
 				</span>
 			</div>
-            <p style="color: #A1A1A1;">Rs.<span id="result">160</span></p>
-			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">160</span></p>
+            <p style="color: #A1A1A1;">Rs.<span id="result2">160</span></p>
+			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price2">160</span></p>
 
 			<table class="quantity-btn">
                 <tr>
                     <th><i style="color: #21826e;" class="fa fa-plus-circle" aria-hidden="true"
-                            onclick="carrotPlus()"></i></th>
+                            onclick="item2Plus()"></i></th>
                     <th>
                         <div class="myQty">
-                            <input disabled="true" type="number" id="myNumber" min="0" value="1">
+                            <input disabled="true" type="number" id="myNumber2" min="0" value="1">
                         </div>
                     </th>
                     <th><i style="color: #21826e;" class="fa fa-minus-circle" aria-hidden="true"
-                            onclick="carrotMinus()"></i></th>
+                            onclick="item2Minus()"></i></th>
                 </tr>
             </table>
 		</div>
@@ -377,20 +314,20 @@
 					Orange - 1 Kg
 				</span>
 			</div>
-            <p style="color: #A1A1A1;">Rs.<span id="result">89</span></p>
-			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">89</span></p>
+            <p style="color: #A1A1A1;">Rs.<span id="result3">89</span></p>
+			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price3">89</span></p>
 
 			<table class="quantity-btn">
                 <tr>
                     <th><i style="color: #21826e;" class="fa fa-plus-circle" aria-hidden="true"
-                            onclick="cabbagePlus()"></i></th>
+                            onclick="item3Plus()"></i></th>
                     <th>
                         <div class="myQty">
-                            <input disabled="true" type="number" id="myNumber" min="0" value="1">
+                            <input disabled="true" type="number" id="myNumber3" min="0" value="1">
                         </div>
                     </th>
                     <th><i style="color: #21826e;" class="fa fa-minus-circle" aria-hidden="true"
-                            onclick="cabbageMinus()"></i></th>
+                            onclick="item3Minus()"></i></th>
                 </tr>
             </table>
 		</div>
@@ -408,20 +345,20 @@
 					Cabbage - 1 Kg
 				</span>
 			</div>
-            <p style="color: #A1A1A1;">Rs.<span id="result">110</span></p>
-			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">110</span></p>
+            <p style="color: #A1A1A1;">Rs.<span id="cabbage-result">110</span></p>
+			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="cabbage-price">110</span></p>
 
 			<table class="quantity-btn">
                 <tr>
                     <th><i style="color: #21826e;" class="fa fa-plus-circle" aria-hidden="true"
-                            onclick="cabbagePlus()"></i></th>
+                            onclick="item4Plus()"></i></th>
                     <th>
                         <div class="myQty">
-                            <input disabled="true" type="number" id="myNumber" min="0" value="1">
+                            <input disabled="true" type="number" id="cabbage-myNumber" min="0" value="1">
                         </div>
                     </th>
                     <th><i style="color: #21826e;" class="fa fa-minus-circle" aria-hidden="true"
-                            onclick="cabbageMinus()"></i></th>
+                            onclick="item4Minus()"></i></th>
                 </tr>
             </table>
 		</div>
@@ -496,7 +433,7 @@
       <div class="container col-12 col-xs-12 mb-5 price-text">
         <div class="d-flex justify-content-between">
             <span>Subtotal</span>
-            <span class="text-right"> Rs.219.00</span>
+            <span class="text-right"> Rs.<span id="tottalCost1"></span></span>
         </div>
         <div class="d-flex justify-content-between">
             <span>Delivery Fee</span>
@@ -509,7 +446,7 @@
         <hr/>
         <div class="d-flex justify-content-between">
             <span class="total-price">Total</span>
-            <span class="text-right"> Rs.<span id="tottalCost"></span>.00</span>
+            <span class="text-right"> Rs.<span id="tottalCost"></span></span>
         </div>
       </div>
       <div class="share-favourites text-center" onclick="checkoutPage()">Checkout</div>
