@@ -46,3 +46,7 @@ function POI2() {
 function POI3() {
     window.location.assign("../../Pages/POI/PorkPie.html")
 }
+
+function homePage() {
+    window.location.assign("../../Pages/Home/Home.html")
+}
