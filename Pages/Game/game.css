@@ -211,9 +211,8 @@ table {
 .ui-content {
     border-width: 0;
     overflow: visible;
-    /* overflow-x: hidden; */
     padding: 5px;
-    /* width: 250px; */
+    
     align-items: center !important;
 }
 

@@ -16,7 +16,7 @@ function vegetablePage() {
 }
 
 function fruitsPage() {
-    window.location.assign("../../Pages/Products/Fruits.html")
+    window.location.assign("../../Pages/Products/test.html")
 }
 
 function bakeryPage() {
@@ -32,10 +32,17 @@ function az() {
 }
 
 function POI1() {
-    window.location.assign("../../Pages/POI/item-page.html")
+    window.location.assign("../../Pages/POI/Onions.html")
 }
 
 function addressPage() {
     window.location.assign("../../Pages/address/address.html")
+}
 
+function POI2() {
+    window.location.assign("../../Pages/POI/Orange.html")
+}
+
+function POI3() {
+    window.location.assign("../../Pages/POI/PorkPie.html")
 }
