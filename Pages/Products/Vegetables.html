@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../Footer/footer.css" />
     <link rel="stylesheet" href="../Navigation/navigation.css" />
     <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+	<script src="../../utils/utils.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
@@ -285,12 +286,18 @@
                 function fav1() {
                     var h = document.getElementById("addFav1").src.split("/").pop().split(".")[0];
 
-
                     if (h == "vector") {
                         document.getElementById("addFav1").src = "../../assets/images/vectorfill.png";
+                        addToFavourites({
+                            id: 'item-5',
+                            name: "Cauliflower - 1kg",
+                            img: "../../assets/images/cauliflower.png",
+                            price: "Rs 400.00"
+                    })
                     }
                     else {
                         document.getElementById("addFav1").src = "../../assets/images/vector.png";
+                        removeFromFavourites("item-5")
                     }
                 }
 
@@ -300,9 +307,16 @@
 
                     if (h == "vector") {
                         document.getElementById("addFav2").src = "../../assets/images/vectorfill.png";
+                        addToFavourites({
+                            id: 'item-2',
+                            name: "Carrot - 1 kg",
+                            img: "../../assets/images/carrot.png",
+                            price: "Rs 105.00"
+                    })
                     }
                     else {
                         document.getElementById("addFav2").src = "../../assets/images/vector.png";
+                        removeFromFavourites("item-5")
                     }
                 }
 
@@ -312,6 +326,12 @@
 
                     if (h == "vector") {
                         document.getElementById("addFav3").src = "../../assets/images/vectorfill.png";
+                        addToFavourites({
+                            id: 'item-3',
+                            name: "Cabbage - 1 kg",
+                            img: "../../assets/images/Cabbage.png",
+                            price: "Rs 110.00"
+                    })
                     }
                     else {
                         document.getElementById("addFav3").src = "../../assets/images/vector.png";
@@ -324,6 +344,12 @@
 
                     if (h == "vector") {
                         document.getElementById("addFav4").src = "../../assets/images/vectorfill.png";
+                        addToFavourites({
+                            id: 'item-5',
+                            name: "Beetroot - 1 kg",
+                            img: "../../assets/images/Beetroot.png",
+                            price: "Rs 100.00"
+                    })
                     }
                     else {
                         document.getElementById("addFav4").src = "../../assets/images/vector.png";
@@ -336,6 +362,12 @@
 
                     if (h == "vector") {
                         document.getElementById("addFav5").src = "../../assets/images/vectorfill.png";
+                        addToFavourites({
+                            id: 'item-5',
+                            name: "Onion - 1 kg",
+                            img: "../../assets/images/onions.png",
+                            price: "Rs 120.00"
+                    })
                     }
                     else {
                         document.getElementById("addFav5").src = "../../assets/images/vector.png";
@@ -348,6 +380,12 @@
 
                     if (h == "vector") {
                         document.getElementById("addFav6").src = "../../assets/images/vectorfill.png";
+                        addToFavourites({
+                            id: 'item-5',
+                            name: "Potatoe - 1 kg",
+                            img: "../../assets/images/potatoe.png",
+                            price: "Rs 140.00"
+                    })
                     }
                     else {
                         document.getElementById("addFav6").src = "../../assets/images/vector.png";
@@ -360,6 +398,12 @@
 
                     if (h == "vector") {
                         document.getElementById("addFav7").src = "../../assets/images/vectorfill.png";
+                        addToFavourites({
+                            id: 'item-5',
+                            name: "Tomatoe - 1 kg",
+                            img: "../../assets/images/tomatoe.png",
+                            price: "Rs 135.00"
+                    })
                     }
                     else {
                         document.getElementById("addFav7").src = "../../assets/images/vector.png";
@@ -372,6 +416,12 @@
 
                     if (h == "vector") {
                         document.getElementById("addFav8").src = "../../assets/images/vectorfill.png";
+                        addToFavourites({
+                            id: 'item-5',
+                            name: "Lotus Root - 1 kg",
+                            img: "../../assets/images/lotus root.png",
+                            price: "Rs 240.00"
+                    })
                     }
                     else {
                         document.getElementById("addFav8").src = "../../assets/images/vector.png";
@@ -384,11 +434,40 @@
 
                     if (h == "vector") {
                         document.getElementById("addFav9").src = "../../assets/images/vectorfill.png";
+                        addToFavourites({
+                            id: 'item-5',
+                            name: "Bitter Melon - 1 kg",
+                            img: "../../assets/images/bitter melon.png",
+                            price: "Rs 115.00"
+                    })
                     }
                     else {
                         document.getElementById("addFav9").src = "../../assets/images/vector.png";
                     }
                 }
+
+                function addToFavourites(favItem){
+                let favourites = localStorage.getItem("favouriteItems");
+                if(favourites){
+                    let favArr = JSON.parse(favourites);
+                    favArr.push(favItem);
+                    localStorage.setItem("favouriteItems", JSON.stringify(favArr))
+                }else{
+                    let favNewArr = [];
+                    favNewArr.push(favItem);
+                    localStorage.setItem("favouriteItems", JSON.stringify(favNewArr))
+                }
+            }
+
+            function removeFromFavourites(id) {
+                let favourites = localStorage.getItem("favouriteItems");
+                if(favourites){
+                    let favArr = JSON.parse(favourites);
+                    let newArr = favArr.filter(x => x.id !== id);
+
+                    localStorage.setItem("favouriteItems", JSON.stringify(newArr))
+                }
+            }
             </script>
 
 <footer>
@@ -458,14 +537,14 @@
           alt="home"
         />
       </a>
-      <a href="#" class="nav__link nav__link--active">
+      <a href="#" class="nav__link nav__link--active" onclick="favPage()">
         <img
           src="../../assets/icons/favourite.png"
           class="nav-icons-fav"
           alt="favourite"
         />
       </a>
-      <a href="#" class="nav__link">
+      <a href="#" class="nav__link" onclick="cartPage()">
         <img
           src="../../assets/icons/cart.png"
           class="nav-icons-cart"

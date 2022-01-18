@@ -1,6 +1,6 @@
 <?php
 
-    $conn=mysqli_connect("localhost","root","","hansaka");
+    $conn=mysqli_connect("localhost","root","","Kwikmart");
     if(!$conn){
         die("Error while connecting to database");
     }
@@ -65,7 +65,7 @@
     </nav>
     <div id="side-menu" class="side-nav">
       <div class="btn-close" onclick="closeSlideMenu()">&times;</div>
-      <a href="item-page.php" class="menu-icon"> <i class="fas fa-home icons"></i>Home </a>
+      <a href="#" class="menu-icon"> <i class="fas fa-home icons"></i>Home </a>
       <a
         href="file:///C:/xampp/htdocs/KwikMart/KwikMart/Pages/Categories/Categories.html"
         class="menu-icon"
@@ -84,13 +84,13 @@
       <a href="#" class="menu-icon">
         <i class="fas fa-gamepad icons"></i>Games
       </a>
-      <a href="home.html" class="menu-icon">
+      <a href="#" class="menu-icon">
         <i class="fa fa-address-card icons"></i>About Us
       </a>
       <a href="#" class="menu-icon">
         <i class="fa fa-qrcode icons"></i>Scan Me
       </a>
-      <a href="location.html" class="menu-icon">
+      <a href="#" class="menu-icon">
         <i class="fa fa-user icons"></i>Account
       </a>
       <a href="#" class="menu-icon">
@@ -155,8 +155,7 @@
             <tbody class="text-muted">
             <tr>
                 <th scope="row" class="border-top-0">Item Description</th>
-                <td class="border-top-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                <td class="border-top-0">A cereal is any grass cultivated (grown) for the edible components of its grain (botanically, a type of fruit called a caryopsis), composed of the endosperm, germ, and bran.
                 </td>
             </tr>
             <tr>
@@ -169,7 +168,7 @@
             </tr>
             <tr>
                 <th scope="row" class="text-muted">Expiry Date</th>
-                <td>11 / 10 / 2022</td>
+                <td>11 / 10 / 2021</td>
             </tr>
             <tr>
                 <th scope="row" class="text-muted">Manufactured Date</th>
