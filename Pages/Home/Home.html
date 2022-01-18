@@ -1,175 +1,264 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="../Navigation/navigation.css" />
+    <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+    <link rel="stylesheet" href="../Footer/footer.css" />
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="home.css" />
-  <link rel="stylesheet" href="../Navigation/navigation.css" />
-  <link rel="stylesheet" href="../Navigation/bottomNav.css" />
-  <link rel="stylesheet" href="../Footer/footer.css" />
-  <title>Home</title>
-  <!-- Bootstrap CSS -->
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-  <!-- the three things that jQuery Mobile needs to work -->
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-</head>
-<div data-role="header" data-position="fixed">
-  <nav class="navbar-header">
-    <span class="open-slide">
-      <p href="#" class="hamburger-icon-qr" onclick="openSlideMenu()">
-        <i class="fa fa-bars"></i>
-      </p>
-    </span>
-    <ul>
-      <img src="../../assets/images/logo1.png" class="logo-header" alt="logocolored" />
-    </ul>
-  </nav>
-  <div id="side-menu" class="side-nav">
-    <div class="btn-close" onclick="closeSlideMenu()">&times;</div>
-    <a href="#" class="menu-icon"><i class="fa fa-home icons"></i>Home</a>
-    <a href="../Categories/Categories.html" class="menu-icon">
-      <i class="fa fa-th-list icons"></i>Categories
-    </a>
-    <a href="#" class="menu-icon">
-      <i class="fa fa-heart icons"></i>Favourites
-    </a>
-    <a href="http://localhost:8080/KwikMart/KwikMart/Pages/Comments-Reviews/Comments.php" class="menu-icon">
-      <i class="fa fa-shopping-cart icons"></i>Cart
-    </a>
-    <a href="#" class="menu-icon">
-      <i class="fa fa-percent icons"></i>Promotions
-    </a>
-    <a href="#" class="menu-icon">
-      <i class="fa fa-gamepad icons"></i>Games
-    </a>
-    <a href="#" class="menu-icon">
-      <i class="fa fa-address-card icons"></i>About Us
-    </a>
-    <a href="../QR/AR-Main-Page.html" class="menu-icon">
-      <i class="fa fa-qrcode icons"></i>Scan Me
-    </a>
-    <a href="#" class="menu-icon">
-      <i class="fa fa-user icons"></i>Account
-    </a>
-    <a href="#" class="menu-icon">
-      <i class="fa fa-power-off icons"></i>Sign out
-    </a>
-  </div>
-
-  <script>
-    function openSlideMenu() {
-      document.getElementById("side-menu").style.width = "300px";
-    }
-
-    function closeSlideMenu() {
-      document.getElementById("side-menu").style.width = "0px";
-    }
-  </script>
-</div>
-
-<body>
-  <div>
-    <img class="img" src="../../assets/images/Bakery.png">
-  </div>
-
-  <div class="container col-12 col-xs-12 mb-5">
-    <div class="d-flex mt-4 justify-content-between">
-      <span class="d-flex cart-title categories">Categories</span>
-      <span class="viewAll"> View All ></span>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- the three things that jQuery Mobile needs to work -->
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <div data-role="header" data-position="fixed">
+    <nav class="navbar-header">
+      <span class="open-slide">
+        <p href="#" class="hamburger-icon-qr" onclick="openSlideMenu()">
+          <i class="fa fa-bars"></i>
+        </p>
+      </span>
+      <ul>
+        <img
+          src="../../assets/images/logo1.png"
+          class="logo-header"
+          alt="logocolored"
+        />
+      </ul>
+    </nav>
+    <div id="side-menu" class="side-nav">
+      <div class="btn-close" onclick="closeSlideMenu()">&times;</div>
+      <a href="#" class="menu-icon"><i class="fa fa-home icons"></i>Home</a>
+      <a href="../Categories/Categories.html" class="menu-icon">
+        <i class="fa fa-th-list icons"></i>Categories
+      </a>
+      <a href="#" class="menu-icon">
+        <i class="fa fa-heart icons"></i>Favourites
+      </a>
+      <a
+        href="http://localhost:8080/KwikMart/KwikMart/Pages/Comments-Reviews/Comments.php"
+        class="menu-icon"
+      >
+        <i class="fa fa-shopping-cart icons"></i>Cart
+      </a>
+      <a href="#" class="menu-icon">
+        <i class="fa fa-percent icons"></i>Promotions
+      </a>
+      <a href="#" class="menu-icon">
+        <i class="fa fa-gamepad icons"></i>Games
+      </a>
+      <a href="#" class="menu-icon">
+        <i class="fa fa-address-card icons"></i>About Us
+      </a>
+      <a href="../QR/AR-Main-Page.html" class="menu-icon">
+        <i class="fa fa-qrcode icons"></i>Scan Me
+      </a>
+      <a href="#" class="menu-icon">
+        <i class="fa fa-user icons"></i>Account
+      </a>
+      <a href="#" class="menu-icon">
+        <i class="fa fa-power-off icons"></i>Sign out
+      </a>
     </div>
+
+    <script>
+      function openSlideMenu() {
+        document.getElementById("side-menu").style.width = "300px";
+      }
+
+      function closeSlideMenu() {
+        document.getElementById("side-menu").style.width = "0px";
+      }
+    </script>
+  </div>
+
+  <body>
     <div>
-
+      <img class="img" src="../../assets/images/Bakery.png" />
     </div>
 
-    <div class="d-flex mt-4 justify-content-between">
-      <span class="d-flex cart-title categories">Best Selling</span>
-      <span class="viewAll"> View All ></span>
-    </div>
-    <div class="d-flex buttons">
+    <div class="container col-12 col-xs-12 mb-5">
+      <div class="d-flex mt-4 justify-content-between">
+        <span class="d-flex cart-title categories">Categories</span>
+        <span class="viewAll"> View All ></span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div class="card text-center card-container" style="width: 15rem">
+          <div class="card-body">
+            <div class="image-icon">
+              <img
+                class="card-img-top"
+                src="../../assets/images/orange.png"
+                alt="Card image cap"
+              />
+            </div>
+            <h5 class="card-title">Orange - 1 kg</h5>
+            <p class="card-text">Rs 89.00</p>
+            <a href="#"><button class="button">Add to Cart</button> </a>
+          </div>
+        </div>
+        <div class="card text-center card-container" style="width: 15rem">
+          <div class="card-body">
+            <div class="image-icon">
+              <img
+                class="card-img-top"
+                src="../../assets/images/orange.png"
+                alt="Card image cap"
+              />
+            </div>
+            <h5 class="card-title">Orange - 1 kg</h5>
+            <p class="card-text">Rs 89.00</p>
+            <a href="#"><button class="button">Add to Cart</button> </a>
+          </div>
+        </div>
+        <div class="card text-center card-container" style="width: 15rem">
+          <div class="card-body">
+            <div class="image-icon">
+              <img
+                class="card-img-top"
+                src="../../assets/images/orange.png"
+                alt="Card image cap"
+              />
+            </div>
+            <h5 class="card-title">Orange - 1 kg</h5>
+            <p class="card-text">Rs 89.00</p>
+            <a href="#"><button class="button">Add to Cart</button> </a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="card" style="width: 9rem">
+        <img
+          class="card-img-top image-icon"
+          src="../../assets/images/orange.png"
+          alt="Card image cap"
+        />
+        <div class="card-body card-content">
+          <p class="card-text">Orange - 1 kg</p>
+          <p class="card-text">Rs 89.00</p>
+        </div>
+      </div> -->
+      <div></div>
 
+      <div class="d-flex mt-4 justify-content-between">
+        <span class="d-flex cart-title categories">Best Selling</span>
+        <span class="viewAll"> View All ></span>
+      </div>
+      <div class="d-flex buttons"></div>
     </div>
-  </div>
-</body>
-<footer>
-  <div class="footer-top">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12 segment-one">
-          <img src="../../assets/images/logo-light.png" class="logo-footer" alt="light-logo" />
-          <p class="content">
-            Our pioneer venture into modern trade in 1983 was a unique
-            innovation of our company's longstanding trading legacy. We
-            continued to challenge the norm by revolutionizing what was
-            traditionally an affluent affair by offering products of a higher
-            value for the lowest prices.
-          </p>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12 segment-two">
-          <h2 class="topic-content">Links</h2>
-          <ul>
-            <p class="link" href="#">Home</p>
-            <p class="link" href="#">Scan Me</p>
-            <p class="link" href="#">Reviews</p>
-            <p class="link" href="#">Categories</p>
-            <p class="link" href="#">About us</p>
-            <p class="link" href="#">Help</p>
-          </ul>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12 segment-three">
-          <h2 class="topic-content">Follow Us</h2>
-          <p class="content">
-            Questions or Feedbacks? We'd love to hear from you. Please follow
-            us on our social media profiles in order to keep updated
-          </p>
-          <div class="icons" href="#"><i class="fa fa-facebook"></i></div>
-          <div class="icons" href="#"><i class="fa fa-twitter"></i></div>
-          <div class="icons" href="#"><i class="fa fa-linkedin"></i></div>
-          <div class="icons" href="#"><i class="fa fa-pinterest"></i></div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12 segment-four">
-          <h2 class="topic-content">Our Newsletters</h2>
-          <p class="content">
-            Questions or Feedbacks? We'd love to hear from you. Please follow
-            us on our social media profiles in order to keep updated
-          </p>
-          <form action="" class="form-area">
-            <span class="email-field"></span>
-            <span class="submit-button">Subscribe</span>
-          </form>
+  </body>
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12 segment-one">
+            <img
+              src="../../assets/images/logo-light.png"
+              class="logo-footer"
+              alt="light-logo"
+            />
+            <p class="content">
+              Our pioneer venture into modern trade in 1983 was a unique
+              innovation of our company's longstanding trading legacy. We
+              continued to challenge the norm by revolutionizing what was
+              traditionally an affluent affair by offering products of a higher
+              value for the lowest prices.
+            </p>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 segment-two">
+            <h2 class="topic-content">Links</h2>
+            <ul>
+              <p class="link" href="#">Home</p>
+              <p class="link" href="#">Scan Me</p>
+              <p class="link" href="#">Reviews</p>
+              <p class="link" href="#">Categories</p>
+              <p class="link" href="#">About us</p>
+              <p class="link" href="#">Help</p>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 segment-three">
+            <h2 class="topic-content">Follow Us</h2>
+            <p class="content">
+              Questions or Feedbacks? We'd love to hear from you. Please follow
+              us on our social media profiles in order to keep updated
+            </p>
+            <div class="icons" href="#"><i class="fa fa-facebook"></i></div>
+            <div class="icons" href="#"><i class="fa fa-twitter"></i></div>
+            <div class="icons" href="#"><i class="fa fa-linkedin"></i></div>
+            <div class="icons" href="#"><i class="fa fa-pinterest"></i></div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 segment-four">
+            <h2 class="topic-content">Our Newsletters</h2>
+            <p class="content">
+              Questions or Feedbacks? We'd love to hear from you. Please follow
+              us on our social media profiles in order to keep updated
+            </p>
+            <form action="" class="form-area">
+              <span class="email-field"></span>
+              <span class="submit-button">Subscribe</span>
+            </form>
+          </div>
         </div>
       </div>
     </div>
+    <p class="footer-bottom-text">
+      Copy right 2022 by KwikMart Grocery Store | All rights reserved
+    </p>
+  </footer>
+
+  <div data-role="footer" data-position="fixed">
+    <nav class="nav">
+      <a href="#" class="nav__link">
+        <img
+          src="../../assets/icons/home.png"
+          class="nav-icons-home"
+          alt="home"
+        />
+      </a>
+      <a href="#" class="nav__link nav__link--active">
+        <img
+          src="../../assets/icons/favourite.png"
+          class="nav-icons-fav"
+          alt="favourite"
+        />
+      </a>
+      <a href="#" class="nav__link">
+        <img
+          src="../../assets/icons/cart.png"
+          class="nav-icons-cart"
+          alt="cart"
+        />
+      </a>
+      <a href="#" class="nav__link">
+        <img
+          src="../../assets/icons/user.png"
+          class="nav-icons-user"
+          alt="user"
+        />
+      </a>
+    </nav>
   </div>
-  <p class="footer-bottom-text">
-    Copy right 2022 by KwikMart Grocery Store | All rights reserved
-  </p>
-</footer>
-
-<div data-role="footer" data-position="fixed">
-  <nav class="nav">
-    <a href="#" class="nav__link">
-      <img src="../../assets/icons/home.png" class="nav-icons-home" alt="home" />
-    </a>
-    <a href="#" class="nav__link nav__link--active">
-      <img src="../../assets/icons/favourite.png" class="nav-icons-fav" alt="favourite" />
-    </a>
-    <a href="#" class="nav__link">
-      <img src="../../assets/icons/cart.png" class="nav-icons-cart" alt="cart" />
-    </a>
-    <a href="#" class="nav__link">
-      <img src="../../assets/icons/user.png" class="nav-icons-user" alt="user" />
-    </a>
-  </nav>
-</div>
-<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-<script type="text/javascript"></script>
-
+  <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+  <script type="text/javascript"></script>
 </html>
