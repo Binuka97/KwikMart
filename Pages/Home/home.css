@@ -83,3 +83,29 @@
 .card-container{
     border-radius: 20px !important;
 }
+
+
+@media (max-width: 896px) {
+    .image-icon {
+        width: 70px;
+        margin: auto;
+      }
+
+    .card-title {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #676767;
+
+    }  
+
+    .card-body {
+        padding: 5px !important;
+        margin-left: 5px !important;
+    }
+
+    .button {
+        font-size: 12px !important;
+        /* width: 40px !important; */
+    }
+  }
