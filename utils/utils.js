@@ -22,3 +22,7 @@ function checkoutPage1() {
 function checkoutPage1() {
     window.location.assign("../../Pages/Checkout/Checkout.html")
 }
+
+function addressPage() {
+    window.location.assign("../../Pages/address/address.html")
+}

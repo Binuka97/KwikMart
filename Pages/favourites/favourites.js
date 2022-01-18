@@ -6,39 +6,27 @@ $(document).ready(function () {
     localStorage.removeItem("selected");
   }
 
-  const fav_products = [
-    {
-      id: 'item-1',
-      name: "Mango - 1Kg",
-      img: "../../assets/images/mango.png",
-      price: "Rs.118.00"
-    },
-    {
-      id: 'item-1',
-      name: "Orange - 1kg",
-      img: "../../assets/images/orange.png",
-      price: "Rs.100.00"
-    }
-  ]
+  // const fav_products = [
+  //   {
+  //     id: 'item-1',
+  //     name: "Onion - 1Kg",
+  //     img: "../../assets/images/onions.png",
+  //     price: "Rs.120.00"
+  //   },
+  //   {
+  //     id: 'item-1',
+  //     name: "Carrot - 1kg",
+  //     img: "../../assets/images/carrot.png",
+  //     price: "Rs.160.00"
+  //   }
+  // ]
 
-  localStorage.setItem("favouriteItems", JSON.stringify(fav_products));
-  let favv = JSON.parse(localStorage.getItem("favouriteItems"))
-  console.log("FAVVVVVV", favv.name)
-  console.log("object", fav_products)
+  // localStorage.setItem("favouriteItems", JSON.stringify(fav_products));
+  // let favv = JSON.parse(localStorage.getItem("favouriteItems"))
+  // console.log("FAVVVVVV", favv.name)
+  // console.log("object", fav_products)
   
   displayFavourites();
-
-  $(".favourite-product-quantity .favourite-product-increase-button").click(function () {
-    var text = $(this).parent().parent().parent().find('.count', '.favourite-product-quantity')
-    text.val(parseInt(text.val()) + 1);
-  });
-
-  $(".favourite-product-quantity .favourite-product-decrease-button").click(function () {
-    var text = $(this).parent().parent().parent().find('.count', '.favourite-product-quantity')
-    if (parseInt(text.val()) > 1) {
-      text.val(parseInt(text.val()) - 1);
-    }
-  });
 
   $(".select-all").click(function () {
     if (this.checked) {
@@ -117,6 +105,9 @@ $(document).ready(function () {
     document.getElementById("myModal").style.display = 'none';
   });
 
+  $("#deleteFav").click(function () {
+    localStorage.removeItem("favouriteItems")
+  });
 
 });
 
@@ -134,8 +125,8 @@ function displayFavourites() {
       favCard += '<div class="item-info">';
       favCard += '<div class="progress-container">';
       favCard += '<span class="progress-text">' + item.name + ' </span></div>';
-      favCard += '<p class="price-txt" style="color: #A1A1A1;">' + item.price + '</p>';
-      favCard += '<span class="quantity-btn"> ADD TO <img src="../../assets/icons/cart1.png" id="cart-img"></span></div></div>';
+      favCard += '<p class="price-txt" style="color: #A1A1A1;">' + item.price + '</p></div>';
+      favCard += '<span class="quantity-btn"> ADD TO <img src="../../assets/icons/cart1.png" id="cart-img"></span></div>';
         })
 
         document.getElementById("favourite-products").innerHTML = favCard;
@@ -168,35 +159,3 @@ function removeAllselectedProducts() {
   localStorage.setItem("selected", JSON.stringify(selectedProducts));
 }
 
-function showSuccessToast() {
-  var x = document.getElementById("success-toast");
-  x.className = "show";
-  setTimeout(function () {
-    x.className = x.className.replace("show", "");
-  }, 3000);
-}
-
-function showErrorToast() {
-  var x = document.getElementById("error-toast");
-  x.className = "show";
-  setTimeout(function () {
-    x.className = x.className.replace("show", "");
-  }, 3000);
-}
-
-function sendEmail() {
-  var emailBody = getEmailBody();
-  var templateParams = {
-    content: emailBody,
-    email: localStorage.getItem("email")
-  };
-
-  emailjs.send('service_3q50ful', 'template_gdvol4w', templateParams, 'user_uOok8WDddCFtXaYtxYn5D')
-    .then(function (response) {
-      console.log('SUCCESS!', response.status, response.text);
-      showSuccessToast();
-    }, function (error) {
-      console.log('FAILED...', error);
-      showErrorToast();
-    });
-}
