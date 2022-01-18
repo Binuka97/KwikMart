@@ -92,6 +92,33 @@
   border-radius: 15px;
   padding: 20px;
 }
-.categories-name{
-    text-align: center;
+.categories-name {
+  text-align: center;
+}
+.best-selling-container {
+  padding: 15px 15px 15px 15px;
+  background: #ffffff;
+  box-shadow: 0px 2px 19px 3px rgba(181, 181, 181, 0.25);
+  border-radius: 15px;
+}
+.best-selling-image {
+  margin: auto;
+  width: 80px;
+}
+.best-selling-name {
+  text-align: center;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.best-selling-btn {
+  background-color: #21826e;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 8px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 20px;
+  color: #ffffff;
 }
