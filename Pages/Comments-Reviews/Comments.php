@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <img src="../../assets/images/AR-201109907_1-removebg-preview.png" width="176">
+                <img src="../../assets/images/Bagel ham.png" width="176">
             </div>
             <div class="position-absolute rounded-pill bg-primary py-2 px-3 text-white font-weight-bold stock-badge outstock">
                 Out of stock
