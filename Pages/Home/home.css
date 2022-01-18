@@ -108,7 +108,7 @@
   }
 }
 .categories-image {
-  width: 70px;
+  width: 50px;
 }
 .categories-container-1,
 .categories-container-2,
@@ -131,7 +131,7 @@
 }
 .best-selling-image {
   margin: auto;
-  width: 60px;
+  width: 80px;
 }
 .best-selling-name {
   text-align: center;
@@ -151,8 +151,8 @@
   color: #ffffff;
 }
 
-@media (width: 414px) {
+/* @media (width: 414px) {
   .categories-container-1 {
     display: none;
   }
-}
+} */
