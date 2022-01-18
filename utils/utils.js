@@ -34,3 +34,8 @@ function az() {
 function POI1() {
     window.location.assign("../../Pages/POI/item-page.html")
 }
+
+function addressPage() {
+    window.location.assign("../../Pages/address/address.html")
+
+}

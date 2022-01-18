@@ -178,7 +178,7 @@ p {
     bottom: 50px;
     color: #676767;
     font-family: "Poppins", sans-serif;
-
+    z-index: 1000;
 }
 
 .total-price {

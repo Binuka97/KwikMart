@@ -10,6 +10,7 @@
   <script src="../../utils/utils.js"></script>
   <link rel="stylesheet" href="../Navigation/navigation.css" />
   <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+  <link rel="stylesheet" href="../Footer/footer.css" />
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
@@ -18,6 +19,7 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script type="text/javascript" src="./cart.js"></script>
 </head>
 
 <div data-role="header" data-position="fixed">
@@ -74,146 +76,10 @@
       document.getElementById("side-menu").style.width = "0px";
     }
 
-    $(document).ready(function () {
-        $("#greenCabbageQuantity").on('change', function () {
-            $('#total').text($('#price').attr('data-price') * $(this).val());
-        });
-    });
-
-    function item1Minus() {
-        decreament = document.getElementById("myNumber").value;
-        if (+decreament == 1 || +decreament > 1) {
-            document.getElementById("myNumber").stepDown();
-            num3 = document.getElementById("price").innerHTML;
-            num4 = document.getElementById("myNumber").value;
-            num5 = document.getElementById("result").innerHTML;
-            console.log(num4)
-            if (+num4 > 0) {
-                document.getElementById("result").innerHTML = result - num3;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num3;
-            }
-            else {
-                document.getElementById("result").innerHTML = 0;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num3;
-            }
-        }
-    }
-
-    function item1Plus() {
-        document.getElementById("myNumber").stepUp();
-        num1 = document.getElementById("price").innerHTML;
-        num2 = document.getElementById("myNumber").value;
-        document.getElementById("result").innerHTML = num1 * num2;
-        total = document.getElementById("tottalCost").innerHTML;
-        document.getElementById("tottalCost").innerHTML = +total + +num1;
-    }
-
-    function item2Minus() {
-        decreament = document.getElementById("myNumber2").value;
-        if (+decreament == 1 || +decreament > 1) {
-            document.getElementById("myNumber2").stepDown();
-            num1 = document.getElementById("price2").innerHTML;
-            num2 = document.getElementById("myNumber2").value;
-            result = document.getElementById("result2").innerHTML;
-            if (+num2 > 0) {
-                document.getElementById("result2").innerHTML = result - num1;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num1;
-            }
-            else {
-                document.getElementById("result2").innerHTML = 0;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num1;
-            }
-        }
-    }
-
-    function item2Plus() {
-        document.getElementById("myNumber2").stepUp();
-        num1 = document.getElementById("price2").innerHTML;
-        num2 = document.getElementById("myNumber2").value;
-        document.getElementById("result2").innerHTML = num1 * num2;
-        total = document.getElementById("tottalCost").innerHTML;
-        document.getElementById("tottalCost").innerHTML = +total + +num1;
-    }
-
-    function item3Plus() {
-        document.getElementById("myNumber3").stepUp();
-        num1 = document.getElementById("price3").innerHTML;
-        num2 = document.getElementById("myNumber3").value;
-        document.getElementById("result3").innerHTML = num1 * num2;
-        total = document.getElementById("tottalCost").innerHTML;
-        result = document.getElementById("tottalCost").innerHTML = +total + +num1;
-    }
-
-    function item3Minus() {
-        decreament = document.getElementById("myNumber3").value;
-        if (+decreament == 1 || +decreament > 1) {
-            document.getElementById("myNumber3").stepDown();
-            num1 = document.getElementById("price3").innerHTML;
-            num2 = document.getElementById("myNumber3").value;
-            result = document.getElementById("result3").innerHTML;
-            if (+num2 > 0) {
-                document.getElementById("result").innerHTML = result - num1;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num1;
-            }
-            else {
-                document.getElementById("result").innerHTML = 0;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num1;
-            }
-        }
-    }
-
-    function item4Minus() {
-        decreament = document.getElementById("cabbage-myNumber").value;
-        if (+decreament == 1 || +decreament > 1) {
-            document.getElementById("cabbage-myNumber").stepDown();
-            num3 = document.getElementById("cabbage-price").innerHTML;
-            num4 = document.getElementById("cabbage-myNumber").value;
-            result = document.getElementById("cabbage-result").innerHTML;
-            if (+num4 > 0) {
-                document.getElementById("cabbage-result").innerHTML = result - num3;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num3;
-            }
-            else {
-                document.getElementById("cabbage-result").innerHTML = 0;
-                total = document.getElementById("tottalCost").innerHTML;
-                document.getElementById("tottalCost").innerHTML = total - num3;
-            }
-        }
-    }
-
-    function item4Plus() {
-        document.getElementById("cabbage-myNumber").stepUp();
-        num1 = document.getElementById("cabbage-price").innerHTML;
-        num2 = document.getElementById("cabbage-myNumber").value;
-        document.getElementById("cabbage-result").innerHTML = num1 * num2;
-        total = document.getElementById("tottalCost").innerHTML;
-        document.getElementById("tottalCost").innerHTML = +total + +num1;
-    }
-
-    function SomeFunction() {
-        // console.log("WE ARE INSIDEEEEE")
-        item1 = document.getElementById("result").innerHTML;
-        // console.log("WE ARE INSIDEEEEE", calc1)
-
-        item2 = document.getElementById("result2").innerHTML;
-        item3 = document.getElementById("result3").innerHTML;
-        item4 = document.getElementById("cabbage-result").innerHTML;
-
-        document.getElementById("tottalCost").innerHTML = +item1 + +item2 + +item3 + +item4;
-        document.getElementById("tottalCost1").innerHTML = +item1 + +item2 + +item3 + +item4;
-
-    }
   </script>
 </div>
 
-<body onload="javascript:SomeFunction()">
+<body onload="javascript:calculateFinalBalance()">
   <script type="text/javascript" src="./favourites.js"></script>
   <div class="container col-12 col-xs-12 mb-5">
     <div class="topic mt-4">
@@ -234,11 +100,6 @@
       <img src="../../assets/icons/delete.png" class="float-right" />
       <div class="clear"></div>
     </div>
-
-    <!-- <div class="products">
-      <ul class="favourite-products" id="favourite-products">
-      </ul>
-    </div> -->
 
     <div class="cart-item"> 
 		<div class="check-image">
@@ -363,69 +224,10 @@
             </table>
 		</div>
 	</div>
-
-    <div class="cart-item"> 
-		<div class="check-image">
-            <input class="select-all" id="select-all" type="checkbox" data-role="none">
-            <img src="../../assets/images/apples.png" class="img" />
-		</div>
-
-		<div class="item-info">
-			<div class="progress-container">
-				<span class="progress-text">
-					Green Cabbage - 1 Kg
-				</span>
-			</div>
-            <p style="color: #A1A1A1;">Rs.<span id="result">68</span></p>
-			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">68</span></p>
-
-			<table class="quantity-btn">
-                <tr>
-                    <th><i style="color: #21826e;" class="fa fa-plus-circle" aria-hidden="true"
-                            onclick="cabbagePlus()"></i></th>
-                    <th>
-                        <div class="myQty">
-                            <input disabled="true" type="number" id="myNumber" min="0" value="1">
-                        </div>
-                    </th>
-                    <th><i style="color: #21826e;" class="fa fa-minus-circle" aria-hidden="true"
-                            onclick="cabbageMinus()"></i></th>
-                </tr>
-            </table>
-
-            
-		</div>
-	</div>
-
-    <div class="cart-item"> 
-		<div class="check-image">
-            <input class="select-all" id="select-all" type="checkbox" data-role="none">
-            <img src="../../assets/images/apples.png" class="img" />
-		</div>
-
-		<div class="item-info">
-			<div class="progress-container">
-				<span class="progress-text">
-					Green Cabbage - 1 Kg
-				</span>
-			</div>
-            <p style="color: #A1A1A1;">Rs.<span id="result">68</span></p>
-			<p style="color: #A1A1A1; visibility: hidden;">Rs.<span id="price">68</span></p>
-
-			<table class="quantity-btn">
-                <tr>
-                    <th><i style="color: #21826e;" class="fa fa-plus-circle" aria-hidden="true"
-                            onclick="cabbagePlus()"></i></th>
-                    <th>
-                        <div class="myQty">
-                            <input disabled="true" type="number" id="myNumber" min="0" value="1">
-                        </div>
-                    </th>
-                    <th><i style="color: #21826e;" class="fa fa-minus-circle" aria-hidden="true"
-                            onclick="cabbageMinus()"></i></th>
-                </tr>
-            </table>
-		</div>
+  <div class="d-flex justify-content-between mt-3">
+    <input style="width: 270px; padding-right: 10px;" type="text" value="">
+    <button style="font-size: 14px; background-color: #21826e; color: #ffffff; margin-left: 10px; border-radius: 7px;">APPLY</button>
+  </div>
 	</div>
 
   </div>
@@ -457,6 +259,64 @@
   </div>
   </div>
 </body>
+<footer>
+  <div style="margin-top: 300px;" class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12 segment-one">
+          <img
+            src="../../assets/images/logo-light.png"
+            class="logo-footer"
+            alt="light-logo"
+          />
+          <p class="content">
+            Our pioneer venture into modern trade in 1983 was a unique
+            innovation of our company's longstanding trading legacy. We
+            continued to challenge the norm by revolutionizing what was
+            traditionally an affluent affair by offering products of a higher
+            value for the lowest prices.
+          </p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 segment-two">
+          <h2 class="topic-content">Links</h2>
+          <ul>
+            <p class="link" href="#">Home</p>
+            <p class="link" href="#">Scan Me</p>
+            <p class="link" href="#">Reviews</p>
+            <p class="link" href="#">Categories</p>
+            <p class="link" href="#">About us</p>
+            <p class="link" href="#">Help</p>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 segment-three">
+          <h2 class="topic-content">Follow Us</h2>
+          <p class="content">
+            Questions or Feedbacks? We'd love to hear from you. Please follow
+            us on our social media profiles in order to keep updated
+          </p>
+          <div class="icons" href="#"><i class="fa fa-facebook"></i></div>
+          <div class="icons" href="#"><i class="fa fa-twitter"></i></div>
+          <div class="icons" href="#"><i class="fa fa-linkedin"></i></div>
+          <div class="icons" href="#"><i class="fa fa-pinterest"></i></div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 segment-four">
+          <h2 class="topic-content">Our Newsletters</h2>
+          <p class="content">
+            Questions or Feedbacks? We'd love to hear from you. Please follow
+            us on our social media profiles in order to keep updated
+          </p>
+          <form action="" class="form-area">
+            <span class="email-field"></span>
+            <span class="submit-button">Subscribe</span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom-text">
+    Copy right 2022 by KwikMart Grocery Store | All rights reserved
+  </p>
+</footer>
 <div data-role="footer" data-position="fixed">
   <nav class="nav">
     <a href="#" class="nav__link">
