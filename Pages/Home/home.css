@@ -80,8 +80,8 @@
   border-radius: 150px !important;
   text-align: center !important;
 }
-.card-container{
-    border-radius: 20px !important;
+.card-container {
+  border-radius: 20px !important;
 }
 
 
@@ -109,3 +109,15 @@
         /* width: 40px !important; */
     }
   }
+.categories-image {
+  width: 50px;
+}
+.categories-container {
+  background: #ffffff;
+  box-shadow: 0px 2px 19px 3px rgba(181, 181, 181, 0.25);
+  border-radius: 15px;
+  padding: 20px;
+}
+.categories-name{
+    text-align: center;
+}
