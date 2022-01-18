@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Page</title>
+    <link rel="stylesheet" href="../QR/qr.css" />
+    <link rel="stylesheet" href="../Game/game.css" />
+    <link rel="stylesheet" href="../Footer/footer.css" />
+    <link rel="stylesheet" href="../Navigation/navigation.css" />
+    <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+    <link rel="stylesheet" href="../favourites/favourites.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    
+    <script>
+        $(document).ready(function () {
+            $('.box_holder').click(function () {
+                $(this).toggleClass('show_info')
+            });
+        });
+        var timeleft = 20;
+        var downloadTimer = setInterval(function () {
+            if (timeleft <= 0) {
+                clearInterval(downloadTimer);
+                document.getElementById("countdown").innerHTML = "Finished";
+            } else {
+                document.getElementById("countdown").innerHTML = timeleft + "seconds remaining";
+            }
+            timeleft -= 1;
+        }, 1000);
+    </script>
+</head>
+
+<body>
+    <div data-role="page">
+        <table>
+            <tr>
+                <td>
+                    <div class="box_holder">
+                        <div class="front"><img src="../../assets/images/coupon.png" alt="Nature" class="responsive"
+                                style="align-items: center;"></div>
+                        <div class="back"><a href="#myPopupDialog2" data-rel="popup" data-position-to="window"
+                                data-transition="fade"><img src="../../assets/images/cross.png" alt="Nature"
+                                    class="responsive"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="box_holder">
+                        <div class="front"><img src="../../assets/images/coupon.png" alt="Nature" class="responsive">
+                        </div>
+                        <div class="back"><a href="#myPopupDialog2" data-rel="popup" data-position-to="window"
+                                data-transition="fade"><img src="../../assets/images/cross.png" alt="Nature"
+                                    class="responsive"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="box_holder">
+                        <div class="front"><img src="../../assets/images/coupon.png" alt="Nature" class="responsive">
+                        </div>
+                        <div class="back"><a href="congratulations.html" rel="external"><img
+                                    src="../../assets/images/price.png" alt="Nature" class="responsive"></a></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="box_holder">
+                        <div class="front"><img src="../../assets/images/coupon.png" alt="Nature" class="responsive">
+                        </div>
+                        <div class="back"><a href="#myPopupDialog2" data-rel="popup" data-position-to="window"
+                                data-transition="fade"><img src="../../assets/images/cross.png" alt="Nature"
+                                    class="responsive"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="box_holder">
+                        <div class="front"><img src="../../assets/images/coupon.png" alt="Nature" class="responsive">
+                        </div>
+                        <div class="back"><a href="#myPopupDialog2" data-rel="popup" data-position-to="window"
+                                data-transition="fade"><img src="../../assets/images/cross.png" alt="Nature"
+                                    class="responsive"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="box_holder">
+                        <div class="front"><img src="../../assets/images/coupon.png" alt="Nature" class="responsive">
+                        </div>
+                        <div class="back"><a href="congratulations.html" rel="external"><img
+                                    src="../../assets/images/price.png" alt="Nature" class="responsive"></a></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="box_holder">
+                        <div class="front"><img src="../../assets/images/coupon.png" alt="Nature" class="responsive">
+                        </div>
+                        <div class="back"><a href="#myPopupDialog2" data-rel="popup" data-position-to="window"
+                                data-transition="fade"><img src="../../assets/images/cross.png" alt="Nature"
+                                    class="responsive"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="box_holder">
+                        <div class="front"><img src="../../assets/images/coupon.png" alt="Nature" class="responsive">
+                        </div>
+                        <div class="back"><a href="#myPopupDialog2" data-rel="popup" data-position-to="window"
+                                data-transition="fade"><img src="../../assets/images/cross.png" alt="Nature"
+                                    class="responsive"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="box_holder">
+                        <div class="front"><img src="../../assets/images/coupon.png" alt="Nature" class="responsive">
+                        </div>
+                        <div class="back"><a href="#myPopupDialog2" data-rel="popup" data-position-to="window"
+                                data-transition="fade"><img src="../../assets/images/cross.png" alt="Nature"
+                                    class="responsive"></div>
+                    </div>
+                </td>
+
+            </tr>
+
+        </table>
+        <div data-role="main" class="ui-content">
+            <!-- <a href="#myPopupDialog2" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Button3</a> -->
+
+            <div data-role="popup" id="myPopupDialog2" style="width: 40vw;">
+                <div data-role="main" class="ui-content">
+                    <p class="popupText">You didn't won the<br>game</p>
+                    <center><img src="../../assets/images/thumbs-up.gif" alt="Nature" class="responsive"
+                            style="margin-left: auto; margin-right: auto; transform: rotate(180deg);transform: scaleY(-1);">
+                    </center>
+                    <!-- <a href="GameStart.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Try Again</a> -->
+                    <center><a href="GameStart.html" rel="external" class="ui-btn"
+                            style="border-radius: 25px; width: 140px; height: auto; background-color:  #21826E; margin-top: 10px;">Play Again</a></center>
+                </div>
+            </div>
+        </div>
+        <div id="countdown"></div>
+    </div>
+</body>
+
+
+<div data-role="footer" data-position="fixed">
+    <nav class="nav">
+        <a href="#" class="nav__link">
+            <img src="../../assets/icons/home.png" class="nav-icons-home" alt="home" />
+        </a>
+        <a href="#" class="nav__link nav__link--active">
+            <img src="../../assets/icons/favourite.png" class="nav-icons-fav" alt="favourite" />
+        </a>
+        <a href="#" class="nav__link">
+            <img src="../../assets/icons/cart.png" class="nav-icons-cart" alt="cart" />
+        </a>
+        <a href="#" class="nav__link">
+            <img src="../../assets/icons/user.png" class="nav-icons-user" alt="user" />
+        </a>
+    </nav>
+</div>
+
+
+
+</html>
