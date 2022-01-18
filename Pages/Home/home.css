@@ -151,8 +151,3 @@
   color: #ffffff;
 }
 
-@media (width: 414px) {
-  .categories-container-1 {
-    display: none;
-  }
-}
