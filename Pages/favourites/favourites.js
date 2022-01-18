@@ -1,4 +1,3 @@
-// JavaScript Document
 $(document).ready(function () {
 
   var selectedProducts = JSON.parse(localStorage.getItem("selected"));
