@@ -49,3 +49,22 @@
     border-radius: 20px;
     margin-left: 20px;
 }
+
+.img {
+    width: 100%;
+    height: 170px;
+}
+
+.categories {
+    font-size: 22px;
+    font-weight: 600;
+    color: #676767;
+    font-family: "Poppins", sans-serif;
+}
+
+.viewAll {
+    color: #21826e;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+
+}
