@@ -88,7 +88,7 @@
         <span class="checkmark"></span>
         <p id="checkbox-label"> Select All</p>
       </label>
-      <img src="../../assets/icons/delete.png" class="float-right" />
+      <img id="deleteFav" src="../../assets/icons/delete.png" class="float-right" />
       <div class="clear"></div>
     </div>
 
@@ -134,16 +134,21 @@
       $('.popupCloseButton').click(function () {
         $('.hover_bkgr_fricc').hide();
       });
+
+      $("#deleteFav").click(function () {
+    localStorage.removeItem("favouriteItems");
+  });
     });
 
 
     function sendEmail() {
       let email = $("#email").val();
+      let message = $('#message').val();
       let favourites = JSON.parse(localStorage.getItem("favouriteItems"))
       if (favourites) {
-        let favString = "";
+        let favString = ` ${message} `;
         favourites.forEach((item) => {
-          let fav = `<br/> ${item.name}`;
+          let fav = `<br/> ${item.name} => Price: ${item.price}`;
           favString += fav
         })
 
@@ -153,7 +158,7 @@
           Password: "Bikkabikka97",
           To: email,
           From: "binuka.2017172@iit.ac.lk",
-          Subject: "Your Favourites List",
+          Subject: "My Favourites List",
           Body: favString,
         }).then(
           message => alert("Successfully sent the favourites list")
@@ -173,7 +178,7 @@
 
 </body>
 <footer>
-  <div style="margin-top: 410px;" class="footer-top">
+  <div style="margin-top: 640px;" class="footer-top">
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12 segment-one">

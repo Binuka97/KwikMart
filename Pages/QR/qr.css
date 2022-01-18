@@ -63,12 +63,12 @@ body {
   display: block;
   color: #21826e;
   text-align: center;
-  padding: 28px 25px;
+  padding: 23px 25px;
   text-decoration: none;
   font-size: 28px;
 }
 
-@media (max-width: 812px) {
+@media (max-width: 896px) {
   .caption-one {
     font-size: 20px;
     font-weight: 500;
@@ -76,7 +76,7 @@ body {
 
   .caption-three,
   .caption-three-last {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 400;
   }
 
