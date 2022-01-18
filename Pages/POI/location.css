@@ -1,0 +1,10 @@
+/* header styling code */
+.navbar-header .hamburger-icon-qr {
+  float: left;
+  display: block;
+  color: #21826e;
+  text-align: center;
+  padding: 23px 25px;
+  text-decoration: none;
+  font-size: 28px;
+}
