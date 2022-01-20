@@ -25,7 +25,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="footer.css" />
-
+    <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <nav class="navbar-header">
@@ -108,7 +109,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <img src="/Applications/XAMPP/xamppfiles/htdocs/KwikMart-1/assets/images/banana.png" width="176">
+                <img src="../../assets/images/banana.png" width="176">
             </div>
             <div class="position-absolute rounded-pill bg-primary py-2 px-3 text-white font-weight-bold stock-badge">
                 In stock
@@ -235,6 +236,22 @@
             </div>
         </form>
     </section>
+</div>
+<div data-role="footer" data-position="fixed">
+  <nav class="nav">
+    <a href="#" class="nav__link" onclick="homePage()">
+      <img src="../../assets/icons/home.png" class="nav-icons-home" alt="home" />
+    </a>
+    <a href="#" class="nav__link nav__link--active" onclick="favPage()">
+      <img src="../../assets/icons/favourite.png" class="nav-icons-fav" alt="favourite" />
+    </a>
+    <a href="#" class="nav__link" onclick="cartPage()">
+      <img src="../../assets/icons/cart.png" class="nav-icons-cart" alt="cart" />
+    </a>
+    <a href="#" class="nav__link">
+      <img src="../../assets/icons/user.png" class="nav-icons-user" alt="user" />
+    </a>
+  </nav>
 </div>
 <footer>
       <div class="footer-top">

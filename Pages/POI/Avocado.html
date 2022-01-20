@@ -16,6 +16,8 @@
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="item-page.css">
 <link rel="stylesheet" href="navigation.css" />
+<link rel="stylesheet" href="../Navigation/bottomNav.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -25,6 +27,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="footer.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
@@ -108,7 +111,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <img src="/Applications/XAMPP/xamppfiles/htdocs/KwikMart-1/assets/images/avocado.png" width="176">
+                <img src="../../assets/images/avocado.png" width="176">
             </div>
             <div class="position-absolute rounded-pill bg-primary py-2 px-3 text-white font-weight-bold stock-badge">
                 In stock
@@ -294,6 +297,22 @@
         Copy right 2022 by KwikMart Grocery Store | All rights reserved
       </p>
     </footer>
+    <div data-role="footer" data-position="fixed">
+      <nav class="nav">
+        <a href="#" class="nav__link" onclick="homePage()">
+          <img src="../../assets/icons/home.png" class="nav-icons-home" alt="home" />
+        </a>
+        <a href="#" class="nav__link nav__link--active" onclick="favPage()">
+          <img src="../../assets/icons/favourite.png" class="nav-icons-fav" alt="favourite" />
+        </a>
+        <a href="#" class="nav__link" onclick="cartPage()">
+          <img src="../../assets/icons/cart.png" class="nav-icons-cart" alt="cart" />
+        </a>
+        <a href="#" class="nav__link">
+          <img src="../../assets/icons/user.png" class="nav-icons-user" alt="user" />
+        </a>
+      </nav>
+    </div>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

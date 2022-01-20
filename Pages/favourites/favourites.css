@@ -410,6 +410,14 @@ position: relative;
 	/* letter-spacing: 1px; */
 }
 
+.no-fav {
+	position: absolute;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  left:155px
+}
+
 #cart-img {
   height: 18px;
   width: 18px;
@@ -442,6 +450,58 @@ position: relative;
   position: relative;
   border-radius: 15px;
   padding: 15px 5%;
+}
+
+.hover_bkgr_fricc1{
+  background:rgba(4,0,0,.4);
+  display:none;
+  height:100%;
+  position:fixed;
+  text-align:center;
+  top:0;
+  width:100%;
+  z-index:10000;
+}
+.hover_bkgr_fricc1 .helper1{
+  display:inline-block;
+  height:100%;
+  vertical-align:middle;
+}
+.hover_bkgr_fricc1 > div {
+  background-color: #fff;
+  box-shadow: 10px 10px 60px #555;
+  display: inline-block;
+  height: auto;
+  max-width: 551px;
+  min-height: 100px;
+  vertical-align: middle;
+  width: 80%;
+  position: relative;
+  border-radius: 15px;
+  padding: 15px 5%;
+}
+
+.buttons {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  /* margin-bottom: 20px; */
+}
+
+#btn1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  background-color: #21826e;
+  border-radius: 20px;
+  margin-left: 50px;
+}
+
+#btn2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #21826e;
+  border-radius: 20px;
+  margin-left: 20px;
 }
 
 #button2{
@@ -494,6 +554,22 @@ p {
 }
 
 .popupCloseButton {
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: arial;
+  font-weight: bold;
+  position: absolute;
+  top: 14px;
+  right: 7px;
+  font-size: 25px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.popupCloseButton1 {
   border-radius: 50px;
   cursor: pointer;
   display: inline-block;

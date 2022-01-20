@@ -104,9 +104,9 @@ $(document).ready(function () {
     document.getElementById("myModal").style.display = 'none';
   });
 
-  $("#deleteFav").click(function () {
-    localStorage.removeItem("favouriteItems")
-  });
+  // $("#deleteFav").click(function () {
+  //   localStorage.removeItem("favouriteItems")
+  // });
 
 });
 
@@ -129,12 +129,16 @@ function displayFavourites() {
         })
 
         document.getElementById("favourite-products").innerHTML = favCard;
+  } else {
+    console.log("came to else");
+    favCard += '<span class="text-center mt-4 justify-content-center no-fav"> No Favourites</span>';
+    document.getElementById("favourite-products").innerHTML = favCard;
   }
   
 }
 
 function addAllselectedProducts() {
-  var favouriteProducts = JSON.parse(localStorage.getItem("favourites"));
+  var favouriteProducts = JSON.parse(localStorage.getItem("favouriteItems"));
   var selectedProducts = JSON.parse(localStorage.getItem("selected"));
   if (selectedProducts == null) {
     selectedProducts = [];
