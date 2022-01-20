@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../Footer/footer.css" />
     <link rel="stylesheet" href="../Navigation/navigation.css" />
     <link rel="stylesheet" href="../Navigation/bottomNav.css" />
+    <link rel="stylesheet" href="../Game/game.html" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
@@ -31,6 +32,11 @@
         </span>
         <ul>
             <img src="../../assets/images/logo1.png" class="logo-header" alt="logocolored" />
+            <img src="../../assets/images/snipe.PNG" class="search" style="align-items: center; margin-left: 140px;
+            margin-bottom: 10px;"  />
+            <img src="../../assets/icons/favourite.png" style="margin-left: 110px; margin-bottom: 15px;" />
+            <img src="../../assets/icons/cart.png"style="margin-left: 20px; margin-bottom: 15px;" />
+            <img src="../../assets/icons/user.png" style="margin-left: 30px; margin-bottom: 15px;"  />
         </ul>
     </nav>
     <!-- Side Navigation -->
@@ -39,7 +45,7 @@
         <div href="#" class="menu-icon">
             <i class="fas fa-home icons"></i>Home
         </div>
-        <div href="#" class="menu-icon">
+        <div href="../Categories/Categories.html" class="menu-icon">
             <i class="fas fa-th-list icons"></i>Categories
         </div>
         <div href="#" class="menu-icon">
@@ -51,7 +57,7 @@
         <div href="#" class="menu-icon">
             <i class="fa fa-percent icons"></i>Promotions
         </div>
-        <div href="#" class="menu-icon">
+        <div href="gameStart.html" class="menu-icon">
             <i class="fas fa-gamepad icons"></i>Games
         </div>
         <div href="#" class="menu-icon">
@@ -78,15 +84,7 @@
         }
     </script>
 </div>
-<!-- <script>
-    $(document).ready(function () {
-        $('#myForm input').on('change', function () {
-            var selvalue = $("[type='radio']:checked").val();
-            $('#selvalue').val($("[type='radio']:checked").val());
-        });
-    });
 
-</script> -->
 
 <body>
 
@@ -94,16 +92,47 @@
     <img id="gif" src="../../assets/images/congrats2.png">
     <img id="gif2" src="../../assets/images/price.png">
 
-    <h4 id="des3">You have won a coupon of <br>
-        Rs100.00</h4>
-    <h4 id="des4" style="font-weight: bold;">10 points</h4>
 
+    <p id="des3"> </p>
+    <p id="demo"> </p>
+
+
+
+    <script>
+        clickCounter();
+        function clickCounter() {
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount) + 1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+            document.getElementById("demo").innerHTML = localStorage.clickcount + " Points";
+        }
+
+
+
+    </script>
+
+
+    <script>
+        clickCounter1();
+        function clickCounter1() {
+            if (localStorage.clickCounter1) {
+                localStorage.clickCounter1 = Number(localStorage.clickCounter1) + 10;
+            } else {
+                localStorage.clickCounter1 = 10;
+            }
+            document.getElementById("des3").innerHTML = "You have won a coupon of " + "<br>" + "Rs " + localStorage.clickCounter1 + ".00";
+        }
+
+
+    </script>
 
     <form class="gg">
         <div class="d-flex justify-content-center align-items-center gap-2">
-            <a href="" rel="external" class="ui-btn" id="done">Done</a>
+            <a href="../Home/Home.html" rel="external" class="ui-btn" id="done">Done</a>
             <a href="gameStart.html" rel="external" class="ui-btn" id="again">Play Again</a>
-            
+
         </div>
     </form>
 
