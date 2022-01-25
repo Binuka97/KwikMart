@@ -12,11 +12,14 @@
                 document.getElementById("result").innerHTML = result - num3;
                 total = document.getElementById("tottalCost").innerHTML;
                 document.getElementById("tottalCost").innerHTML = total - num3;
+                localStorage.setItem("totalPrice", total - num3)
             }
             else {
                 document.getElementById("result").innerHTML = 0;
                 total = document.getElementById("tottalCost").innerHTML;
                 document.getElementById("tottalCost").innerHTML = total - num3;
+                localStorage.setItem("totalPrice", total - num3)
+
             }
         }
     }
@@ -28,6 +31,7 @@
         document.getElementById("result").innerHTML = num1 * num2;
         total = document.getElementById("tottalCost").innerHTML;
         document.getElementById("tottalCost").innerHTML = +total + +num1;
+        localStorage.setItem("totalPrice", +total + +num1)
     }
 
     function item2Minus() {
@@ -41,11 +45,13 @@
                 document.getElementById("result2").innerHTML = result - num1;
                 total = document.getElementById("tottalCost").innerHTML;
                 document.getElementById("tottalCost").innerHTML = total - num1;
+                localStorage.setItem("totalPrice", total - num1)
             }
             else {
                 document.getElementById("result2").innerHTML = 0;
                 total = document.getElementById("tottalCost").innerHTML;
                 document.getElementById("tottalCost").innerHTML = total - num1;
+                localStorage.setItem("totalPrice", total - num1)
             }
         }
     }
@@ -57,6 +63,7 @@
         document.getElementById("result2").innerHTML = num1 * num2;
         total = document.getElementById("tottalCost").innerHTML;
         document.getElementById("tottalCost").innerHTML = +total + +num1;
+        localStorage.setItem("totalPrice", +total + +num1)
     }
 
     function item3Plus() {
@@ -66,6 +73,7 @@
         document.getElementById("result3").innerHTML = num1 * num2;
         total = document.getElementById("tottalCost").innerHTML;
         result = document.getElementById("tottalCost").innerHTML = +total + +num1;
+        localStorage.setItem("totalPrice", +total + +num1)
     }
 
     function item3Minus() {
@@ -79,11 +87,13 @@
                 document.getElementById("result").innerHTML = result - num1;
                 total = document.getElementById("tottalCost").innerHTML;
                 document.getElementById("tottalCost").innerHTML = total - num1;
+                localStorage.setItem("totalPrice", total - num1)
             }
             else {
                 document.getElementById("result").innerHTML = 0;
                 total = document.getElementById("tottalCost").innerHTML;
                 document.getElementById("tottalCost").innerHTML = total - num1;
+                localStorage.setItem("totalPrice", total - num1)
             }
         }
     }
@@ -99,11 +109,13 @@
                 document.getElementById("cabbage-result").innerHTML = result - num3;
                 total = document.getElementById("tottalCost").innerHTML;
                 document.getElementById("tottalCost").innerHTML = total - num3;
+                localStorage.setItem("totalPrice", total - num3)
             }
             else {
                 document.getElementById("cabbage-result").innerHTML = 0;
                 total = document.getElementById("tottalCost").innerHTML;
                 document.getElementById("tottalCost").innerHTML = total - num3;
+                localStorage.setItem("totalPrice", total - num3)
             }
         }
     }
@@ -115,6 +127,7 @@
         document.getElementById("cabbage-result").innerHTML = num1 * num2;
         total = document.getElementById("tottalCost").innerHTML;
         document.getElementById("tottalCost").innerHTML = +total + +num1;
+        localStorage.setItem("totalPrice", +total + +num1)
     }
 
     function calculateFinalBalance() {

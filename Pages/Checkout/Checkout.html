@@ -147,7 +147,7 @@
 		<div class="container col-12 col-xs-12 mb-5 price-text">
 			<div class="d-flex justify-content-between">
 				<span class="total-price">Total</span>
-				<span class="text-right"> Rs.427.00</span></span>
+				<span class="text-right"> Rs.<span id="price"></span>.00</span></span>
 			</div>
 		</div>
 
@@ -163,6 +163,8 @@
 		function closeSlideMenu() {
 			document.getElementById("side-menu").style.width = "0px";
 		}
+
+		$("#price").html(`${localStorage.getItem("totalPrice")}`)
 
 		jQuery(function ($) {
 			var handler = StripeCheckout.configure({
@@ -186,7 +188,7 @@
 				handler.open({
 					name: 'KwikMart',
 					currency: 'lkr',
-					amount: 427 * 100,
+					amount: localStorage.getItem("totalPrice") * 100,
 					description: "Pay To Confirm Your Order",
 				});
 				e.preventDefault();

@@ -164,7 +164,11 @@
 
     function deleteFav() {
       console.log("deleteeeeeeeeeeee");
-    localStorage.removeItem("favouriteItems");
+  
+      if ( JSON.stringify(localStorage.getItem("favouriteItems")) == JSON.stringify(localStorage.getItem("selected")) ) {
+        localStorage.removeItem("favouriteItems");
+
+        displayFavourites();
         $(".popupCloseButton1").append(`
           <div style="color: #676767;" class="successMessage">
           <p style="color: #676767;">Favourites Deleted Successfully!</p>
@@ -172,6 +176,31 @@
           <button class="button" id="button2" ">Done</button>
           </div>
           `)
+
+      } else {
+        let newFavArr = [];
+        let currentFav = JSON.parse(localStorage.getItem("favouriteItems"));
+        let selectedItems = JSON.parse(localStorage.getItem("selected"));
+        console.log("NEW FAV", selectedItems);
+        currentFav.map((item) => { 
+          selectedItems.forEach((i) => {
+            if ( item.id !== i ) {
+              newFavArr.push(item);
+            }
+          })
+        })
+        localStorage.setItem("favouriteItems", JSON.stringify(newFavArr))
+        console.log("NEW FAV", newFavArr);
+        displayFavourites();
+        $(".popupCloseButton1").append(`
+          <div style="color: #676767;" class="successMessage">
+          <p style="color: #676767;">Favourites Deleted Successfully!</p>
+          <img src="../../assets/icons/thumb.png">
+          <button class="button" id="button2" ">Done</button>
+          </div>
+          `)
+      }
+    
     }
 
 

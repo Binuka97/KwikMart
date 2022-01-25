@@ -85,24 +85,24 @@ $(document).ready(function () {
     }
   });
 
-  $(".share-favourites").click(function () {
-    document.getElementById("myModal").style.display = 'block';
-  });
+  // $(".share-favourites").click(function () {
+  //   document.getElementById("myModal").style.display = 'block';
+  // });
 
-  $("#share-btn").click(function () {
-    if ($("#email").val() == "") {
-      document.getElementById("error-text").style.display = 'block';
-    } else {
-      document.getElementById("myModal").style.display = 'none';
-      console.log($("#email").val());
-      localStorage.setItem("email", $("#email").val());
-      sendEmail();
-    }
-  });
+  // $("#share-btn").click(function () {
+  //   if ($("#email").val() == "") {
+  //     document.getElementById("error-text").style.display = 'block';
+  //   } else {
+  //     document.getElementById("myModal").style.display = 'none';
+  //     console.log($("#email").val());
+  //     localStorage.setItem("email", $("#email").val());
+  //     sendEmail();
+  //   }
+  // });
 
-  $("#close-btn").click(function () {
-    document.getElementById("myModal").style.display = 'none';
-  });
+  // $("#close-btn").click(function () {
+  //   document.getElementById("myModal").style.display = 'none';
+  // });
 
   // $("#deleteFav").click(function () {
   //   localStorage.removeItem("favouriteItems")
@@ -116,7 +116,7 @@ function displayFavourites() {
   console.log(fav_items);
 
   var favCard = '';
-  if (fav_items != null) {
+  if (fav_items) {
     fav_items.forEach((item) => {
       favCard += '<div class="cart-item">';
       favCard += '<div class="check-image">';
