@@ -50,3 +50,12 @@ function POI3() {
 function homePage() {
     window.location.assign("../../Pages/Home/Home.html")
 }
+
+function categoriesPage() {
+    window.location.assign("../../Pages/Categories/Categories.html")
+}
+
+function vegetablesPage() {
+    window.location.assign("../../Pages/Products/Vegetables.html")
+
+}
